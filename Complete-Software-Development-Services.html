@@ -1,0 +1,3648 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title id="page-title">Meta Software - Complete Programming Services | Saudi Arabia & Gulf</title>
+    <meta name="description" id="meta-description"
+        content="Leading programming services company in Saudi Arabia and Gulf region. We provide all types of software solutions with comprehensive contracts and documentation.">
+    <meta name="keywords"
+        content="programming services Saudi Arabia, software development Gulf, professional contracts, intellectual property rights, تطوير البرمجيات السعودية, عقود برمجية مهنية">
+    <meta name="author" content="Meta Software">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English, Arabic">
+    <meta name="geo.region" content="SA, AE, KW, QA, BH, OM, EG">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Meta Software - Complete Programming Services">
+    <meta property="og:description" content="Leading programming services company in Saudi Arabia and Gulf region">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.metasoftware.com">
+    <meta property="og:image" content="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+
+    <!-- jsPDF Library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+        /* ==================== CSS STYLES ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #4A90E2;
+            --secondary-blue: #2E86C1;
+            --light-blue: #E3F2FD;
+            --dark-blue: #1565C0;
+            --white: #FFFFFF;
+            --dark-gray: #2C3E50;
+            --light-gray: #BDC3C7;
+            --shadow: rgba(74, 144, 226, 0.15);
+            --blue-shadow: rgba(74, 144, 226, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.rtl {
+            direction: rtl;
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 50%, var(--primary-blue) 100%);
+            padding: 1.5rem 0;
+            box-shadow: 0 8px 32px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .company-logo {
+            width: 80px;
+            height: 40px;
+            background-image: url('https://metasoftware.eg/assets/images/2trivgoAgJVHgQNIzVMC5uvbZ03.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 4px 8px var(--blue-shadow));
+            position: relative;
+        }
+
+        .company-logo::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--primary-blue), transparent, var(--secondary-blue));
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .company-logo:hover::before {
+            opacity: 0.3;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.1) translateY(-2px);
+            filter: drop-shadow(0 8px 16px var(--blue-shadow));
+        }
+
+        /* إضافة تأثير نبضة للوجو */
+        @keyframes logoPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .company-logo {
+            animation: logoPulse 3s ease-in-out infinite;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 3px solid var(--white);
+            background-image: url('https://metasoftware.eg/assets/images/favourite_icon_2.svg');
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .logo-icon:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 10px 30px var(--blue-shadow);
+        }
+
+        .company-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--dark-gray), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-name::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        .logo-section:hover .company-name::after {
+            width: 100%;
+        }
+
+        /* تأثير لامع */
+        .logo-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .logo-section:hover::before {
+            left: 100%;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-blue);
+            background: var(--white);
+            color: var(--primary-blue);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        /* Services Section */
+        .services-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark-gray);
+            margin-bottom: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px var(--shadow);
+            border-color: var(--primary-blue);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-action {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .action-btn {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            border: none;
+            border-radius: 50%;
+            color: var(--white);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .action-btn:hover {
+            background: var(--secondary-blue);
+            transform: scale(1.1);
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 0;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-subtitle {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .service-details {
+            margin-bottom: 2rem;
+        }
+
+        .service-details h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-points {
+            background: var(--light-blue);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-points h4 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .service-points ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-points li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-points li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .documents-section {
+            margin-bottom: 2rem;
+        }
+
+        .documents-section h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--light-blue);
+            padding-bottom: 0.5rem;
+        }
+
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .document-card {
+            background: linear-gradient(135deg, var(--white), var(--light-blue));
+            border: 2px solid var(--primary-blue);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .document-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .document-icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .document-title {
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 0.3rem;
+        }
+
+        .document-subtitle {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+        }
+
+        .form-section h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--light-blue);
+            padding-bottom: 0.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--light-blue);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            margin: 1.5rem 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--light-blue);
+            border-radius: 8px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--primary-blue);
+        }
+
+        .checkbox-link {
+            color: var(--primary-blue);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .checkbox-link:hover {
+            color: var(--secondary-blue);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        .btn-cancel {
+            padding: 1rem 2rem;
+            border: 2px solid var(--light-gray);
+            background: var(--white);
+            color: var(--dark-gray);
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cancel:hover {
+            background: var(--light-gray);
+        }
+
+        .btn-submit {
+            padding: 1rem 2rem;
+            border: none;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+        }
+
+        /* Document Viewer Modal */
+        .document-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 20000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .document-modal.show {
+            display: flex;
+        }
+
+        .document-content {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 0;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .document-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .document-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .document-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .download-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .document-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .document-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .document-body {
+            padding: 2rem;
+            max-height: 70vh;
+            overflow-y: auto;
+            line-height: 1.8;
+        }
+
+        .document-body h4 {
+            color: var(--primary-blue);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .document-body ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .document-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--light-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes logoPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-actions {
+                flex-direction: column;
+            }
+
+            .documents-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Spinner */
+        .spinner-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s;
+        }
+
+        .spinner {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid var(--primary-blue);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Service card focus/hover/click improvements */
+        .service-card:focus-within,
+        .service-card:focus,
+        .service-card:active {
+            outline: 2px solid var(--primary-blue);
+            box-shadow: 0 0 0 4px var(--light-blue);
+        }
+
+        .service-card {
+            transition: box-shadow 0.3s, transform 0.2s;
+        }
+
+        .service-card:active {
+            transform: scale(0.97);
+        }
+
+        /* Subtle background effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 80% 20%, var(--light-blue) 0%, transparent 70%),
+                radial-gradient(circle at 20% 80%, var(--primary-blue) 0%, transparent 70%);
+            opacity: 0.12;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Accessibility: high contrast for text */
+        .section-title,
+        .service-title,
+        .footer-section h3 {
+            color: #1a1a1a;
+        }
+
+        /* Responsive improvements */
+        @media (max-width: 500px) {
+
+            .header-container,
+            .footer-container {
+                padding: 0 0.5rem;
+            }
+
+            .service-card {
+                padding: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Spinner -->
+    <div class="spinner-overlay" id="spinner" role="status" aria-label="Loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="company-logo" title="Meta Software Official Logo"></div>
+                <div class="logo-icon" title="Meta Software Icon"></div>
+                <h1 class="company-name">Meta Software</h1>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLanguage(event, 'en')" aria-label="Switch to English"
+                    tabindex="0">EN</button>
+                <button class="lang-btn" onclick="switchLanguage(event, 'ar')" aria-label="Switch to Arabic"
+                    tabindex="0">AR</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <main class="services-section" aria-label="Our Complete Programming Services">
+        <h2 class="section-title" data-en="Complete Programming Services" data-ar="خدمات البرمجة المتكاملة">Complete
+            Programming Services</h2>
+
+        <div class="services-grid">
+            <!-- 1. Software by Purpose -->
+            <div class="service-card fade-in" data-service="system-software">
+                <div class="service-icon">SYS</div>
+                <h3 class="service-title" data-en="System Software" data-ar="برمجيات النظام">System Software</h3>
+                <p class="service-description"
+                    data-en="Operating systems and hardware management software like Windows, Linux, macOS. Responsible for device operation and hardware control."
+                    data-ar="أنظمة التشغيل وبرمجيات إدارة الأجهزة مثل Windows و Linux و macOS. مسؤولة عن تشغيل الجهاز وإدارة العتاد.">
+                    Operating systems and hardware management software like Windows, Linux, macOS. Responsible for
+                    device operation and hardware control.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="application-software">
+                <div class="service-icon">APP</div>
+                <h3 class="service-title" data-en="Application Software" data-ar="برمجيات التطبيقات">Application
+                    Software</h3>
+                <p class="service-description"
+                    data-en="User applications like Word, Chrome, WhatsApp. Used directly by people to accomplish daily tasks and business operations."
+                    data-ar="تطبيقات المستخدمين مثل Word و Chrome و WhatsApp. تُستخدم مباشرة من قبل الأشخاص لإنجاز المهام.">
+                    User applications like Word, Chrome, WhatsApp. Used directly by people to accomplish daily tasks and
+                    business operations.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="programming-software">
+                <div class="service-icon">PRG</div>
+                <h3 class="service-title" data-en="Programming Software" data-ar="برمجيات البرمجة">Programming Software
+                </h3>
+                <p class="service-description"
+                    data-en="Development tools like Python, Visual Studio Code, Git. Used for creating and developing other software applications."
+                    data-ar="أدوات التطوير مثل Python و Visual Studio Code و Git. تُستخدم لتطوير البرمجيات الأخرى.">
+                    Development tools like Python, Visual Studio Code, Git. Used for creating and developing other
+                    software applications.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="embedded-software">
+                <div class="service-icon">EMB</div>
+                <h3 class="service-title" data-en="Embedded Software" data-ar="برمجيات مضمنة">Embedded Software</h3>
+                <p class="service-description"
+                    data-en="Firmware for devices like washing machines and air conditioners. Integrated within physical hardware for smart functionality."
+                    data-ar="البرمجيات الثابتة للأجهزة مثل الغسالات وأجهزة التكييف. مدمجة داخل أجهزة مادية وتعمل معها.">
+                    Firmware for devices like washing machines and air conditioners. Integrated within physical hardware
+                    for smart functionality.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="custom-software">
+                <div class="service-icon">CUS</div>
+                <h3 class="service-title" data-en="Custom Software" data-ar="برمجيات مخصصة">Custom Software</h3>
+                <p class="service-description"
+                    data-en="Tailor-made solutions like hospital systems or warehouse management. Developed according to specific requirements."
+                    data-ar="حلول مصممة خصيصاً مثل أنظمة المستشفيات أو إدارة المخازن. يتم تطويرها حسب احتياج شركة أو عميل.">
+                    Tailor-made solutions like hospital systems or warehouse management. Developed according to specific
+                    requirements.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 2. Software by Execution Method -->
+            <div class="service-card fade-in" data-service="web-apps">
+                <div class="service-icon">WEB</div>
+                <h3 class="service-title" data-en="Web Applications" data-ar="تطبيقات ويب">Web Applications</h3>
+                <p class="service-description"
+                    data-en="Browser-based applications like Gmail and YouTube. No download required - works from any device with internet."
+                    data-ar="تطبيقات تعمل من خلال المتصفح مثل Gmail و YouTube. لا تحتاج إلى تحميل - تعمل من أي جهاز.">
+                    Browser-based applications like Gmail and YouTube. No download required - works from any device with
+                    internet.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="mobile-apps">
+                <div class="service-icon">MOB</div>
+                <h3 class="service-title" data-en="Mobile Applications" data-ar="تطبيقات موبايل">Mobile Applications
+                </h3>
+                <p class="service-description"
+                    data-en="Native and hybrid apps for Android and iOS like Uber and Instagram. Can be Native or Hybrid development."
+                    data-ar="تطبيقات أصلية ومختلطة لأجهزة Android و iOS مثل Uber و Instagram. يمكن أن تكون Native أو Hybrid.">
+                    Native and hybrid apps for Android and iOS like Uber and Instagram. Can be Native or Hybrid
+                    development.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="desktop-apps">
+                <div class="service-icon">DSK</div>
+                <h3 class="service-title" data-en="Desktop Applications" data-ar="تطبيقات سطح المكتب">Desktop
+                    Applications</h3>
+                <p class="service-description"
+                    data-en="Desktop software like Excel, Photoshop, VS Code. Installed directly on computers for maximum performance."
+                    data-ar="برمجيات سطح المكتب مثل Excel و Photoshop و VS Code. تُثبّت على جهاز الكمبيوتر مباشرة.">
+                    Desktop software like Excel, Photoshop, VS Code. Installed directly on computers for maximum
+                    performance.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="cloud-software">
+                <div class="service-icon">CLD</div>
+                <h3 class="service-title" data-en="Cloud-Based Software" data-ar="برمجيات سحابية">Cloud-Based Software
+                </h3>
+                <p class="service-description"
+                    data-en="Online software like Google Drive and Zoom. Operates and stores data on the internet with scalable infrastructure."
+                    data-ar="برمجيات أونلاين مثل Google Drive و Zoom. تعمل أونلاين - تخزن وتعمل من الإنترنت.">Online
+                    software like Google Drive and Zoom. Operates and stores data on the internet with scalable
+                    infrastructure.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="distributed-software">
+                <div class="service-icon">DIS</div>
+                <h3 class="service-title" data-en="Distributed Software" data-ar="برمجيات موزعة">Distributed Software
+                </h3>
+                <p class="service-description"
+                    data-en="Enterprise systems like banking applications. Operates across multiple servers and networks for high availability."
+                    data-ar="أنظمة المؤسسات مثل تطبيقات البنوك. تعمل على أكثر من سيرفر أو شبكة.">Enterprise systems like
+                    banking applications. Operates across multiple servers and networks for high availability.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 3. Industry-Specific Software -->
+            <div class="service-card fade-in" data-service="educational-software">
+                <div class="service-icon">EDU</div>
+                <h3 class="service-title" data-en="Educational Software" data-ar="البرمجيات التعليمية">Educational
+                    Software</h3>
+                <p class="service-description"
+                    data-en="Learning platforms, tests, and interactive content like Moodle. Educational systems for schools and universities."
+                    data-ar="منصات تعليم، اختبارات، محتوى تفاعلي مثل Moodle. أنظمة تعليمية للمدارس والجامعات.">Learning
+                    platforms, tests, and interactive content like Moodle. Educational systems for schools and
+                    universities.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="medical-software">
+                <div class="service-icon">MED</div>
+                <h3 class="service-title" data-en="Medical Software" data-ar="البرمجيات الطبية">Medical Software</h3>
+                <p class="service-description"
+                    data-en="Clinic management, patient records, and medical analysis systems. Healthcare technology solutions."
+                    data-ar="إدارة عيادات، ملفات المرضى، تحاليل. حلول تقنية الرعاية الصحية.">Clinic management, patient
+                    records, and medical analysis systems. Healthcare technology solutions.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="accounting-software">
+                <div class="service-icon">ACC</div>
+                <h3 class="service-title" data-en="Accounting Software" data-ar="البرمجيات المحاسبية">Accounting
+                    Software</h3>
+                <p class="service-description"
+                    data-en="Invoice programs, tax systems, and inventory management like QuickBooks. Financial management solutions."
+                    data-ar="برامج فواتير، ضرائب، مخازن مثل QuickBooks. حلول الإدارة المالية.">Invoice programs, tax
+                    systems, and inventory management like QuickBooks. Financial management solutions.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="business-management">
+                <div class="service-icon">BIZ</div>
+                <h3 class="service-title" data-en="Business Management" data-ar="برمجيات إدارة الأعمال">Business
+                    Management</h3>
+                <p class="service-description"
+                    data-en="ERP and CRM systems for comprehensive company management. Enterprise resource planning solutions."
+                    data-ar="أنظمة ERP وCRM لإدارة الشركات. حلول تخطيط موارد المؤسسات.">ERP and CRM systems for
+                    comprehensive company management. Enterprise resource planning solutions.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 4. Emerging Technologies -->
+            <div class="service-card fade-in" data-service="ai-software">
+                <div class="service-icon">AI</div>
+                <h3 class="service-title" data-en="AI Software" data-ar="برمجيات الذكاء الاصطناعي">AI Software</h3>
+                <p class="service-description"
+                    data-en="Chatbots, text and image generation systems. Artificial intelligence solutions for automation."
+                    data-ar="شات بوت، توليد نصوص أو صور. حلول الذكاء الاصطناعي للأتمتة.">Chatbots, text and image
+                    generation systems. Artificial intelligence solutions for automation.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="blockchain">
+                <div class="service-icon">⛓️</div>
+                <h3 class="service-title" data-en="Blockchain" data-ar="البلوك تشين">Blockchain</h3>
+                <p class="service-description"
+                    data-en="Blockchain technology: cryptocurrencies and smart contracts. Decentralized application development."
+                    data-ar="تقنية البلوك تشين: العملات الرقمية، العقود الذكية. تطوير التطبيقات اللامركزية.">Blockchain
+                    technology: cryptocurrencies and smart contracts. Decentralized application development.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="iot">
+                <div class="service-icon">IOT</div>
+                <h3 class="service-title" data-en="Internet of Things" data-ar="إنترنت الأشياء">Internet of Things</h3>
+                <p class="service-description"
+                    data-en="IoT solutions: connecting devices like sensors and cameras to applications. Smart device integration."
+                    data-ar="حلول إنترنت الأشياء: ربط أجهزة مثل الحساسات والكاميرات بالتطبيقات. تكامل الأجهزة الذكية.">
+                    IoT solutions: connecting devices like sensors and cameras to applications. Smart device
+                    integration.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="ar-vr">
+                <div class="service-icon">VR</div>
+                <h3 class="service-title" data-en="AR/VR" data-ar="الواقع المعزز/الافتراضي">AR/VR</h3>
+                <p class="service-description"
+                    data-en="Augmented and Virtual Reality: games, educational and tourism applications. Immersive experiences."
+                    data-ar="الواقع المعزز والافتراضي: ألعاب وتطبيقات تعليم وسياحة. تجارب غامرة.">Augmented and Virtual
+                    Reality: games, educational and tourism applications. Immersive experiences.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 5. Additional Professional Services -->
+            <div class="service-card fade-in" data-service="cybersecurity-software">
+                <div class="service-icon">🔒</div>
+                <h3 class="service-title" data-en="Cybersecurity" data-ar="الأمن السيبراني">Cybersecurity</h3>
+                <p class="service-description"
+                    data-en="Protection systems and vulnerability detection tools. Advanced security solutions for businesses."
+                    data-ar="أنظمة حماية وكشف ثغرات. حلول أمنية متقدمة للشركات.">Protection systems and vulnerability
+                    detection tools. Advanced security solutions for businesses.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 6. Software by Licensing & Usage Rights -->
+            <div class="service-card fade-in" data-service="open-source">
+                <div class="service-icon">🔓</div>
+                <h3 class="service-title" data-en="Open Source Software" data-ar="برمجيات مفتوحة المصدر">Open Source
+                    Software</h3>
+                <p class="service-description"
+                    data-en="Open source solutions like Linux and WordPress. Free to use and modify by anyone."
+                    data-ar="حلول مفتوحة المصدر مثل Linux و WordPress. يمكن لأي شخص استخدامها وتعديلها مجانًا.">Open
+                    source solutions like Linux and WordPress. Free to use and modify by anyone.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="freeware">
+                <div class="service-icon">🆓</div>
+                <h3 class="service-title" data-en="Freeware Software" data-ar="برمجيات مجانية">Freeware Software</h3>
+                <p class="service-description"
+                    data-en="Free software like Zoom and VLC. Free to use but code modification not allowed."
+                    data-ar="برمجيات مجانية مثل Zoom و VLC. مجانية لكن لا يُسمح بتعديل الكود.">Free software like Zoom
+                    and VLC. Free to use but code modification not allowed.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="trialware">
+                <div class="service-icon">⏰</div>
+                <h3 class="service-title" data-en="Trial Software" data-ar="برمجيات تجريبية">Trial Software</h3>
+                <p class="service-description"
+                    data-en="Trial versions like Adobe Premiere 7-day version. Free for limited time period."
+                    data-ar="إصدارات تجريبية مثل Adobe Premiere نسخة 7 أيام. تستخدم مجانًا لفترة محددة.">Trial versions
+                    like Adobe Premiere 7-day version. Free for limited time period.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="commercial-software">
+                <div class="service-icon">💰</div>
+                <h3 class="service-title" data-en="Commercial Software" data-ar="برمجيات مدفوعة">Commercial Software
+                </h3>
+                <p class="service-description"
+                    data-en="Paid software like Microsoft Office. Requires license purchase or monthly subscription."
+                    data-ar="برمجيات مدفوعة مثل Microsoft Office. تتطلب شراء ترخيص أو اشتراك شهري.">Paid software like
+                    Microsoft Office. Requires license purchase or monthly subscription.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 7. Design & Media Software -->
+            <div class="service-card fade-in" data-service="design-software">
+                <div class="service-icon">🎨</div>
+                <h3 class="service-title" data-en="Design & Media Software" data-ar="برمجيات التصميم والميديا">Design &
+                    Media Software</h3>
+                <p class="service-description"
+                    data-en="Design tools like Photoshop and Figma. Creative software for graphics and media production."
+                    data-ar="أدوات التصميم مثل Photoshop و Figma. برمجيات إبداعية للرسومات وإنتاج الوسائط.">Design tools
+                    like Photoshop and Figma. Creative software for graphics and media production.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="streaming-software">
+                <div class="service-icon">📺</div>
+                <h3 class="service-title" data-en="Streaming & Communication" data-ar="برمجيات البث والتواصل">Streaming
+                    & Communication</h3>
+                <p class="service-description"
+                    data-en="Streaming tools like Zoom and OBS Studio. Communication and broadcasting software."
+                    data-ar="أدوات البث مثل Zoom و OBS Studio. برمجيات التواصل والبث.">Streaming tools like Zoom and OBS
+                    Studio. Communication and broadcasting software.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 8. Professional Development Services -->
+            <div class="service-card fade-in" data-service="web-development">
+                <div class="service-icon">🌐</div>
+                <h3 class="service-title" data-en="Website Development" data-ar="برمجة المواقع الإلكترونية">Website
+                    Development</h3>
+                <p class="service-description"
+                    data-en="Professional websites, e-commerce platforms, and web systems. Complete web solutions."
+                    data-ar="مواقع احترافية، منصات تجارة إلكترونية، أنظمة ويب. حلول ويب كاملة.">Professional websites,
+                    e-commerce platforms, and web systems. Complete web solutions.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="mobile-development">
+                <div class="service-icon">📱</div>
+                <h3 class="service-title" data-en="Mobile App Development" data-ar="برمجة تطبيقات الموبايل">Mobile App
+                    Development</h3>
+                <p class="service-description"
+                    data-en="Service apps, delivery apps, educational apps. Native and cross-platform development."
+                    data-ar="تطبيقات خدمات، توصيل، تعليم. تطوير أصلي ومتعدد المنصات.">Service apps, delivery apps,
+                    educational apps. Native and cross-platform development.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="erp-crm">
+                <div class="service-icon">🏢</div>
+                <h3 class="service-title" data-en="ERP/CRM Systems" data-ar="أنظمة ERP/CRM">ERP/CRM Systems</h3>
+                <p class="service-description"
+                    data-en="Enterprise systems for inventory, sales, and employee management. Business process automation."
+                    data-ar="أنظمة المؤسسات للمخازن، المبيعات، إدارة الموظفين. أتمتة العمليات التجارية.">Enterprise
+                    systems for inventory, sales, and employee management. Business process automation.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="ui-ux-design">
+                <div class="service-icon">🎯</div>
+                <h3 class="service-title" data-en="UI/UX Design" data-ar="تصميم واجهات المستخدم">UI/UX Design</h3>
+                <p class="service-description"
+                    data-en="User interface design and user experience optimization. Intuitive and engaging designs."
+                    data-ar="تصميم واجهات المستخدم وتحسين تجربة المستخدم. تصاميم بديهية وجذابة.">User interface design
+                    and user experience optimization. Intuitive and engaging designs.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="data-analytics">
+                <div class="service-icon">📊</div>
+                <h3 class="service-title" data-en="Data Analytics & BI" data-ar="تحليل البيانات وذكاء الأعمال">Data
+                    Analytics & BI</h3>
+                <p class="service-description"
+                    data-en="Data analysis, reports, and business intelligence dashboards. Data-driven insights."
+                    data-ar="تحليل البيانات، تقارير، لوحات ذكاء الأعمال. رؤى قائمة على البيانات.">Data analysis,
+                    reports, and business intelligence dashboards. Data-driven insights.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="api-integration">
+                <div class="service-icon">🔗</div>
+                <h3 class="service-title" data-en="API & Integration" data-ar="خدمات API والتكامل">API & Integration
+                </h3>
+                <p class="service-description"
+                    data-en="Payment gateway integration, system connectivity. Seamless data flow between applications."
+                    data-ar="ربط بوابات الدفع، ربط الأنظمة ببعضها. تدفق سلس للبيانات بين التطبيقات.">Payment gateway
+                    integration, system connectivity. Seamless data flow between applications.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="chatbots">
+                <div class="service-icon">🤖</div>
+                <h3 class="service-title" data-en="Smart Chatbots" data-ar="برمجة بوتات ذكية">Smart Chatbots</h3>
+                <p class="service-description"
+                    data-en="WhatsApp/Telegram bots for automated customer service. AI-powered communication."
+                    data-ar="بوتات WhatsApp/Telegram لخدمة عملاء تلقائية. تواصل مدعوم بالذكاء الاصطناعي.">
+                    WhatsApp/Telegram bots for automated customer service. AI-powered communication.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="task-automation">
+                <div class="service-icon">⚙️</div>
+                <h3 class="service-title" data-en="Task Automation" data-ar="أتمتة المهام">Task Automation</h3>
+                <p class="service-description"
+                    data-en="Email automation, task scheduling, workflow optimization. Streamlined business processes."
+                    data-ar="أتمتة الإيميلات، جدولة مهام، تحسين سير العمل. عمليات تجارية مبسطة.">Email automation, task
+                    scheduling, workflow optimization. Streamlined business processes.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" data-service="consulting">
+                <div class="service-icon">💡</div>
+                <h3 class="service-title" data-en="Technical Consulting" data-ar="استشارات برمجية">Technical Consulting
+                </h3>
+                <p class="service-description"
+                    data-en="Technology selection, feasibility studies, technical guidance. Expert software consulting."
+                    data-ar="اختيار التقنية، دراسة الجدوى الفنية، إرشادات تقنية. استشارات برمجية متخصصة.">Technology
+                    selection, feasibility studies, technical guidance. Expert software consulting.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 9. Cloud Computing Services -->
+            <div class="service-card fade-in" data-service="cloud-computing">
+                <div class="service-icon">☁️</div>
+                <h3 class="service-title" data-en="Cloud Computing" data-ar="الحوسبة السحابية">Cloud Computing</h3>
+                <p class="service-description"
+                    data-en="Cloud-based systems that operate and store data on the internet. Scalable infrastructure."
+                    data-ar="أنظمة سحابية تعمل وتخزن البيانات في الإنترنت. بنية تحتية قابلة للتوسع.">Cloud-based systems
+                    that operate and store data on the internet. Scalable infrastructure.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 10. Security & Compliance -->
+            <div class="service-card fade-in" data-service="security-audit">
+                <div class="service-icon">🔍</div>
+                <h3 class="service-title" data-en="Security Audits" data-ar="فحص الأمان">Security Audits</h3>
+                <p class="service-description"
+                    data-en="Vulnerability assessment, security testing, compliance verification. Comprehensive security analysis."
+                    data-ar="تقييم الثغرات، اختبار الأمان، التحقق من الامتثال. تحليل أمني شامل.">Vulnerability
+                    assessment, security testing, compliance verification. Comprehensive security analysis.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 11. Maintenance & Support -->
+            <div class="service-card fade-in" data-service="maintenance-support">
+                <div class="service-icon">🛠️</div>
+                <h3 class="service-title" data-en="Maintenance & Support" data-ar="الصيانة والدعم">Maintenance & Support
+                </h3>
+                <p class="service-description"
+                    data-en="Ongoing software maintenance, updates, technical support. 24/7 system monitoring."
+                    data-ar="صيانة البرمجيات المستمرة، تحديثات، دعم تقني. مراقبة النظام على مدار الساعة.">Ongoing
+                    software maintenance, updates, technical support. 24/7 system monitoring.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+
+            <!-- 12. Training & Documentation -->
+            <div class="service-card fade-in" data-service="training-docs">
+                <div class="service-icon">📚</div>
+                <h3 class="service-title" data-en="Training & Documentation" data-ar="التدريب والتوثيق">Training &
+                    Documentation</h3>
+                <p class="service-description"
+                    data-en="User training, technical documentation, system manuals. Knowledge transfer and support."
+                    data-ar="تدريب المستخدمين، توثيق تقني، أدلة النظام. نقل المعرفة والدعم.">User training, technical
+                    documentation, system manuals. Knowledge transfer and support.</p>
+                <div class="service-action">
+                    <button class="action-btn">→</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h3>
+                <p data-en="📧 Contact@metasoftware.eg" data-ar="📧 Contact@metasoftware.eg">
+                    <a href="mailto:Contact@metasoftware.com?subject=استفسار%20إلى%20Meta%20Software%20%7C%20Inquiry%20to%20Meta%20Software"
+                        style="text-decoration: none; color: inherit;">
+                        📧 Contact@metasoftware.eg
+                    </a>
+                </p>
+                <p data-en="📍 Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar"
+                    data-ar="📍مصر, الرياض، المملكة العربية السعودية, الكويت, قطر">📍
+                    Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar</p>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Main Services" data-ar="الخدمات الرئيسية">Main Services</h3>
+                <ul>
+                    <li data-en="System Software" data-ar="برمجيات النظام">System Software</li>
+                    <li data-en="Application Development" data-ar="تطوير التطبيقات">Application Development</li>
+                    <li data-en="Web Development" data-ar="تطوير الويب">Web Development</li>
+                    <li data-en="Mobile Apps" data-ar="تطبيقات الجوال">Mobile Apps</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Technologies" data-ar="التقنيات">Technologies</h3>
+                <ul>
+                    <li data-en="🤖 Artificial Intelligence" data-ar="🤖 الذكاء الاصطناعي">🤖 Artificial Intelligence
+                    </li>
+                    <li data-en="⛓️ Blockchain" data-ar="⛓️ البلوك تشين">⛓️ Blockchain</li>
+                    <li data-en="☁️ Cloud Computing" data-ar="☁️ الحوسبة السحابية">☁️ Cloud Computing</li>
+                    <li data-en="🔒 Cybersecurity" data-ar="🔒 الأمن السيبراني">🔒 Cybersecurity</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Service Areas" data-ar="مناطق الخدمة">Service Areas</h3>
+                <ul>
+                    <li data-en="🇸🇦 Saudi Arabia" data-ar="🇸🇦 المملكة العربية السعودية">🇸🇦 Saudi Arabia</li>
+                    <li data-en="🇦🇪 United Arab Emirates" data-ar="🇦🇪 الإمارات العربية المتحدة">🇦🇪 United Arab
+                        Emirates</li>
+                    <li data-en="🇰🇼 Kuwait" data-ar="🇰🇼 الكويت">🇰🇼 Kuwait</li>
+                    <li data-en="🇶🇦 Qatar" data-ar="🇶🇦 قطر">🇶🇦 Qatar</li>
+                    <li data-en="🇶🇦 Qatar" data-ar="🇶🇦 مصر  (المقر الرئيسي)">Eg Egypt (Headquarters)</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-en="© 2025 Meta Software. All rights reserved. | Complete Programming Services for the Arab world"
+                data-ar="© 2025 ميتا سوفت وير. جميع الحقوق محفوظة. | خدمات البرمجة المتكاملة لمنطقة الوطن العربي">© 2025
+                Meta
+                Software. All rights reserved. | Complete Programming Services for the Arab world</p>
+        </div>
+    </footer>
+
+    <!-- Service Agreement Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" id="modalClose">×</button>
+                <h2 class="modal-title" id="modalTitle">Service Agreement</h2>
+                <p class="modal-subtitle" id="modalSubtitle">Professional Software Development Contract</p>
+            </div>
+            <div class="modal-body">
+                <!-- Service Details Section -->
+                <div class="service-details" id="serviceDetails">
+                    <h3 data-en="Service Overview" data-ar="نظرة عامة على الخدمة">Service Overview</h3>
+                    <div class="service-points" id="servicePoints">
+                        <!-- Content will be dynamically filled -->
+                    </div>
+                </div>
+
+                <!-- Documents Section -->
+                <div class="documents-section">
+                    <h4 data-en="Required Documents & Policies" data-ar="الوثائق والسياسات المطلوبة">Required Documents
+                        & Policies</h4>
+                    <p data-en="Please review the following documents before proceeding:"
+                        data-ar="يرجى مراجعة الوثائق التالية قبل المتابعة:">Please review the following documents before
+                        proceeding:</p>
+
+                    <div class="documents-grid">
+                        <div class="document-card" onclick="openDocument('intellectual-property')">
+                            <div class="document-icon">📋</div>
+                            <div class="document-title" data-en="Intellectual Property Rights"
+                                data-ar="حقوق الملكية الفكرية">Intellectual Property Rights</div>
+                            <div class="document-subtitle" data-en="Software ownership & licensing terms"
+                                data-ar="ملكية البرمجيات وشروط الترخيص">Software ownership & licensing terms</div>
+                        </div>
+
+                        <div class="document-card" onclick="openDocument('privacy-policy')">
+                            <div class="document-icon">🔒</div>
+                            <div class="document-title" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy
+                            </div>
+                            <div class="document-subtitle" data-en="Data protection & processing terms"
+                                data-ar="حماية البيانات وشروط المعالجة">Data protection & processing terms</div>
+                        </div>
+
+                        <div class="document-card" onclick="openDocument('terms-conditions')">
+                            <div class="document-icon">📄</div>
+                            <div class="document-title" data-en="Terms & Conditions" data-ar="الشروط والأحكام">Terms &
+                                Conditions</div>
+                            <div class="document-subtitle" data-en="Service agreement terms"
+                                data-ar="شروط اتفاقية الخدمة">Service agreement terms</div>
+                        </div>
+
+                        <div class="document-card" onclick="openDocument('communication-policy')">
+                            <div class="document-icon">📧</div>
+                            <div class="document-title" data-en="Communication Policy" data-ar="سياسة التواصل">
+                                Communication Policy</div>
+                            <div class="document-subtitle" data-en="Project updates & notifications"
+                                data-ar="تحديثات المشروع والإشعارات">Project updates & notifications</div>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="serviceForm">
+                    <!-- Client Information Section -->
+                    <div class="form-section">
+                        <h4 data-en="Client Information" data-ar="معلومات العميل">Client Information</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientName" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name
+                                    *</label>
+                                <input type="text" id="clientName" name="clientName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientEmail" data-en="Email Address *" data-ar="البريد الإلكتروني *">Email
+                                    Address *</label>
+                                <input type="email" id="clientEmail" name="clientEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientPhone" data-en="Phone Number *" data-ar="رقم الهاتف *">Phone Number
+                                    *</label>
+                                <input type="tel" id="clientPhone" name="clientPhone" placeholder="+966 5X XXX XXXX"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientCompany" data-en="Compئany Name" data-ar="اسم الشركة">Company
+                                    Name</label>
+                                <input type="text" id="clientCompany" name="clientCompany">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientPosition" data-en="Position/Title"
+                                    data-ar="المنصب/اللقب">Position/Title</label>
+                                <input type="text" id="clientPosition" name="clientPosition">
+                            </div>
+                            <div class="form-group">
+                                <label for="clientCountry" data-en="Country *" data-ar="الدولة *">Country *</label>
+                                <select id="clientCountry" name="clientCountry" required>
+                                    <option value="">Select Country</option>
+                                    <option value="SA">Saudi Arabia</option>
+                                    <option value="AE">United Arab Emirates</option>
+                                    <option value="KW">Kuwait</option>
+                                    <option value="QA">Qatar</option>
+                                    <option value="BH">Bahrain</option>
+                                    <option value="OM">Oman</option>
+                                    <option value="EG">Egypt</option>
+                                    <option value="JO">Jordan</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Details Section -->
+                    <div class="form-section">
+                        <h4 data-en="Project Details" data-ar="تفاصيل المشروع">Project Details</h4>
+                        <div class="form-group">
+                            <label for="projectTitle" data-en="Project Title *" data-ar="عنوان المشروع *">Project Title
+                                *</label>
+                            <input type="text" id="projectTitle" name="projectTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectDescription" data-en="Project Description *"
+                                data-ar="وصف المشروع *">Project Description *</label>
+                            <textarea id="projectDescription" name="projectDescription"
+                                placeholder="Please describe your project requirements in detail..."
+                                required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="projectBudget" data-en="Budget Range" data-ar="نطاق الميزانية">Budget
+                                    Range</label>
+                                <select id="projectBudget" name="projectBudget">
+                                    <option value="">Select Budget Range</option>
+                                    <option value="under-100$">Under $100</option>
+                                    <option value="200$-400$">$200 - $400</option>
+                                    <option value="500$-1,5$">$500 - $1,5K</option>
+                                    <option value="1500$-3K">$1500 - $3K</option>
+                                    <option value="over-5k">Over $5K</option>
+                                    <option value="discuss">To be discussed</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectTimeline" data-en="Expected Timeline"
+                                    data-ar="الجدول الزمني المتوقع">Expected Timeline</label>
+                                <select id="projectTimeline" name="projectTimeline">
+                                    <option value="">Select Timeline</option>
+                                    <option value="1-3Weeks">1-3Weeks</option>
+                                    <option value="1-3months">1-3months</option>
+                                    <option value="3-6months">3-6months</option>
+                                    <option value="6-12months">6-12months</option>
+                                    <option value="over-1year">Over 1 year</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectFeatures" data-en="Key Features Required"
+                                data-ar="المميزات الرئيسية المطلوبة">Key Features Required</label>
+                            <textarea id="projectFeatures" name="projectFeatures"
+                                placeholder="List the main features and functionality you need..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="technicalRequirements" data-en="Technical Requirements"
+                                data-ar="المتطلبات التقنية">Technical Requirements</label>
+                            <textarea id="technicalRequirements" name="technicalRequirements"
+                                placeholder="Any specific technologies, platforms, or integrations required..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Agreement Terms -->
+                    <div class="form-section">
+                        <h4 data-en="Agreement Acceptance" data-ar="قبول الاتفاقية">Agreement Acceptance</h4>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                <label for="agreeTerms">
+                                    <span data-en="I agree to the " data-ar="أوافق على ">I agree to the </span>
+                                    <span class="checkbox-link" onclick="openDocument('terms-conditions')"
+                                        data-en="Terms & Conditions" data-ar="الشروط والأحكام">Terms & Conditions</span>
+                                    <span data-en=" and understand this is a legally binding contract."
+                                        data-ar=" وأفهم أن هذا عقد ملزم قانونياً."> and understand this is a legally
+                                        binding contract.</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agreePrivacy" name="agreePrivacy" required>
+                                <label for="agreePrivacy">
+                                    <span data-en="I agree to the " data-ar="أوافق على ">I agree to the </span>
+                                    <span class="checkbox-link" onclick="openDocument('privacy-policy')"
+                                        data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</span>
+                                    <span data-en=" and consent to data processing for project purposes."
+                                        data-ar=" وأوافق على معالجة البيانات لأغراض المشروع."> and consent to data
+                                        processing for project purposes.</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agreeCommunication" name="agreeCommunication" required>
+                                <label for="agreeCommunication">
+                                    <span data-en="I agree to the " data-ar="أوافق على ">I agree to the </span>
+                                    <span class="checkbox-link" onclick="openDocument('communication-policy')"
+                                        data-en="Communication Policy" data-ar="سياسة التواصل">Communication
+                                        Policy</span>
+                                    <span data-en=" for project updates via email and SMS."
+                                        data-ar=" لتحديثات المشروع عبر البريد الإلكتروني والرسائل النصية."> for project
+                                        updates via email and SMS.</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agreeIntellectual" name="agreeIntellectual" required>
+                                <label for="agreeIntellectual">
+                                    <span data-en="I understand the " data-ar="أفهم ">I understand the </span>
+                                    <span class="checkbox-link" onclick="openDocument('intellectual-property')"
+                                        data-en="Intellectual Property Rights"
+                                        data-ar="حقوق الملكية الفكرية">Intellectual Property Rights</span>
+                                    <span data-en=" as outlined in the service agreement."
+                                        data-ar=" كما هو موضح في اتفاقية الخدمة."> as outlined in the service
+                                        agreement.</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn-cancel" id="btnCancel" data-en="Cancel"
+                            data-ar="إلغاء">Cancel</button>
+                        <button type="submit" class="btn-submit" id="btnSubmit" data-en="Submit Agreement"
+                            data-ar="إرسال الاتفاقية">Submit Agreement</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Document Viewer Modal -->
+    <div class="document-modal" id="documentModal">
+        <div class="document-content">
+            <div class="document-header">
+                <h3 id="documentTitle">Document Title</h3>
+                <div class="document-controls">
+                    <button class="download-btn" id="downloadBtn" data-en="Download PDF" data-ar="تحميل PDF">Download
+                        PDF</button>
+                    <button class="document-close" id="documentClose">×</button>
+                </div>
+            </div>
+            <div class="document-body" id="documentBody">
+                <!-- Content will be dynamically filled -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT SECTION ==================== -->
+    <script>
+        // Language switching functionality
+        let currentLang = 'en';
+
+        function switchLanguage(event, lang) {
+            currentLang = lang;
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update body direction
+            document.body.className = lang === 'ar' ? 'rtl' : '';
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+                element.textContent = element.getAttribute('data-' + lang);
+            });
+
+            // Update placeholders
+            updatePlaceholders(lang);
+
+            // Update meta tags
+            updateMetaTags(lang);
+        }
+
+        function updatePlaceholders(lang) {
+            const placeholders = {
+                en: {
+                    projectDescription: "Please describe your project requirements in detail...",
+                    projectFeatures: "List the main features and functionality you need...",
+                    technicalRequirements: "Any specific technologies, platforms, or integrations required...",
+                    clientPhone: "+966 5X XXX XXXX"
+                },
+                ar: {
+                    projectDescription: "يرجى وصف متطلبات مشروعك بالتفصيل...",
+                    projectFeatures: "اذكر المميزات والوظائف الرئيسية التي تحتاجها...",
+                    technicalRequirements: "أي تقنيات أو منصات أو تكاملات محددة مطلوبة...",
+                    clientPhone: "+966 5X XXX XXXX"
+                }
+            };
+
+            Object.keys(placeholders[lang]).forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.placeholder = placeholders[lang][id];
+                }
+            });
+        }
+
+        function updateMetaTags(lang) {
+            const titles = {
+                en: 'Meta Software - Complete Programming Services | the Arab World',
+                ar: 'ميتا سوفت وير - خدمات البرمجة المتكاملة | الوطن العربي'
+            };
+            const descriptions = {
+                en: 'Leading programming services company in Saudi Arabia and Gulf region. We provide all types of software solutions with comprehensive contracts and documentation.',
+                ar: 'شركة رائدة في خدمات البرمجة في المملكة العربية السعودية ومنطقة الخليج. نوفر جميع أنواع الحلول البرمجية مع عقود شاملة وتوثيق.'
+            };
+
+            document.getElementById('page-title').textContent = titles[lang];
+            document.getElementById('meta-description').setAttribute('content', descriptions[lang]);
+        }
+
+        // Service definitions with comprehensive details
+        const serviceDefinitions = {
+            'system-software': {
+                title: 'System Software Development',
+                titleAr: 'تطوير برمجيات النظام',
+                points: {
+                    en: [
+                        'Operating system development and customization',
+                        'Device drivers and hardware abstraction layers',
+                        'System utilities and diagnostic tools',
+                        'Performance optimization and monitoring',
+                        'Security implementation and kernel hardening',
+                        'Cross-platform compatibility solutions',
+                        'Real-time system development',
+                        'Memory management optimization',
+                        'Process scheduling and resource allocation',
+                        'System-level debugging and profiling tools'
+                    ],
+                    ar: [
+                        'تطوير وتخصيص أنظمة التشغيل',
+                        'برامج تشغيل الأجهزة وطبقات تجريد الأجهزة',
+                        'أدوات النظام التشخيصية والمساعدة',
+                        'تحسين الأداء والمراقبة',
+                        'تنفيذ الأمان وتقوية النواة',
+                        'حلول التوافق متعدد المنصات',
+                        'تطوير الأنظمة الفورية',
+                        'تحسين إدارة الذاكرة',
+                        'جدولة العمليات وتخصيص الموارد',
+                        'أدوات تصحيح الأخطاء والتحليل على مستوى النظام'
+                    ]
+                }
+            },
+            'application-software': {
+                title: 'Application Software Development',
+                titleAr: 'تطوير برمجيات التطبيقات',
+                points: {
+                    en: [
+                        'Desktop application development',
+                        'Cross-platform compatibility',
+                        'User interface design and implementation',
+                        'Database integration and management',
+                        'File handling and data processing',
+                        'Printing and reporting functionality',
+                        'Multi-language support',
+                        'Plugin and extension architecture',
+                        'Performance optimization',
+                        'User training and documentation'
+                    ],
+                    ar: [
+                        'تطوير تطبيقات سطح المكتب',
+                        'التوافق متعدد المنصات',
+                        'تصميم وتنفيذ واجهة المستخدم',
+                        'تكامل وإدارة قواعد البيانات',
+                        'معالجة الملفات والبيانات',
+                        'وظائف الطباعة والتقارير',
+                        'دعم متعدد اللغات',
+                        'هندسة الإضافات والتوسعات',
+                        'تحسين الأداء',
+                        'تدريب المستخدمين والتوثيق'
+                    ]
+                }
+            },
+            'programming-software': {
+                title: 'Programming Tools Development',
+                titleAr: 'تطوير أدوات البرمجة',
+                points: {
+                    en: [
+                        'Integrated Development Environment (IDE) creation',
+                        'Code editors with syntax highlighting',
+                        'Debugging and profiling tools',
+                        'Version control system integration',
+                        'Automated testing frameworks',
+                        'Code analysis and quality tools',
+                        'Build automation systems',
+                        'Package managers and dependency tools',
+                        'API documentation generators',
+                        'Custom compiler and interpreter development'
+                    ],
+                    ar: [
+                        'إنشاء بيئة التطوير المتكاملة (IDE)',
+                        'محررات الكود مع تمييز بناء الجملة',
+                        'أدوات التصحيح والتحليل',
+                        'تكامل نظام التحكم في الإصدار',
+                        'أطر عمل الاختبار الآلي',
+                        'أدوات تحليل وجودة الكود',
+                        'أنظمة أتمتة البناء',
+                        'مديري الحزم وأدوات التبعية',
+                        'مولدات توثيق API',
+                        'تطوير المجمع والمترجم المخصص'
+                    ]
+                }
+            },
+            'embedded-software': {
+                title: 'Embedded Software Development',
+                titleAr: 'تطوير البرمجيات المضمنة',
+                points: {
+                    en: [
+                        'Microcontroller programming',
+                        'Real-time operating system (RTOS) development',
+                        'Hardware abstraction layer design',
+                        'Low-level driver development',
+                        'Power management optimization',
+                        'Wireless communication protocols',
+                        'Sensor integration and data processing',
+                        'IoT device connectivity',
+                        'Firmware update mechanisms',
+                        'Safety-critical system development'
+                    ],
+                    ar: [
+                        'برمجة المتحكمات الدقيقة',
+                        'تطوير نظام التشغيل الفوري (RTOS)',
+                        'تصميم طبقة تجريد الأجهزة',
+                        'تطوير برامج التشغيل منخفضة المستوى',
+                        'تحسين إدارة الطاقة',
+                        'بروتوكولات الاتصال اللاسلكي',
+                        'تكامل أجهزة الاستشعار ومعالجة البيانات',
+                        'اتصال أجهزة إنترنت الأشياء',
+                        'آليات تحديث البرامج الثابتة',
+                        'تطوير الأنظمة الحرجة للسلامة'
+                    ]
+                }
+            },
+            'custom-software': {
+                title: 'Custom Software Development',
+                titleAr: 'تطوير البرمجيات المخصصة',
+                points: {
+                    en: [
+                        'Requirements analysis and specification',
+                        'Custom architecture design',
+                        'Scalable solution development',
+                        'Third-party system integration',
+                        'Custom workflow automation',
+                        'Specialized reporting tools',
+                        'Industry-specific compliance',
+                        'Legacy system modernization',
+                        'Custom security implementations',
+                        'Ongoing maintenance and support'
+                    ],
+                    ar: [
+                        'تحليل ومواصفات المتطلبات',
+                        'تصميم الهندسة المعمارية المخصصة',
+                        'تطوير حلول قابلة للتوسع',
+                        'تكامل أنظمة الطرف الثالث',
+                        'أتمتة سير العمل المخصص',
+                        'أدوات التقارير المتخصصة',
+                        'الامتثال الخاص بالصناعة',
+                        'تحديث الأنظمة القديمة',
+                        'تنفيذ الأمان المخصص',
+                        'الصيانة والدعم المستمر'
+                    ]
+                }
+            },
+            'web-apps': {
+                title: 'Web Application Development',
+                titleAr: 'تطوير تطبيقات الويب',
+                points: {
+                    en: [
+                        'Responsive web design implementation',
+                        'Single Page Application (SPA) development',
+                        'Progressive Web App (PWA) creation',
+                        'RESTful API development and integration',
+                        'Database design and optimization',
+                        'User authentication and authorization',
+                        'Payment gateway integration',
+                        'Search engine optimization (SEO)',
+                        'Performance optimization and caching',
+                        'Cross-browser compatibility testing'
+                    ],
+                    ar: [
+                        'تنفيذ تصميم الويب المتجاوب',
+                        'تطوير تطبيق الصفحة الواحدة (SPA)',
+                        'إنشاء تطبيق الويب التقدمي (PWA)',
+                        'تطوير وتكامل RESTful API',
+                        'تصميم وتحسين قاعدة البيانات',
+                        'مصادقة وتخويل المستخدم',
+                        'تكامل بوابة الدفع',
+                        'تحسين محرك البحث (SEO)',
+                        'تحسين الأداء والتخزين المؤقت',
+                        'اختبار التوافق عبر المتصفحات'
+                    ]
+                }
+            },
+            'mobile-apps': {
+                title: 'Mobile Application Development',
+                titleAr: 'تطوير تطبيقات الجوال',
+                points: {
+                    en: [
+                        'Native iOS development (Swift/Objective-C)',
+                        'Native Android development (Kotlin/Java)',
+                        'Cross-platform development (React Native/Flutter)',
+                        'Mobile UI/UX design and implementation',
+                        'App Store optimization and publishing',
+                        'Push notifications and messaging',
+                        'Offline functionality and data sync',
+                        'Mobile payment integration',
+                        'Location-based services',
+                        'Mobile analytics and crash reporting'
+                    ],
+                    ar: [
+                        'تطوير iOS الأصلي (Swift/Objective-C)',
+                        'تطوير Android الأصلي (Kotlin/Java)',
+                        'التطوير متعدد المنصات (React Native/Flutter)',
+                        'تصميم وتنفيذ واجهة المستخدم للجوال',
+                        'تحسين ونشر متجر التطبيقات',
+                        'الإشعارات الفورية والمراسلة',
+                        'الوظائف دون اتصال ومزامنة البيانات',
+                        'تكامل الدفع عبر الجوال',
+                        'الخدمات المبنية على الموقع',
+                        'تحليلات الجوال وتقارير الأعطال'
+                    ]
+                }
+            },
+            'desktop-apps': {
+                title: 'Desktop Application Development',
+                titleAr: 'تطوير تطبيقات سطح المكتب',
+                points: {
+                    en: [
+                        'Windows application development (.NET/WPF)',
+                        'macOS application development (Swift/Objective-C)',
+                        'Linux application development (Qt/GTK)',
+                        'Cross-platform desktop solutions (Electron)',
+                        'Native performance optimization',
+                        'System integration and automation',
+                        'File system operations and management',
+                        'Hardware device integration',
+                        'Advanced graphics and multimedia',
+                        'Enterprise-grade security features'
+                    ],
+                    ar: [
+                        'تطوير تطبيقات Windows (.NET/WPF)',
+                        'تطوير تطبيقات macOS (Swift/Objective-C)',
+                        'تطوير تطبيقات Linux (Qt/GTK)',
+                        'حلول سطح المكتب متعددة المنصات (Electron)',
+                        'تحسين الأداء الأصلي',
+                        'تكامل النظام والأتمتة',
+                        'عمليات وإدارة نظام الملفات',
+                        'تكامل أجهزة الأجهزة',
+                        'الرسوميات المتقدمة والوسائط المتعددة',
+                        'ميزات الأمان على مستوى المؤسسة'
+                    ]
+                }
+            },
+            'cloud-software': {
+                title: 'Cloud-Based Software Development',
+                titleAr: 'تطوير البرمجيات السحابية',
+                points: {
+                    en: [
+                        'Cloud-native application architecture',
+                        'Microservices development and deployment',
+                        'Serverless computing solutions',
+                        'Auto-scaling and load balancing',
+                        'Container orchestration (Kubernetes)',
+                        'Cloud storage and database solutions',
+                        'Multi-cloud deployment strategies',
+                        'DevOps and CI/CD pipeline implementation',
+                        'Cloud security and compliance',
+                        'Monitoring and logging solutions'
+                    ],
+                    ar: [
+                        'هندسة التطبيقات السحابية الأصلية',
+                        'تطوير ونشر الخدمات المصغرة',
+                        'حلول الحوسبة بدون خادم',
+                        'التوسع التلقائي وتوزيع الأحمال',
+                        'تنظيم الحاويات (Kubernetes)',
+                        'حلول التخزين وقواعد البيانات السحابية',
+                        'استراتيجيات النشر متعدد السحابة',
+                        'تنفيذ DevOps وخط أنابيب CI/CD',
+                        'الأمان والامتثال السحابي',
+                        'حلول المراقبة والتسجيل'
+                    ]
+                }
+            },
+            'distributed-software': {
+                title: 'Distributed Software Development',
+                titleAr: 'تطوير البرمجيات الموزعة',
+                points: {
+                    en: [
+                        'Distributed system architecture design',
+                        'High-availability and fault tolerance',
+                        'Database sharding and replication',
+                        'Message queuing and event streaming',
+                        'Consensus algorithms implementation',
+                        'Load balancing and traffic management',
+                        'Distributed caching solutions',
+                        'Network partition handling',
+                        'Performance monitoring and optimization',
+                        'Disaster recovery and backup systems'
+                    ],
+                    ar: [
+                        'تصميم هندسة النظام الموزع',
+                        'التوفر العالي وتحمل الأخطاء',
+                        'تقسيم وتكرار قاعدة البيانات',
+                        'طوابير الرسائل وتدفق الأحداث',
+                        'تنفيذ خوارزميات الإجماع',
+                        'توزيع الأحمال وإدارة حركة المرور',
+                        'حلول التخزين المؤقت الموزعة',
+                        'التعامل مع تقسيم الشبكة',
+                        'مراقبة وتحسين الأداء',
+                        'أنظمة استعادة الكوارث والنسخ الاحتياطي'
+                    ]
+                }
+            },
+            'educational-software': {
+                title: 'Educational Software Development',
+                titleAr: 'تطوير البرمجيات التعليمية',
+                points: {
+                    en: [
+                        'Learning Management System (LMS) development',
+                        'Interactive courseware and content creation',
+                        'Assessment and testing platforms',
+                        'Virtual classroom solutions',
+                        'Student progress tracking and analytics',
+                        'Gamification and engagement features',
+                        'Multi-media content integration',
+                        'Accessibility compliance (WCAG)',
+                        'Mobile learning applications',
+                        'Integration with educational standards (SCORM)'
+                    ],
+                    ar: [
+                        'تطوير نظام إدارة التعلم (LMS)',
+                        'إنشاء المحتوى والمواد التفاعلية',
+                        'منصات التقييم والاختبار',
+                        'حلول الفصول الافتراضية',
+                        'تتبع تقدم الطلاب والتحليلات',
+                        'ميزات التلعيب والمشاركة',
+                        'تكامل المحتوى متعدد الوسائط',
+                        'الامتثال لإمكانية الوصول (WCAG)',
+                        'تطبيقات التعلم المحمولة',
+                        'التكامل مع المعايير التعليمية (SCORM)'
+                    ]
+                }
+            },
+            'medical-software': {
+                title: 'Medical Software Development',
+                titleAr: 'تطوير البرمجيات الطبية',
+                points: {
+                    en: [
+                        'Electronic Health Record (EHR) systems',
+                        'Hospital Information Systems (HIS)',
+                        'Medical imaging and DICOM integration',
+                        'Telemedicine and remote consultation platforms',
+                        'Laboratory Information Management Systems',
+                        'Pharmacy management solutions',
+                        'Medical device integration and IoT',
+                        'HIPAA compliance and data security',
+                        'Clinical decision support systems',
+                        'Medical billing and insurance processing'
+                    ],
+                    ar: [
+                        'أنظمة السجلات الصحية الإلكترونية (EHR)',
+                        'أنظمة معلومات المستشفيات (HIS)',
+                        'التصوير الطبي وتكامل DICOM',
+                        'منصات الطب عن بُعد والاستشارة عن بُعد',
+                        'أنظمة إدارة معلومات المختبر',
+                        'حلول إدارة الصيدلية',
+                        'تكامل الأجهزة الطبية وإنترنت الأشياء',
+                        'الامتثال لـ HIPAA وأمان البيانات',
+                        'أنظمة دعم القرار السريري',
+                        'الفواتير الطبية ومعالجة التأمين'
+                    ]
+                }
+            },
+            'accounting-software': {
+                title: 'Accounting Software Development',
+                titleAr: 'تطوير البرمجيات المحاسبية',
+                points: {
+                    en: [
+                        'General ledger and chart of accounts',
+                        'Accounts payable and receivable management',
+                        'Invoicing and billing automation',
+                        'Tax calculation and compliance',
+                        'Financial reporting and analytics',
+                        'Bank reconciliation and cash flow',
+                        'Multi-currency and multi-company support',
+                        'Inventory valuation and costing',
+                        'Audit trails and compliance reporting',
+                        'Integration with banking and payment systems'
+                    ],
+                    ar: [
+                        'دفتر الأستاذ العام وجدول الحسابات',
+                        'إدارة الحسابات الدائنة والمدينة',
+                        'أتمتة الفواتير والفوترة',
+                        'حساب الضرائب والامتثال',
+                        'التقارير المالية والتحليلات',
+                        'تسوية البنك والتدفق النقدي',
+                        'دعم متعدد العملات والشركات',
+                        'تقييم المخزون والتكلفة',
+                        'مسارات التدقيق وتقارير الامتثال',
+                        'التكامل مع أنظمة البنوك والدفع'
+                    ]
+                }
+            },
+            'business-management': {
+                title: 'Business Management Software',
+                titleAr: 'برمجيات إدارة الأعمال',
+                points: {
+                    en: [
+                        'Enterprise Resource Planning (ERP) systems',
+                        'Customer Relationship Management (CRM)',
+                        'Human Resources Management (HRM)',
+                        'Supply Chain Management (SCM)',
+                        'Project management and collaboration tools',
+                        'Business intelligence and analytics',
+                        'Workflow automation and process optimization',
+                        'Document management systems',
+                        'Quality management and compliance',
+                        'Performance monitoring and KPI dashboards'
+                    ],
+                    ar: [
+                        'أنظمة تخطيط موارد المؤسسة (ERP)',
+                        'إدارة علاقات العملاء (CRM)',
+                        'إدارة الموارد البشرية (HRM)',
+                        'إدارة سلسلة التوريد (SCM)',
+                        'أدوات إدارة المشاريع والتعاون',
+                        'ذكاء الأعمال والتحليلات',
+                        'أتمتة سير العمل وتحسين العمليات',
+                        'أنظمة إدارة الوثائق',
+                        'إدارة الجودة والامتثال',
+                        'مراقبة الأداء ولوحات مؤشرات الأداء الرئيسية'
+                    ]
+                }
+            },
+            'ai-software': {
+                title: 'Artificial Intelligence Software',
+                titleAr: 'برمجيات الذكاء الاصطناعي',
+                points: {
+                    en: [
+                        'Machine learning model development',
+                        'Natural language processing (NLP)',
+                        'Computer vision and image recognition',
+                        'Chatbots and conversational AI',
+                        'Predictive analytics and forecasting',
+                        'Recommendation systems',
+                        'Automated decision making systems',
+                        'Deep learning neural networks',
+                        'AI model training and optimization',
+                        'AI ethics and bias mitigation'
+                    ],
+                    ar: [
+                        'تطوير نماذج التعلم الآلي',
+                        'معالجة اللغة الطبيعية (NLP)',
+                        'رؤية الكمبيوتر والتعرف على الصور',
+                        'شات بوت والذكاء الاصطناعي التحاوري',
+                        'التحليلات التنبؤية والتنبؤ',
+                        'أنظمة التوصية',
+                        'أنظمة صنع القرار الآلي',
+                        'شبكات التعلم العميق العصبية',
+                        'تدريب وتحسين نماذج الذكاء الاصطناعي',
+                        'أخلاقيات الذكاء الاصطناعي وتخفيف التحيز'
+                    ]
+                }
+            },
+            'blockchain': {
+                title: 'Blockchain Development',
+                titleAr: 'تطوير البلوك تشين',
+                points: {
+                    en: [
+                        'Smart contract development',
+                        'Cryptocurrency and token creation',
+                        'Decentralized application (DApp) development',
+                        'Blockchain network setup and maintenance',
+                        'Consensus mechanism implementation',
+                        'Digital wallet integration',
+                        'Blockchain security and auditing',
+                        'Cross-chain interoperability',
+                        'NFT marketplace development',
+                        'DeFi protocol implementation'
+                    ],
+                    ar: [
+                        'تطوير العقود الذكية',
+                        'إنشاء العملات المشفرة والرموز',
+                        'تطوير التطبيقات اللامركزية (DApp)',
+                        'إعداد وصيانة شبكة البلوك تشين',
+                        'تنفيذ آلية الإجماع',
+                        'تكامل المحفظة الرقمية',
+                        'أمان وتدقيق البلوك تشين',
+                        'التشغيل البيني عبر السلاسل',
+                        'تطوير سوق NFT',
+                        'تنفيذ بروتوكول DeFi'
+                    ]
+                }
+            },
+            'iot': {
+                title: 'Internet of Things Development',
+                titleAr: 'تطوير إنترنت الأشياء',
+                points: {
+                    en: [
+                        'IoT device programming and integration',
+                        'Sensor data collection and processing',
+                        'IoT platform development',
+                        'Device connectivity and communication',
+                        'Edge computing solutions',
+                        'IoT security implementation',
+                        'Data analytics and visualization',
+                        'Remote monitoring and control',
+                        'IoT protocol implementation',
+                        'Smart home and industrial IoT'
+                    ],
+                    ar: [
+                        'برمجة وتكامل أجهزة إنترنت الأشياء',
+                        'جمع ومعالجة بيانات أجهزة الاستشعار',
+                        'تطوير منصة إنترنت الأشياء',
+                        'اتصال الأجهزة والتواصل',
+                        'حلول الحوسبة الطرفية',
+                        'تنفيذ أمان إنترنت الأشياء',
+                        'تحليل البيانات والتصور',
+                        'المراقبة والتحكم عن بُعد',
+                        'تنفيذ بروتوكول إنترنت الأشياء',
+                        'المنزل الذكي وإنترنت الأشياء الصناعي'
+                    ]
+                }
+            },
+            'ar-vr': {
+                title: 'AR/VR Development',
+                titleAr: 'تطوير الواقع المعزز والافتراضي',
+                points: {
+                    en: [
+                        'Virtual reality application development',
+                        'Augmented reality solutions',
+                        'Mixed reality experiences',
+                        '3D modeling and environment creation',
+                        'VR/AR user interface design',
+                        'Motion tracking and gesture recognition',
+                        'Immersive content creation',
+                        'Cross-platform VR/AR development',
+                        'Performance optimization for VR/AR',
+                        'VR/AR hardware integration'
+                    ],
+                    ar: [
+                        'تطوير تطبيقات الواقع الافتراضي',
+                        'حلول الواقع المعزز',
+                        'تجارب الواقع المختلط',
+                        'النمذجة ثلاثية الأبعاد وإنشاء البيئة',
+                        'تصميم واجهة المستخدم VR/AR',
+                        'تتبع الحركة والتعرف على الإيماءات',
+                        'إنشاء المحتوى الغامر',
+                        'تطوير VR/AR متعدد المنصات',
+                        'تحسين الأداء لـ VR/AR',
+                        'تكامل أجهزة VR/AR'
+                    ]
+                }
+            },
+            'cybersecurity-software': {
+                title: 'Cybersecurity Software Development',
+                titleAr: 'تطوير برمجيات الأمن السيبراني',
+                points: {
+                    en: [
+                        'Intrusion detection and prevention systems',
+                        'Vulnerability assessment and scanning tools',
+                        'Security information and event management (SIEM)',
+                        'Identity and access management (IAM)',
+                        'Endpoint detection and response (EDR)',
+                        'Network security monitoring',
+                        'Encryption and data protection solutions',
+                        'Security awareness training platforms',
+                        'Incident response and forensics tools',
+                        'Compliance monitoring and reporting'
+                    ],
+                    ar: [
+                        'أنظمة كشف ومنع التسلل',
+                        'أدوات تقييم ومسح الثغرات الأمنية',
+                        'إدارة معلومات وأحداث الأمان (SIEM)',
+                        'إدارة الهوية والوصول (IAM)',
+                        'كشف والاستجابة لنقاط النهاية (EDR)',
+                        'مراقبة أمان الشبكة',
+                        'حلول التشفير وحماية البيانات',
+                        'منصات تدريب الوعي الأمني',
+                        'أدوات الاستجابة للحوادث والطب الشرعي',
+                        'مراقبة والإبلاغ عن الامتثال'
+                    ]
+                }
+            },
+            'open-source': {
+                title: 'Open Source Software Development',
+                titleAr: 'تطوير البرمجيات مفتوحة المصدر',
+                points: {
+                    en: [
+                        'Open source project development and contribution',
+                        'Community-driven software solutions',
+                        'License compliance and documentation',
+                        'Open source ecosystem integration',
+                        'Collaborative development workflows',
+                        'Code review and quality assurance',
+                        'Open source licensing strategies',
+                        'Community engagement and support',
+                        'Security auditing of open source components',
+                        'Open source governance and policies'
+                    ],
+                    ar: [
+                        'تطوير ومساهمة مشاريع المصدر المفتوح',
+                        'حلول برمجية مدفوعة بالمجتمع',
+                        'الامتثال للترخيص والتوثيق',
+                        'تكامل نظام المصدر المفتوح',
+                        'سير عمل التطوير التعاوني',
+                        'مراجعة الكود وضمان الجودة',
+                        'استراتيجيات ترخيص المصدر المفتوح',
+                        'المشاركة المجتمعية والدعم',
+                        'المراجعة الأمنية لمكونات المصدر المفتوح',
+                        'حوكمة وسياسات المصدر المفتوح'
+                    ]
+                }
+            },
+            'freeware': {
+                title: 'Freeware Software Development',
+                titleAr: 'تطوير البرمجيات المجانية',
+                points: {
+                    en: [
+                        'Free software development and distribution',
+                        'Ad-supported software solutions',
+                        'Freemium business model implementation',
+                        'User acquisition and retention strategies',
+                        'Monetization through premium features',
+                        'Community building and user engagement',
+                        'Free software marketing and promotion',
+                        'User feedback and feature prioritization',
+                        'Free software analytics and metrics',
+                        'Partnership and sponsorship opportunities'
+                    ],
+                    ar: [
+                        'تطوير وتوزيع البرمجيات المجانية',
+                        'حلول برمجية مدعومة بالإعلانات',
+                        'تنفيذ نموذج الأعمال المجاني المميز',
+                        'استراتيجيات اكتساب والاحتفاظ بالمستخدمين',
+                        'تحقيق الربح من خلال الميزات المميزة',
+                        'بناء المجتمع والمشاركة مع المستخدمين',
+                        'تسويق وتعزيز البرمجيات المجانية',
+                        'ملاحظات المستخدمين وأولوية الميزات',
+                        'تحليلات ومقاييس البرمجيات المجانية',
+                        'فرص الشراكة والرعاية'
+                    ]
+                }
+            },
+            'trialware': {
+                title: 'Trial Software Development',
+                titleAr: 'تطوير البرمجيات التجريبية',
+                points: {
+                    en: [
+                        'Trial version development and management',
+                        'Feature limitation and time-based restrictions',
+                        'Trial-to-paid conversion optimization',
+                        'User onboarding and trial experience',
+                        'Trial analytics and conversion tracking',
+                        'Payment gateway integration for trials',
+                        'Trial extension and upgrade strategies',
+                        'Customer support during trial periods',
+                        'Trial marketing and lead generation',
+                        'Post-trial follow-up and retention'
+                    ],
+                    ar: [
+                        'تطوير وإدارة الإصدارات التجريبية',
+                        'تقييد الميزات والقيود الزمنية',
+                        'تحسين التحويل من التجريبي إلى المدفوع',
+                        'إعداد المستخدمين وتجربة التجربة',
+                        'تحليلات التجربة وتتبع التحويل',
+                        'تكامل بوابة الدفع للتجارب',
+                        'استراتيجيات تمديد التجربة والترقية',
+                        'دعم العملاء خلال فترات التجربة',
+                        'تسويق التجربة وتوليد العملاء المحتملين',
+                        'المتابعة والاحتفاظ بعد التجربة'
+                    ]
+                }
+            },
+            'commercial-software': {
+                title: 'Commercial Software Development',
+                titleAr: 'تطوير البرمجيات التجارية',
+                points: {
+                    en: [
+                        'Commercial software licensing systems',
+                        'Subscription and billing management',
+                        'Enterprise software development',
+                        'Software as a Service (SaaS) solutions',
+                        'License key generation and validation',
+                        'Revenue optimization and pricing strategies',
+                        'Enterprise sales and distribution',
+                        'Customer relationship management',
+                        'Software maintenance and updates',
+                        'Professional support and training'
+                    ],
+                    ar: [
+                        'أنظمة ترخيص البرمجيات التجارية',
+                        'إدارة الاشتراكات والفواتير',
+                        'تطوير البرمجيات المؤسسية',
+                        'حلول البرمجيات كخدمة (SaaS)',
+                        'توليد والتحقق من مفاتيح الترخيص',
+                        'تحسين الإيرادات واستراتيجيات التسعير',
+                        'المبيعات والتوزيع المؤسسي',
+                        'إدارة علاقات العملاء',
+                        'صيانة وتحديث البرمجيات',
+                        'الدعم والتدريب المهني'
+                    ]
+                }
+            },
+            'design-software': {
+                title: 'Design & Media Software Development',
+                titleAr: 'تطوير برمجيات التصميم والوسائط',
+                points: {
+                    en: [
+                        'Graphic design software development',
+                        'Video editing and post-production tools',
+                        '3D modeling and animation software',
+                        'Digital asset management systems',
+                        'Creative workflow automation',
+                        'Design collaboration platforms',
+                        'Media file processing and optimization',
+                        'Color management and calibration',
+                        'Design template and asset libraries',
+                        'Creative project management tools'
+                    ],
+                    ar: [
+                        'تطوير برمجيات التصميم الجرافيكي',
+                        'أدوات تحرير الفيديو وما بعد الإنتاج',
+                        'برمجيات النمذجة والرسوم المتحركة ثلاثية الأبعاد',
+                        'أنظمة إدارة الأصول الرقمية',
+                        'أتمتة سير العمل الإبداعي',
+                        'منصات التعاون في التصميم',
+                        'معالجة وتحسين ملفات الوسائط',
+                        'إدارة الألوان والمعايرة',
+                        'مكتبات قوالب التصميم والأصول',
+                        'أدوات إدارة المشاريع الإبداعية'
+                    ]
+                }
+            },
+            'streaming-software': {
+                title: 'Streaming & Communication Software',
+                titleAr: 'برمجيات البث والتواصل',
+                points: {
+                    en: [
+                        'Live streaming platform development',
+                        'Video conferencing solutions',
+                        'Real-time communication protocols',
+                        'Streaming quality optimization',
+                        'Multi-platform streaming support',
+                        'Content delivery network integration',
+                        'Streaming analytics and monitoring',
+                        'Interactive streaming features',
+                        'Mobile streaming applications',
+                        'Streaming security and DRM'
+                    ],
+                    ar: [
+                        'تطوير منصات البث المباشر',
+                        'حلول مؤتمرات الفيديو',
+                        'بروتوكولات التواصل في الوقت الفعلي',
+                        'تحسين جودة البث',
+                        'دعم البث متعدد المنصات',
+                        'تكامل شبكة توصيل المحتوى',
+                        'تحليلات ومراقبة البث',
+                        'ميزات البث التفاعلي',
+                        'تطبيقات البث المحمولة',
+                        'أمان البث وإدارة الحقوق الرقمية'
+                    ]
+                }
+            },
+            'web-development': {
+                title: 'Website Development Services',
+                titleAr: 'خدمات تطوير المواقع',
+                points: {
+                    en: [
+                        'Custom website design and development',
+                        'E-commerce platform development',
+                        'Content Management System (CMS)',
+                        'Progressive Web App (PWA) development',
+                        'Search Engine Optimization (SEO)',
+                        'Website performance optimization',
+                        'Responsive design implementation',
+                        'Database design and integration',
+                        'Payment gateway integration',
+                        'Website maintenance and updates'
+                    ],
+                    ar: [
+                        'تصميم وتطوير المواقع المخصصة',
+                        'تطوير منصات التجارة الإلكترونية',
+                        'نظام إدارة المحتوى (CMS)',
+                        'تطوير تطبيق الويب التقدمي (PWA)',
+                        'تحسين محركات البحث (SEO)',
+                        'تحسين أداء الموقع',
+                        'تنفيذ التصميم المتجاوب',
+                        'تصميم وتكامل قاعدة البيانات',
+                        'تكامل بوابة الدفع',
+                        'صيانة وتحديث الموقع'
+                    ]
+                }
+            },
+            'mobile-development': {
+                title: 'Mobile App Development Services',
+                titleAr: 'خدمات تطوير تطبيقات الجوال',
+                points: {
+                    en: [
+                        'Native iOS and Android development',
+                        'Cross-platform mobile development',
+                        'Mobile UI/UX design',
+                        'App Store optimization',
+                        'Push notification systems',
+                        'Mobile payment integration',
+                        'Offline functionality',
+                        'Mobile analytics and tracking',
+                        'App performance optimization',
+                        'Mobile security implementation'
+                    ],
+                    ar: [
+                        'تطوير iOS و Android الأصلي',
+                        'تطوير الجوال متعدد المنصات',
+                        'تصميم واجهة المستخدم للجوال',
+                        'تحسين متجر التطبيقات',
+                        'أنظمة الإشعارات الفورية',
+                        'تكامل الدفع عبر الجوال',
+                        'الوظائف دون اتصال',
+                        'تحليلات وتتبع الجوال',
+                        'تحسين أداء التطبيق',
+                        'تنفيذ أمان الجوال'
+                    ]
+                }
+            },
+            'erp-crm': {
+                title: 'ERP/CRM System Development',
+                titleAr: 'تطوير أنظمة ERP/CRM',
+                points: {
+                    en: [
+                        'Enterprise Resource Planning (ERP) systems',
+                        'Customer Relationship Management (CRM)',
+                        'Inventory management systems',
+                        'Sales and marketing automation',
+                        'Financial management modules',
+                        'Human resource management',
+                        'Supply chain management',
+                        'Business intelligence and reporting',
+                        'Integration with existing systems',
+                        'Custom workflow automation'
+                    ],
+                    ar: [
+                        'أنظمة تخطيط موارد المؤسسات (ERP)',
+                        'إدارة علاقات العملاء (CRM)',
+                        'أنظمة إدارة المخزون',
+                        'أتمتة المبيعات والتسويق',
+                        'وحدات الإدارة المالية',
+                        'إدارة الموارد البشرية',
+                        'إدارة سلسلة التوريد',
+                        'ذكاء الأعمال والتقارير',
+                        'التكامل مع الأنظمة الموجودة',
+                        'أتمتة سير العمل المخصص'
+                    ]
+                }
+            },
+            'ui-ux-design': {
+                title: 'UI/UX Design Services',
+                titleAr: 'خدمات تصميم واجهات المستخدم',
+                points: {
+                    en: [
+                        'User interface design and prototyping',
+                        'User experience research and testing',
+                        'Wireframing and mockup creation',
+                        'Interactive design systems',
+                        'Accessibility compliance (WCAG)',
+                        'User journey mapping',
+                        'Design system development',
+                        'Usability testing and optimization',
+                        'Mobile-first design approach',
+                        'Design-to-development handoff'
+                    ],
+                    ar: [
+                        'تصميم واجهة المستخدم وإنشاء النماذج',
+                        'بحث واختبار تجربة المستخدم',
+                        'إنشاء الإطارات السلكية والنماذج',
+                        'أنظمة التصميم التفاعلية',
+                        'الامتثال لإمكانية الوصول (WCAG)',
+                        'رسم خرائط رحلة المستخدم',
+                        'تطوير نظام التصميم',
+                        'اختبار وتحسين سهولة الاستخدام',
+                        'نهج التصميم المحمول أولاً',
+                        'تسليم التصميم للتطوير'
+                    ]
+                }
+            },
+            'data-analytics': {
+                title: 'Data Analytics & Business Intelligence',
+                titleAr: 'تحليل البيانات وذكاء الأعمال',
+                points: {
+                    en: [
+                        'Data warehouse design and implementation',
+                        'Business intelligence dashboard development',
+                        'Data visualization and reporting',
+                        'Predictive analytics and modeling',
+                        'Real-time data processing',
+                        'Data quality and governance',
+                        'Machine learning integration',
+                        'Performance metrics and KPIs',
+                        'Data security and compliance',
+                        'Custom analytics solutions'
+                    ],
+                    ar: [
+                        'تصميم وتنفيذ مستودع البيانات',
+                        'تطوير لوحات ذكاء الأعمال',
+                        'تصور البيانات والتقارير',
+                        'التحليلات التنبؤية والنمذجة',
+                        'معالجة البيانات في الوقت الفعلي',
+                        'جودة البيانات والحوكمة',
+                        'تكامل التعلم الآلي',
+                        'مقاييس الأداء والمؤشرات الرئيسية',
+                        'أمان البيانات والامتثال',
+                        'حلول التحليلات المخصصة'
+                    ]
+                }
+            },
+            'api-integration': {
+                title: 'API & Integration Services',
+                titleAr: 'خدمات API والتكامل',
+                points: {
+                    en: [
+                        'RESTful API development',
+                        'Third-party service integration',
+                        'Payment gateway integration',
+                        'Database integration and migration',
+                        'Cloud service integration',
+                        'API documentation and testing',
+                        'Microservices architecture',
+                        'Data synchronization',
+                        'API security and authentication',
+                        'Integration monitoring and maintenance'
+                    ],
+                    ar: [
+                        'تطوير RESTful API',
+                        'تكامل خدمات الطرف الثالث',
+                        'تكامل بوابة الدفع',
+                        'تكامل قاعدة البيانات والهجرة',
+                        'تكامل الخدمات السحابية',
+                        'توثيق واختبار API',
+                        'هندسة الخدمات المصغرة',
+                        'مزامنة البيانات',
+                        'أمان API والمصادقة',
+                        'مراقبة وصيانة التكامل'
+                    ]
+                }
+            },
+            'chatbots': {
+                title: 'Smart Chatbot Development',
+                titleAr: 'تطوير البوتات الذكية',
+                points: {
+                    en: [
+                        'WhatsApp/Telegram bot development',
+                        'Natural language processing (NLP)',
+                        'Conversational AI implementation',
+                        'Multi-language chatbot support',
+                        'Integration with CRM systems',
+                        'Automated customer service',
+                        'Chatbot analytics and optimization',
+                        'Voice-enabled chatbots',
+                        'Machine learning for chatbots',
+                        'Chatbot deployment and maintenance'
+                    ],
+                    ar: [
+                        'تطوير بوتات WhatsApp/Telegram',
+                        'معالجة اللغة الطبيعية (NLP)',
+                        'تنفيذ الذكاء الاصطناعي المحادثي',
+                        'دعم البوتات متعددة اللغات',
+                        'التكامل مع أنظمة CRM',
+                        'خدمة العملاء الآلية',
+                        'تحليلات وتحسين البوتات',
+                        'البوتات المدعومة بالصوت',
+                        'التعلم الآلي للبوتات',
+                        'نشر وصيانة البوتات'
+                    ]
+                }
+            },
+            'task-automation': {
+                title: 'Task Automation Services',
+                titleAr: 'خدمات أتمتة المهام',
+                points: {
+                    en: [
+                        'Email automation and marketing',
+                        'Workflow automation design',
+                        'Business process automation',
+                        'Scheduled task management',
+                        'Data entry and processing automation',
+                        'Report generation automation',
+                        'Integration automation',
+                        'Customer communication automation',
+                        'Quality assurance automation',
+                        'Monitoring and alert automation'
+                    ],
+                    ar: [
+                        'أتمتة البريد الإلكتروني والتسويق',
+                        'تصميم أتمتة سير العمل',
+                        'أتمتة العمليات التجارية',
+                        'إدارة المهام المجدولة',
+                        'أتمتة إدخال ومعالجة البيانات',
+                        'أتمتة توليد التقارير',
+                        'أتمتة التكامل',
+                        'أتمتة التواصل مع العملاء',
+                        'أتمتة ضمان الجودة',
+                        'أتمتة المراقبة والتنبيهات'
+                    ]
+                }
+            },
+            'consulting': {
+                title: 'Technical Consulting Services',
+                titleAr: 'خدمات الاستشارات التقنية',
+                points: {
+                    en: [
+                        'Technology strategy and planning',
+                        'Software architecture consulting',
+                        'Technology stack selection',
+                        'Feasibility studies and analysis',
+                        'Project planning and estimation',
+                        'Code review and optimization',
+                        'Security assessment and recommendations',
+                        'Performance optimization consulting',
+                        'Migration and upgrade planning',
+                        'Technical documentation and training'
+                    ],
+                    ar: [
+                        'استراتيجية وتخطيط التقنية',
+                        'استشارات هندسة البرمجيات',
+                        'اختيار مجموعة التقنيات',
+                        'دراسات الجدوى والتحليل',
+                        'تخطيط وتقدير المشروع',
+                        'مراجعة وتحسين الكود',
+                        'تقييم الأمان والتوصيات',
+                        'استشارات تحسين الأداء',
+                        'تخطيط الهجرة والترقية',
+                        'التوثيق والتدريب التقني'
+                    ]
+                }
+            },
+            'cloud-computing': {
+                title: 'Cloud Computing Services',
+                titleAr: 'خدمات الحوسبة السحابية',
+                points: {
+                    en: [
+                        'Cloud infrastructure design and deployment',
+                        'Multi-cloud strategy implementation',
+                        'Serverless computing solutions',
+                        'Container orchestration (Kubernetes)',
+                        'Cloud security and compliance',
+                        'Auto-scaling and load balancing',
+                        'Cloud migration and optimization',
+                        'DevOps and CI/CD implementation',
+                        'Cloud monitoring and management',
+                        'Disaster recovery and backup'
+                    ],
+                    ar: [
+                        'تصميم ونشر البنية التحتية السحابية',
+                        'تنفيذ استراتيجية متعددة السحابة',
+                        'حلول الحوسبة بدون خادم',
+                        'تنظيم الحاويات (Kubernetes)',
+                        'الأمان والامتثال السحابي',
+                        'التوسع التلقائي وتوزيع الأحمال',
+                        'الهجرة والتحسين السحابي',
+                        'تنفيذ DevOps و CI/CD',
+                        'المراقبة والإدارة السحابية',
+                        'استعادة الكوارث والنسخ الاحتياطي'
+                    ]
+                }
+            },
+            'security-audit': {
+                title: 'Security Audit Services',
+                titleAr: 'خدمات فحص الأمان',
+                points: {
+                    en: [
+                        'Vulnerability assessment and scanning',
+                        'Penetration testing and ethical hacking',
+                        'Security compliance auditing',
+                        'Code security review',
+                        'Infrastructure security assessment',
+                        'Security policy development',
+                        'Incident response planning',
+                        'Security training and awareness',
+                        'Risk assessment and mitigation',
+                        'Security monitoring and alerting'
+                    ],
+                    ar: [
+                        'تقييم ومسح الثغرات الأمنية',
+                        'اختبار الاختراق والقرصنة الأخلاقية',
+                        'مراجعة الامتثال الأمني',
+                        'مراجعة أمان الكود',
+                        'تقييم أمان البنية التحتية',
+                        'تطوير السياسات الأمنية',
+                        'تخطيط الاستجابة للحوادث',
+                        'التدريب والوعي الأمني',
+                        'تقييم المخاطر والتخفيف',
+                        'المراقبة والتنبيه الأمني'
+                    ]
+                }
+            },
+            'maintenance-support': {
+                title: 'Maintenance & Support Services',
+                titleAr: 'خدمات الصيانة والدعم',
+                points: {
+                    en: [
+                        '24/7 system monitoring and support',
+                        'Regular software updates and patches',
+                        'Bug fixes and issue resolution',
+                        'Performance optimization',
+                        'Security updates and maintenance',
+                        'Database maintenance and optimization',
+                        'Backup and disaster recovery',
+                        'Technical support and troubleshooting',
+                        'System health monitoring',
+                        'Proactive maintenance planning'
+                    ],
+                    ar: [
+                        'المراقبة والدعم على مدار الساعة',
+                        'التحديثات والتصحيحات المنتظمة',
+                        'إصلاح الأخطاء وحل المشاكل',
+                        'تحسين الأداء',
+                        'التحديثات والصيانة الأمنية',
+                        'صيانة وتحسين قاعدة البيانات',
+                        'النسخ الاحتياطي واستعادة الكوارث',
+                        'الدعم التقني وحل المشاكل',
+                        'مراقبة صحة النظام',
+                        'تخطيط الصيانة الاستباقية'
+                    ]
+                }
+            },
+            'training-docs': {
+                title: 'Training & Documentation Services',
+            }
+        };
+
+        // Document contents - Complete legal documents
+        const documentContents = {
+            'intellectual-property': {
+                title: 'Intellectual Property Rights Agreement',
+                titleAr: 'اتفاقية حقوق الملكية الفكرية',
+                content: {
+                    en: `
+                        <h4>1. Ownership of Developed Software</h4>
+                        <p>Upon full payment, the client shall own all rights, title, and interest in the custom software developed specifically for their project, including:</p>
+                        <ul>
+                            <li>Source code written specifically for the client's project</li>
+                            <li>Custom databases and data structures</li>
+                            <li>Project-specific documentation and user manuals</li>
+                            <li>Custom graphics and user interface elements</li>
+                        </ul>
+
+                        <h4>2. Meta Software Retained Rights</h4>
+                        <p>Meta Software retains ownership of:</p>
+                        <ul>
+                            <li>Pre-existing proprietary frameworks and libraries</li>
+                            <li>General methodologies and development processes</li>
+                            <li>Reusable code components and templates</li>
+                            <li>Third-party licensed software and tools</li>
+                        </ul>
+
+                        <h4>3. License Restrictions</h4>
+                        <p>The client agrees to:</p>
+                        <ul>
+                            <li>Not reverse engineer proprietary Meta Software frameworks</li>
+                            <li>Not distribute or resell Meta Software's proprietary tools</li>
+                            <li>Respect third-party software licenses included in the project</li>
+                            <li>Provide proper attribution for open-source components</li>
+                        </ul>
+
+                        <h4>4. Confidentiality</h4>
+                        <p>Both parties agree to maintain confidentiality of:</p>
+                        <ul>
+                            <li>Proprietary business information</li>
+                            <li>Technical specifications and architecture</li>
+                            <li>Trade secrets and know-how</li>
+                            <li>Client data and business processes</li>
+                        </ul>
+
+                        <h4>5. Warranty and Support</h4>
+                        <p>Meta Software provides:</p>
+                        <ul>
+                            <li>90-day warranty on delivered software</li>
+                            <li>Bug fixes for issues present at delivery</li>
+                            <li>Technical support during warranty period</li>
+                            <li>Documentation for ongoing maintenance</li>
+                        </ul>
+                    `,
+                    ar: `
+                        <h4>1. ملكية البرمجيات المطورة</h4>
+                        <p>عند الدفع الكامل، يمتلك العميل جميع الحقوق والملكية والمصلحة في البرمجيات المخصصة المطورة خصيصاً لمشروعه، بما في ذلك:</p>
+                        <ul>
+                            <li>الكود المصدري المكتوب خصيصاً لمشروع العميل</li>
+                            <li>قواعد البيانات المخصصة وهياكل البيانات</li>
+                            <li>الوثائق الخاصة بالمشروع ودلائل المستخدم</li>
+                            <li>الرسوميات المخصصة وعناصر واجهة المستخدم</li>
+                        </ul>
+
+                        <h4>2. الحقوق المحتفظ بها لميتا سوفت وير</h4>
+                        <p>تحتفظ ميتا سوفت وير بملكية:</p>
+                        <ul>
+                            <li>الأطر والمكتبات الخاصة الموجودة مسبقاً</li>
+                            <li>المنهجيات العامة وعمليات التطوير</li>
+                            <li>مكونات الكود القابلة لإعادة الاستخدام والقوالب</li>
+                            <li>البرمجيات والأدوات المرخصة من طرف ثالث</li>
+                        </ul>
+
+                        <h4>3. قيود الترخيص</h4>
+                        <p>يوافق العميل على:</p>
+                        <ul>
+                            <li>عدم إجراء هندسة عكسية لأطر ميتا سوفت وير الخاصة</li>
+                            <li>عدم توزيع أو إعادة بيع أدوات ميتا سوفت وير الخاصة</li>
+                            <li>احترام تراخيص البرمجيات من الطرف الثالث المدرجة في المشروع</li>
+                            <li>توفير الإسناد المناسب لمكونات المصدر المفتوح</li>
+                        </ul>
+
+                        <h4>4. السرية</h4>
+                        <p>يوافق الطرفان على الحفاظ على سرية:</p>
+                        <ul>
+                            <li>المعلومات التجارية الخاصة</li>
+                            <li>المواصفات التقنية والهندسة المعمارية</li>
+                            <li>الأسرار التجارية والمعرفة الفنية</li>
+                            <li>بيانات العميل والعمليات التجارية</li>
+                        </ul>
+
+                        <h4>5. الضمان والدعم</h4>
+                        <p>تقدم ميتا سوفت وير:</p>
+                        <ul>
+                            <li>ضمان 90 يوماً على البرمجيات المسلمة</li>
+                            <li>إصلاح الأخطاء الموجودة وقت التسليم</li>
+                            <li>الدعم التقني خلال فترة الضمان</li>
+                            <li>التوثيق للصيانة المستمرة</li>
+                        </ul>
+                    `
+                }
+            },
+            'privacy-policy': {
+                title: 'Privacy Policy',
+                titleAr: 'سياسة الخصوصية',
+                content: {
+                    en: `
+                        <h4>1. Information Collection</h4>
+                        <p>We collect the following types of information:</p>
+                        <ul>
+                            <li>Personal identification information (name, email, phone)</li>
+                            <li>Company information and business details</li>
+                            <li>Project requirements and specifications</li>
+                            <li>Communication preferences and history</li>
+                        </ul>
+
+                        <h4>2. Use of Information</h4>
+                        <p>Collected information is used for:</p>
+                        <ul>
+                            <li>Project development and delivery</li>
+                            <li>Communication regarding project progress</li>
+                            <li>Billing and payment processing</li>
+                            <li>Customer support and technical assistance</li>
+                            <li>Service improvement and quality assurance</li>
+                        </ul>
+
+                        <h4>3. Data Protection</h4>
+                        <p>We implement security measures including:</p>
+                        <ul>
+                            <li>Encrypted data transmission and storage</li>
+                            <li>Access controls and authentication systems</li>
+                            <li>Regular security audits and updates</li>
+                            <li>Staff training on data protection protocols</li>
+                        </ul>
+
+                        <h4>4. Information Sharing</h4>
+                        <p>We do not share your information except:</p>
+                        <ul>
+                            <li>With your explicit consent</li>
+                            <li>As required by law or legal proceedings</li>
+                            <li>With trusted service providers under confidentiality agreements</li>
+                            <li>To protect our rights, property, or safety</li>
+                        </ul>
+
+                        <h4>5. Your Rights</h4>
+                        <p>You have the right to:</p>
+                        <ul>
+                            <li>Access your personal data</li>
+                            <li>Correct inaccurate information</li>
+                            <li>Request data deletion (subject to legal requirements)</li>
+                            <li>Opt-out of marketing communications</li>
+                            <li>File a complaint with data protection authorities</li>
+                        </ul>
+                    `,
+                    ar: `
+                        <h4>1. جمع المعلومات</h4>
+                        <p>نجمع الأنواع التالية من المعلومات:</p>
+                        <ul>
+                            <li>معلومات التعريف الشخصي (الاسم، البريد الإلكتروني، الهاتف)</li>
+                            <li>معلومات الشركة والتفاصيل التجارية</li>
+                            <li>متطلبات ومواصفات المشروع</li>
+                            <li>تفضيلات وتاريخ التواصل</li>
+                        </ul>
+
+                        <h4>2. استخدام المعلومات</h4>
+                        <p>تُستخدم المعلومات المجمعة لـ:</p>
+                        <ul>
+                            <li>تطوير وتسليم المشروع</li>
+                            <li>التواصل بشأن تقدم المشروع</li>
+                            <li>معالجة الفواتير والدفعات</li>
+                            <li>دعم العملاء والمساعدة التقنية</li>
+                            <li>تحسين الخدمة وضمان الجودة</li>
+                        </ul>
+
+                        <h4>3. حماية البيانات</h4>
+                        <p>نطبق تدابير أمنية تشمل:</p>
+                        <ul>
+                            <li>تشفير نقل وتخزين البيانات</li>
+                            <li>ضوابط الوصول وأنظمة المصادقة</li>
+                            <li>مراجعات وتحديثات أمنية منتظمة</li>
+                            <li>تدريب الموظفين على بروتوكولات حماية البيانات</li>
+                        </ul>
+
+                        <h4>4. مشاركة المعلومات</h4>
+                        <p>لا نشارك معلوماتك إلا:</p>
+                        <ul>
+                            <li>بموافقتك الصريحة</li>
+                            <li>كما يتطلب القانون أو الإجراءات القانونية</li>
+                            <li>مع مقدمي الخدمات الموثوقين تحت اتفاقيات السرية</li>
+                            <li>لحماية حقوقنا أو ممتلكاتنا أو سلامتنا</li>
+                        </ul>
+
+                        <h4>5. حقوقك</h4>
+                        <p>لديك الحق في:</p>
+                        <ul>
+                            <li>الوصول إلى بياناتك الشخصية</li>
+                            <li>تصحيح المعلومات غير الدقيقة</li>
+                            <li>طلب حذف البيانات (رهناً بالمتطلبات القانونية)</li>
+                            <li>إلغاء الاشتراك في الاتصالات التسويقية</li>
+                            <li>تقديم شكوى لسلطات حماية البيانات</li>
+                        </ul>
+                    `
+                }
+            },
+            'terms-conditions': {
+                title: 'Terms & Conditions',
+                titleAr: 'الشروط والأحكام',
+                content: {
+                    en: `
+                        <h4>1. Service Agreement</h4>
+                        <p>This agreement constitutes a legally binding contract between Meta Software and the client for software development services.</p>
+
+                        <h4>2. Scope of Work</h4>
+                        <ul>
+                            <li>Services will be provided according to agreed specifications</li>
+                            <li>Changes to scope require written approval and may affect timeline/cost</li>
+                            <li>Meta Software will use industry best practices and standards</li>
+                        </ul>
+
+                        <h4>3. Payment Terms</h4>
+                        <ul>
+                            <li>Payment schedule will be agreed upon project initiation</li>
+                            <li>Late payments may result in project suspension</li>
+                            <li>All fees are exclusive of applicable taxes</li>
+                            <li>Refunds are subject to specific terms in the project agreement</li>
+                        </ul>
+
+                        <h4>4. Timelines and Delivery</h4>
+                        <ul>
+                            <li>Project timelines are estimates based on provided requirements</li>
+                            <li>Delays due to client feedback or changes may extend delivery dates</li>
+                            <li>Force majeure events may affect project timelines</li>
+                        </ul>
+
+                        <h4>5. Client Responsibilities</h4>
+                        <ul>
+                            <li>Provide accurate and complete project requirements</li>
+                            <li>Timely feedback and approval of deliverables</li>
+                            <li>Provide necessary access to systems and data</li>
+                            <li>Ensure availability of key stakeholders for project meetings</li>
+                        </ul>
+
+                        <h4>6. Limitation of Liability</h4>
+                        <p>Meta Software's liability is limited to the total project value. We are not liable for indirect, incidental, or consequential damages.</p>
+
+                        <h4>7. Termination</h4>
+                        <p>Either party may terminate this agreement with written notice. Termination terms and compensation will be as specified in the project agreement.</p>
+                    `,
+                    ar: `
+                        <h4>1. اتفاقية الخدمة</h4>
+                        <p>تشكل هذه الاتفاقية عقداً ملزماً قانونياً بين ميتا سوفت وير والعميل لخدمات تطوير البرمجيات.</p>
+
+                        <h4>2. نطاق العمل</h4>
+                        <ul>
+                            <li>ستُقدم الخدمات وفقاً للمواصفات المتفق عليها</li>
+                            <li>التغييرات في النطاق تتطلب موافقة خطية وقد تؤثر على الجدول الزمني/التكلفة</li>
+                            <li>ستستخدم ميتا سوفت وير أفضل الممارسات والمعايير الصناعية</li>
+                        </ul>
+
+                        <h4>3. شروط الدفع</h4>
+                        <ul>
+                            <li>سيتم الاتفاق على جدول الدفع عند بدء المشروع</li>
+                            <li>التأخر في الدفع قد يؤدي إلى تعليق المشروع</li>
+                            <li>جميع الرسوم لا تشمل الضرائب المطبقة</li>
+                            <li>المبالغ المستردة تخضع لشروط محددة في اتفاقية المشروع</li>
+                        </ul>
+
+                        <h4>4. الجداول الزمنية والتسليم</h4>
+                        <ul>
+                            <li>الجداول الزمنية للمشروع تقديرات مبنية على المتطلبات المقدمة</li>
+                            <li>التأخير بسبب ملاحظات العميل أو التغييرات قد يمدد تواريخ التسليم</li>
+                            <li>أحداث القوة القاهرة قد تؤثر على الجداول الزمنية للمشروع</li>
+                        </ul>
+
+                        <h4>5. مسؤوليات العميل</h4>
+                        <ul>
+                            <li>تقديم متطلبات مشروع دقيقة وكاملة</li>
+                            <li>ملاحظات وموافقة في الوقت المناسب على المخرجات</li>
+                            <li>توفير الوصول اللازم للأنظمة والبيانات</li>
+                            <li>ضمان توفر أصحاب المصلحة الرئيسيين لاجتماعات المشروع</li>
+                        </ul>
+
+                        <h4>6. حدود المسؤولية</h4>
+                        <p>مسؤولية ميتا سوفت وير محدودة بقيمة المشروع الإجمالية. لسنا مسؤولين عن الأضرار غير المباشرة أو العرضية أو التبعية.</p>
+
+                        <h4>7. الإنهاء</h4>
+                        <p>يمكن لأي من الطرفين إنهاء هذه الاتفاقية بإشعار خطي. شروط الإنهاء والتعويض ستكون كما هو محدد في اتفاقية المشروع.</p>
+                    `
+                }
+            },
+            'communication-policy': {
+                title: 'Communication Policy',
+                titleAr: 'سياسة التواصل',
+                content: {
+                    en: `
+                        <h4>1. Communication Channels</h4>
+                        <p>We use multiple channels to ensure effective communication:</p>
+                        <ul>
+                            <li>Email for formal communications and documentation</li>
+                            <li>SMS for urgent updates and meeting reminders</li>
+                            <li>Video calls for project meetings and reviews</li>
+                            <li>Project management tools for task tracking</li>
+                        </ul>
+
+                        <h4>2. Project Updates</h4>
+                        <p>Regular project updates include:</p>
+                        <ul>
+                            <li>Weekly progress reports via email</li>
+                            <li>Milestone completion notifications</li>
+                            <li>Issue alerts and resolution updates</li>
+                            <li>Schedule changes and timeline adjustments</li>
+                        </ul>
+
+                        <h4>3. Response Times</h4>
+                        <ul>
+                            <li>Email inquiries: Response within 24 hours</li>
+                            <li>Urgent matters: Response within 4 hours</li>
+                            <li>Support requests: Acknowledgment within 2 hours</li>
+                            <li>Emergency issues: Immediate response available</li>
+                        </ul>
+
+                        <h4>4. Meeting Schedule</h4>
+                        <ul>
+                            <li>Weekly status meetings during active development</li>
+                            <li>Milestone review meetings at key project phases</li>
+                            <li>Ad-hoc meetings as needed for issue resolution</li>
+                            <li>Final delivery and handover sessions</li>
+                        </ul>
+
+                        <h4>5. Documentation</h4>
+                        <p>All important communications are documented:</p>
+                        <ul>
+                            <li>Meeting minutes and action items</li>
+                            <li>Decision logs and change requests</li>
+                            <li>Technical specifications and requirements</li>
+                            <li>User guides and training materials</li>
+                        </ul>
+
+                        <h4>6. Contact Information</h4>
+                        <ul>
+                            <li>Primary contact: Project Manager assigned to your project</li>
+                            <li>Technical support: technical-support@metasoftware.com</li>
+                            <li>Business inquiries: business@metasoftware.com</li>
+                            <li>Emergency hotline: +966 11 234 5678</li>
+                        </ul>
+                    `,
+                    ar: `
+                        <h4>1. قنوات التواصل</h4>
+                        <p>نستخدم قنوات متعددة لضمان التواصل الفعال:</p>
+                        <ul>
+                            <li>البريد الإلكتروني للاتصالات الرسمية والتوثيق</li>
+                            <li>الرسائل النصية للتحديثات العاجلة وتذكيرات الاجتماعات</li>
+                            <li>المكالمات المرئية لاجتماعات ومراجعات المشروع</li>
+                            <li>أدوات إدارة المشاريع لتتبع المهام</li>
+                        </ul>
+
+                        <h4>2. تحديثات المشروع</h4>
+                        <p>تشمل تحديثات المشروع المنتظمة:</p>
+                        <ul>
+                            <li>تقارير تقدم أسبوعية عبر البريد الإلكتروني</li>
+                            <li>إشعارات إكمال المراحل الرئيسية</li>
+                            <li>تنبيهات المشاكل وتحديثات الحلول</li>
+                            <li>تغييرات الجدول وتعديلات الجدول الزمني</li>
+                        </ul>
+
+                        <h4>3. أوقات الاستجابة</h4>
+                        <ul>
+                            <li>استفسارات البريد الإلكتروني: الرد خلال 24 ساعة</li>
+                            <li>الأمور العاجلة: الرد خلال 4 ساعات</li>
+                            <li>طلبات الدعم: الإقرار خلال ساعتين</li>
+                            <li>المشاكل الطارئة: استجابة فورية متاحة</li>
+                        </ul>
+
+                        <h4>4. جدول الاجتماعات</h4>
+                        <ul>
+                            <li>اجتماعات حالة أسبوعية أثناء التطوير النشط</li>
+                            <li>اجتماعات مراجعة المراحل الرئيسية في مراحل المشروع الرئيسية</li>
+                            <li>اجتماعات مخصصة حسب الحاجة لحل المشاكل</li>
+                            <li>جلسات التسليم النهائي والتسليم</li>
+                        </ul>
+
+                        <h4>5. التوثيق</h4>
+                        <p>يتم توثيق جميع الاتصالات المهمة:</p>
+                        <ul>
+                            <li>محاضر الاجتماعات وعناصر العمل</li>
+                            <li>سجلات القرارات وطلبات التغيير</li>
+                            <li>المواصفات التقنية والمتطلبات</li>
+                            <li>أدلة المستخدم ومواد التدريب</li>
+                        </ul>
+
+                        <h4>6. معلومات الاتصال</h4>
+                        <ul>
+                            <li>جهة الاتصال الأساسية: مدير المشروع المعين لمشروعك</li>
+                            <li>الدعم التقني: technical-support@metasoftware.com</li>
+                            <li>الاستفسارات التجارية: business@metasoftware.com</li>
+                            <li>الخط الساخن للطوارئ: +966 11 234 5678</li>
+                        </ul>
+                    `
+                }
+            }
+        };
+
+        // Modal and form elements
+        const serviceModal = document.getElementById('serviceModal');
+        const documentModal = document.getElementById('documentModal');
+
+        // Event handlers for service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function () {
+                const serviceName = this.getAttribute('data-service');
+                const serviceData = serviceDefinitions[serviceName];
+
+                if (serviceData) {
+                    // Update modal content
+                    document.getElementById('modalTitle').textContent = currentLang === 'ar' ? serviceData.titleAr : serviceData.title;
+                    document.getElementById('modalSubtitle').textContent = currentLang === 'ar' ? 'عقد تطوير البرمجيات المهني' : 'Professional Software Development Contract';
+
+                    // Update service points
+                    const points = serviceData.points[currentLang];
+                    document.getElementById('servicePoints').innerHTML = `
+                        <h4>${currentLang === 'ar' ? 'ما نقدمه في هذا المشروع:' : 'What we deliver in this project:'}</h4>
+                        <ul>
+                            ${points.map(point => `<li>${point}</li>`).join('')}
+                        </ul>
+                    `;
+
+                    // Reset form
+                    document.getElementById('serviceForm').reset();
+
+                    // Show modal
+                    serviceModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Document opening function
+        function openDocument(docType) {
+            const docData = documentContents[docType];
+            if (docData) {
+                document.getElementById('documentTitle').textContent = currentLang === 'ar' ? docData.titleAr : docData.title;
+                document.getElementById('documentBody').innerHTML = docData.content[currentLang];
+
+                // Set download button data
+                document.getElementById('downloadBtn').setAttribute('data-doc-type', docType);
+
+                documentModal.classList.add('show');
+            }
+        }
+
+        // PDF generation function
+        function generatePDF(docType) {
+            const docData = documentContents[docType];
+            if (!docData) return;
+
+            // Create new jsPDF instance
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+
+            // Setup fonts and formatting
+            pdf.setFont('helvetica', 'bold');
+            pdf.setFontSize(16);
+
+            // Add title
+            const title = currentLang === 'ar' ? docData.titleAr : docData.title;
+            pdf.text(title, 20, 20);
+
+            // Add Meta Software header
+            pdf.setFontSize(12);
+            pdf.setFont('helvetica', 'normal');
+            pdf.text('Meta Software - Professional Software Development', 20, 30);
+            pdf.text('Riyadh, Saudi Arabia | +966 11 234 5678', 20, 40);
+            pdf.text('info@metasoftware.com | www.metasoftware.com', 20, 50);
+
+            // Add horizontal line
+            pdf.line(20, 55, 190, 55);
+
+            // Add content (simplified - in real implementation you'd need better text parsing)
+            const content = docData.content[currentLang];
+            const cleanContent = content.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+
+            // Split content into lines that fit the page
+            const splitText = pdf.splitTextToSize(cleanContent, 170);
+            pdf.text(splitText, 20, 70);
+
+            // Add footer
+            const pageCount = pdf.internal.getNumberOfPages();
+            for (let i = 1; i <= pageCount; i++) {
+                pdf.setPage(i);
+                pdf.setFontSize(10);
+                pdf.text(`Page ${i} of ${pageCount}`, 170, 280);
+                pdf.text('© 2025 Meta Software. All rights reserved.', 20, 280);
+                pdf.text(new Date().toLocaleDateString(), 100, 280);
+            }
+
+            // Save PDF
+            const fileName = `MetaSoftware_${docType}_${currentLang}.pdf`;
+            pdf.save(fileName);
+        }
+
+        // Download button event handler
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            const docType = this.getAttribute('data-doc-type');
+            generatePDF(docType);
+        });
+
+        // Modal closing functions
+        function closeModal() {
+            serviceModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeDocumentModal() {
+            documentModal.classList.remove('show');
+        }
+
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+        document.getElementById('btnCancel').addEventListener('click', closeModal);
+        document.getElementById('documentClose').addEventListener('click', closeDocumentModal);
+
+        // Click outside modal to close
+        serviceModal.addEventListener('click', function (e) {
+            if (e.target === serviceModal) {
+                closeModal();
+            }
+        });
+
+        documentModal.addEventListener('click', function (e) {
+            if (e.target === documentModal) {
+                closeDocumentModal();
+            }
+        });
+
+        // Form submission
+        document.getElementById('serviceForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // Basic validation
+            const requiredFields = ['clientName', 'clientEmail', 'clientPhone', 'projectTitle', 'projectDescription'];
+            const missingFields = requiredFields.filter(field => !data[field]);
+
+            if (missingFields.length > 0) {
+                alert(currentLang === 'ar' ?
+                    'يرجى ملء جميع الحقول المطلوبة.' :
+                    'Please fill in all required fields.'
+                );
+                return;
+            }
+
+            // Check all checkboxes
+            const checkboxes = ['agreeTerms', 'agreePrivacy', 'agreeCommunication', 'agreeIntellectual'];
+            const uncheckedBoxes = checkboxes.filter(checkbox => !data[checkbox]);
+
+            if (uncheckedBoxes.length > 0) {
+                alert(currentLang === 'ar' ?
+                    'يرجى الموافقة على جميع الشروط والأحكام.' :
+                    'Please agree to all terms and conditions.'
+                );
+                return;
+            }
+
+            // Simulate data submission
+            alert(currentLang === 'ar' ?
+                'تم إرسال طلبك بنجاح! سنتواصل معك قريباً.' :
+                'Your request has been submitted successfully! We will contact you soon.'
+            );
+
+            // Close modal
+            closeModal();
+            this.reset();
+        });
+
+        // Animation activation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Hide spinner when page is loaded
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.getElementById('spinner').style.opacity = 0;
+                setTimeout(function () {
+                    document.getElementById('spinner').style.display = 'none';
+                }, 300);
+            }, 400); // show spinner for at least 400ms
+        });
+        // Service card keyboard accessibility
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+        // Add focus state for buttons
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('focus', function () {
+                this.style.outline = '2px solid var(--primary-blue)';
+            });
+            el.addEventListener('blur', function () {
+                this.style.outline = '';
+            });
+        });
+        // Responsive improvements for mobile
+        window.addEventListener('resize', function () {
+            if (window.innerWidth < 500) {
+                document.body.style.fontSize = '15px';
+            } else {
+                document.body.style.fontSize = '';
+            }
+        });
+    </script>
+    <!-- مكتبة EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // ⚠️ استبدل القيم دي بالقيم من حسابك في EmailJS
+        const SERVICE_ID = 'service_afky2d1';
+        const TEMPLATE_ID = 'template_v5ux7uz';
+        const PUBLIC_KEY = 'JJ3nd6_kwp5VcGNFO';
+
+        // تهيئة EmailJS
+        emailjs.init(PUBLIC_KEY);
+
+        // التعامل مع زر الإرسال
+        document.getElementById("btnSubmit").addEventListener("click", function (e) {
+            e.preventDefault(); // يمنع الفورم من الإرسال التقليدي
+
+            // إرسال الفورم الموجود داخل المودال كما هو
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, '#serviceForm')
+                .then(() => {
+                    alert("✅ تم إرسال البيانات بنجاح إلى بريدك.");
+                    document.getElementById("serviceForm").reset();
+                })
+                .catch((error) => {
+                    console.error("❌ فشل الإرسال:", error);
+                    alert("❌ حدث خطأ أثناء الإرسال. تأكد من البيانات.");
+                });
+        });
+    </script>
+    <script src="protection.js"></script>
+
+</body>
+
+</html>

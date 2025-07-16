@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Enhanced SEO Meta Tags -->
+    <title id="page-title"> Meta Software | Portfolio of Completed Projects in Egypt and Arab World
+    </title>
+    <meta name="description" id="meta-description"
+        content="استكشف سابقة أعمال Meta Software: مشاريع برمجية متطورة، حلول ذكاء أعمال، تطبيقات جوال، أنظمة تعليمية، منصات تجارة إلكترونية، وحلول أتمتة صناعية في مصر والوطن العربي">
+    <meta name="keywords"
+        content="سابقة الأعمال Meta Software, برتفوليو مشاريع, مشاريع برمجية مصر, تطبيقات جوال عربية, أنظمة إدارة مستشفيات, منصات تجارة إلكترونية, حلول ذكاء أعمال, أتمتة صناعية, تطبيقات تعليمية">
+    <meta name="author" content="Meta Software Egypt">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English, Arabic">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+
+    <!-- Enhanced Bilingual SEO - Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://metasoftware.eg/en/portfolio" />
+    <link rel="alternate" hreflang="ar" href="https://metasoftware.eg/ar/portfolio" />
+    <link rel="alternate" hreflang="x-default" href="https://metasoftware.eg/portfolio" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Meta Software Portfolio - Leading Technology Projects in Egypt">
+    <meta property="og:description"
+        content="Discover Meta Software's impressive portfolio of technology projects across Egypt and the Arab world">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.metasoftware.eg/portfolio">
+    <meta property="og:image" content="https://metasoftware.eg/assets/images/portfolio-showcase.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Meta Software",
+        "url": "https://metasoftware.eg",
+        "description": "Egypt's leading technology solutions provider with strong portfolio of completed projects",
+        "foundingDate": "2024",
+        "foundingLocation": {
+            "@type": "Place",
+            "name": "Cairo, Egypt"
+        }
+    }
+    </script>
+
+    <style>
+        /* ==================== المتغيرات الأساسية ==================== */
+        :root {
+            --primary-blue: #4A90E2;
+            --secondary-blue: #2E86C1;
+            --light-blue: #E3F2FD;
+            --dark-blue: #1565C0;
+            --white: #FFFFFF;
+            --dark-gray: #2C3E50;
+            --light-gray: #BDC3C7;
+            --shadow: rgba(74, 144, 226, 0.15);
+            --blue-shadow: rgba(74, 144, 226, 0.3);
+            --egypt-gold: #D4AF37;
+            --success-green: #27AE60;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.rtl {
+            direction: rtl;
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        /* Header Styles (نفس الهيدر الأصلي) */
+        .header {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 50%, var(--primary-blue) 100%);
+            padding: 1.5rem 0;
+            box-shadow: 0 8px 32px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        /* اللوجو الرئيسي من الشركة */
+        .company-logo {
+            width: 80px;
+            height: 40px;
+            background-image: url('https://metasoftware.eg/assets/images/2trivgoAgJVHgQNIzVMC5uvbZ03.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 4px 8px var(--blue-shadow));
+            position: relative;
+        }
+
+        .company-logo::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--primary-blue), transparent, var(--secondary-blue));
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .company-logo:hover::before {
+            opacity: 0.3;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.1) translateY(-2px);
+            filter: drop-shadow(0 8px 16px var(--blue-shadow));
+        }
+
+        /* أيقونة جديدة مع الـ SVG المحدد */
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 3px solid var(--white);
+            background-image: url('https://metasoftware.eg/assets/images/favourite_icon_2.svg');
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .logo-icon:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 10px 30px var(--blue-shadow);
+        }
+
+        .company-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--dark-gray), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-name::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        .logo-section:hover .company-name::after {
+            width: 100%;
+        }
+
+        /* تأثير لامع */
+        .logo-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .logo-section:hover::before {
+            left: 100%;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-blue);
+            background: var(--white);
+            color: var(--primary-blue);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        /* Portfolio Content Styles */
+        .portfolio-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+            border-radius: 25px;
+            box-shadow: 0 15px 50px var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--egypt-gold), var(--primary-blue), var(--secondary-blue), var(--egypt-gold));
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        .egypt-flag {
+            display: inline-block;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            position: relative;
+        }
+
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--egypt-gold), var(--primary-blue));
+            border-radius: 3px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.6rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-top: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            margin-top: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .content-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: left 0.5s ease;
+        }
+
+        .content-section:hover::before {
+            left: 0;
+        }
+
+        .content-section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px var(--shadow);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            font-weight: 800;
+            text-align: center;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary-blue);
+            border-radius: 2px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px var(--shadow);
+            border-color: var(--primary-blue);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-sector {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-desc {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .project-features li::before {
+            content: '✓';
+            background: var(--success-green);
+            color: var(--white);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .project-results {
+            background: var(--light-blue);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .project-results h4 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            background: linear-gradient(135deg, var(--light-blue), var(--white));
+            border-radius: 15px;
+            border: 3px solid var(--primary-blue);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(74, 144, 226, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+            animation: shimmer 1s ease-in-out;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 50px var(--shadow);
+            border-color: var(--secondary-blue);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary-blue);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            font-weight: 700;
+        }
+
+        /* Summary Table */
+        .summary-table {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px var(--shadow);
+            margin: 2rem 0;
+        }
+
+        .summary-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .summary-table th {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: right;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .summary-table td {
+            padding: 1.2rem;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background 0.3s ease;
+        }
+
+        .summary-table tr:hover td {
+            background: var(--light-blue);
+        }
+
+        /* Call to Action */
+        .cta-section {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            border-radius: 20px;
+            color: var(--white);
+        }
+
+        .cta-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .cta-btn {
+            background: var(--white);
+            color: var(--primary-blue);
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-btn:hover {
+            background: var(--egypt-gold);
+            color: var(--white);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Footer الأصلي */
+        .footer {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--light-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes logoPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes wave {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(10deg);
+            }
+
+            75% {
+                transform: rotate(-10deg);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .main-title {
+                font-size: 2.5rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header الأصلي بدون تغيير -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="company-logo" title="Meta Software Official Logo"></div>
+                <div class="logo-icon" title="Meta Software Icon"></div>
+                <h1 class="company-name">Meta Software</h1>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                <button class="lang-btn" onclick="switchLanguage('ar')">AR</button>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Content -->
+    <main class="portfolio-section">
+        <!-- Hero Section -->
+        <section class="hero-section fade-in">
+            <div class="egypt-flag">🇪🇬</div>
+            <h1 class="main-title" data-en="Our Portfolio" data-ar="سابقة أعمالنا">سابقة أعمالنا</h1>
+            <p class="hero-subtitle" data-en="The Arab world's Leading Technology Projects Since 2024"
+                data-ar="مشاريع تقنية رائدة في الوطن العربي منذ عام 2024">مشاريع تقنية رائدة في الوطن العربي منذ عام
+                2024</p>
+            <p class="hero-description"
+                data-en="Discover our impressive portfolio of successful technology projects across Egypt and the Arab world. From healthcare systems to e-commerce platforms, AI solutions to industrial automation - we deliver excellence in every project."
+                data-ar="اكتشف محفظة أعمالنا المثيرة للإعجاب من مشاريع التكنولوجيا الناجحة في مصر والوطن العربي. من أنظمة الرعاية الصحية إلى منصات التجارة الإلكترونية، من حلول الذكاء الاصطناعي إلى الأتمتة الصناعية - نحن نقدم التميز في كل مشروع.">
+                اكتشف محفظة أعمالنا المثيرة للإعجاب من مشاريع التكنولوجيا الناجحة في مصر والوطن العربي. من أنظمة الرعاية
+                الصحية إلى منصات التجارة الإلكترونية، من حلول الذكاء الاصطناعي إلى الأتمتة الصناعية - نحن نقدم التميز في
+                كل مشروع.
+            </p>
+        </section>
+
+        <!-- Portfolio Statistics -->
+        <section class="fade-in">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label" data-en="Completed Projects" data-ar="مشروع مكتمل">مشروع مكتمل</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">1,500+</span>
+                    <span class="stat-label" data-en="Satisfied Clients" data-ar="عميل راضٍ">عميل راضٍ</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label" data-en="Arab Countries" data-ar="دولة عربية">دولة عربية</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label" data-en="Industry Sectors" data-ar="قطاع صناعي">قطاع صناعي</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="content-section fade-in">
+            <h2 class="section-title" data-en="Featured Projects" data-ar="المشاريع المميزة">المشاريع المميزة</h2>
+
+            <div class="portfolio-grid">
+                <!-- Healthcare Management System -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🏥</span>
+                        <h3 class="project-title" data-en="Healthcare Management Systems"
+                            data-ar="أنظمة إدارة الرعاية الصحية">أنظمة إدارة الرعاية الصحية</h3>
+                        <p class="project-sector" data-en="Healthcare & Hospitals" data-ar="الرعاية الصحية والمستشفيات">
+                            الرعاية الصحية والمستشفيات</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-desc"
+                            data-en="Comprehensive hospital and clinic management solutions including patient management, medical records, lab results, appointment scheduling, and integrated billing systems."
+                            data-ar="حلول شاملة لإدارة المستشفيات والعيادات تشمل إدارة المرضى، السجلات الطبية، نتائج المختبرات، جدولة المواعيد، وأنظمة الفوترة المتكاملة.">
+                            حلول شاملة لإدارة المستشفيات والعيادات تشمل إدارة المرضى، السجلات الطبية، نتائج المختبرات،
+                            جدولة المواعيد، وأنظمة الفوترة المتكاملة.
+                        </p>
+                        <ul class="project-features">
+                            <li data-en="Patient record management" data-ar="إدارة سجلات المرضى">إدارة سجلات المرضى</li>
+                            <li data-en="Appointment scheduling system" data-ar="نظام جدولة المواعيد">نظام جدولة
+                                المواعيد</li>
+                            <li data-en="Laboratory integration" data-ar="تكامل المختبرات">تكامل المختبرات</li>
+                            <li data-en="Pharmacy management" data-ar="إدارة الصيدلية">إدارة الصيدلية</li>
+                        </ul>
+                        <div class="project-results">
+                            <h4 data-en="Key Results:" data-ar="النتائج الرئيسية:">النتائج الرئيسية:</h4>
+                            <p data-en="Improved operational efficiency by 40%, reduced medical errors by 60%, accelerated patient care processes"
+                                data-ar="تحسين الكفاءة التشغيلية بنسبة 40%، تقليل الأخطاء الطبية بنسبة 60%، تسريع عمليات رعاية المرضى">
+                                تحسين الكفاءة التشغيلية بنسبة 40%، تقليل الأخطاء الطبية بنسبة 60%، تسريع عمليات رعاية
+                                المرضى</p>
+                        </div>
+                        <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+
+                        <style>
+                            .view-project-btn {
+                                padding: 10px 25px;
+                                font-size: 16px;
+                                border: 2px solid #3498db;
+                                background-color: transparent;
+                                color: #3498db;
+                                border-radius: 6px;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                                display: inline-block;
+                                text-align: center;
+                                margin: 20px auto;
+                                display: block;
+                            }
+
+                            .view-project-btn:hover {
+                                background-color: #3498db;
+                                color: #fff;
+                            }
+
+                            /* وسط الصفحة أفقيًا فقط */
+                            .view-project-btn {
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        </style>
+
+                    </div>
+                </div>
+
+                <!-- E-commerce Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🛍️</span>
+                        <h3 class="project-title" data-en="Advanced E-commerce Platforms"
+                            data-ar="منصات التجارة الإلكترونية المتقدمة">منصات التجارة الإلكترونية المتقدمة</h3>
+                        <p class="project-sector" data-en="E-commerce & Retail" data-ar="التجارة الإلكترونية والتجزئة">
+                            التجارة الإلكترونية والتجزئة</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-desc"
+                            data-en="Sophisticated e-commerce platforms with integrated payment gateways, inventory management, customer relationship systems, and advanced analytics for online businesses."
+                            data-ar="منصات تجارة إلكترونية متطورة مع بوابات دفع متكاملة وإدارة المخزون وأنظمة علاقات العملاء وتحليلات متقدمة للأعمال الإلكترونية.">
+                            منصات تجارة إلكترونية متطورة مع بوابات دفع متكاملة وإدارة المخزون وأنظمة علاقات العملاء
+                            وتحليلات متقدمة للأعمال الإلكترونية.
+                        </p>
+                        <ul class="project-features">
+                            <li data-en="Multi-payment gateway integration" data-ar="تكامل بوابات دفع متعددة">تكامل
+                                بوابات دفع متعددة</li>
+                            <li data-en="Real-time inventory tracking" data-ar="تتبع المخزون في الوقت الفعلي">تتبع
+                                المخزون في الوقت الفعلي</li>
+                            <li data-en="Mobile-responsive design" data-ar="تصميم متجاوب للجوال">تصميم متجاوب للجوال
+                            </li>
+                            <li data-en="Advanced analytics dashboard" data-ar="لوحة تحليلات متقدمة">لوحة تحليلات متقدمة
+                            </li>
+                        </ul>
+                        <div class="project-results">
+                            <h4 data-en="Key Results:" data-ar="النتائج الرئيسية:">النتائج الرئيسية:</h4>
+                            <p data-en="Increased sales by 75%, seamless user experience, enhanced transaction security, improved customer retention"
+                                data-ar="زيادة المبيعات بنسبة 75%، تجربة مستخدم سلسة، تعزيز أمان المعاملات، تحسين احتفاظ العملاء">
+                                زيادة المبيعات بنسبة 75%، تجربة مستخدم سلسة، تعزيز أمان المعاملات، تحسين احتفاظ العملاء
+                            </p>
+                        </div>
+                        <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Educational Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🎓</span>
+                        <h3 class="project-title" data-en="Interactive Educational Platforms"
+                            data-ar="المنصات التعليمية التفاعلية">المنصات التعليمية التفاعلية</h3>
+                        <p class="project-sector" data-en="Education & Training" data-ar="التعليم والتدريب">التعليم
+                            والتدريب</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-desc"
+                            data-en="Learning management systems for universities and schools with interactive content, online assessments, virtual classrooms, and comprehensive reporting systems."
+                            data-ar="أنظمة إدارة التعلم للجامعات والمدارس مع محتوى تفاعلي وتقييمات عبر الإنترنت وفصول افتراضية وأنظمة تقارير شاملة.">
+                            أنظمة إدارة التعلم للجامعات والمدارس مع محتوى تفاعلي وتقييمات عبر الإنترنت وفصول افتراضية
+                            وأنظمة تقارير شاملة.
+                        </p>
+                        <ul class="project-features">
+                            <li data-en="Virtual classroom integration" data-ar="تكامل الفصول الافتراضية">تكامل الفصول
+                                الافتراضية</li>
+                            <li data-en="Automated assessment tools" data-ar="أدوات تقييم آلية">أدوات تقييم آلية</li>
+                            <li data-en="Student progress tracking" data-ar="تتبع تقدم الطلاب">تتبع تقدم الطلاب</li>
+                            <li data-en="Interactive multimedia content" data-ar="محتوى وسائط تفاعلي">محتوى وسائط تفاعلي
+                            </li>
+                        </ul>
+                        <div class="project-results">
+                            <h4 data-en="Key Results:" data-ar="النتائج الرئيسية:">النتائج الرئيسية:</h4>
+                            <p data-en="Enhanced remote learning efficiency, improved student engagement, automated grading system, comprehensive educational management"
+                                data-ar="تحسين كفاءة التعليم عن بُعد، زيادة مشاركة الطلاب، نظام تقدير آلي، إدارة تعليمية شاملة">
+                                تحسين كفاءة التعليم عن بُعد، زيادة مشاركة الطلاب، نظام تقدير آلي، إدارة تعليمية شاملة
+                            </p>
+                        </div>
+                        <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Banking Solutions -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🏦</span>
+                        <h3 class="project-title" data-en="Advanced Banking Solutions"
+                            data-ar="الحلول المصرفية المتقدمة">الحلول المصرفية المتقدمة</h3>
+                        <p class="project-sector" data-en="Banking & Financial Services"
+                            data-ar="البنوك والخدمات المالية">البنوك والخدمات المالية</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-desc"
+                            data-en="Secure financial systems and mobile banking applications with full compliance to banking standards, advanced security measures, and seamless user experience."
+                            data-ar="أنظمة مالية آمنة وتطبيقات مصرفية للجوال مع امتثال كامل للمعايير المصرفية وإجراءات أمان متقدمة وتجربة مستخدم سلسة.">
+                            أنظمة مالية آمنة وتطبيقات مصرفية للجوال مع امتثال كامل للمعايير المصرفية وإجراءات أمان
+                            متقدمة وتجربة مستخدم سلسة.
+                        </p>
+                        <ul class="project-features">
+                            <li data-en="Secure transaction processing" data-ar="معالجة المعاملات الآمنة">معالجة
+                                المعاملات الآمنة</li>
+                            <li data-en="Mobile banking apps" data-ar="تطبيقات البنوك المحمولة">تطبيقات البنوك المحمولة
+                            </li>
+                            <li data-en="Real-time fraud detection" data-ar="كشف الاحتيال في الوقت الفعلي">كشف الاحتيال
+                                في الوقت الفعلي</li>
+                            <li data-en="Multi-factor authentication" data-ar="المصادقة متعددة العوامل">المصادقة متعددة
+                                العوامل</li>
+                        </ul>
+                        <div class="project-results">
+                            <h4 data-en="Key Results:" data-ar="النتائج الرئيسية:">النتائج الرئيسية:</h4>
+                            <p data-en="Enhanced data security, accelerated banking operations, support for digital services, improved customer satisfaction"
+                                data-ar="تعزيز أمان البيانات، تسريع العمليات المصرفية، دعم الخدمات الرقمية، تحسين رضا العملاء">
+                                تعزيز أمان البيانات، تسريع العمليات المصرفية، دعم الخدمات الرقمية، تحسين رضا العملاء</p>
+                        </div>
+                        <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Business Intelligence -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📊</span>
+                        <h3 class="project-title" data-en="Business Intelligence & Analytics"
+                            data-ar="ذكاء الأعمال والتحليلات">ذكاء الأعمال والتحليلات</h3>
+                        <p class="project-sector" data-en="All Industries" data-ar="جميع الصناعات">جميع الصناعات</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-desc"
+                            data-en="Data analytics systems and interactive reports for enterprise clients with advanced dashboards, real-time insights, and customized reporting for executive management."
+                            data-ar="أنظمة تحليل البيانات والتقارير التفاعلية لعملاء المؤسسات مع لوحات معلومات متقدمة ورؤى فورية وتقارير مخصصة للإدارة التنفيذية.">
+                            أنظمة تحليل البيانات والتقارير التفاعلية لعملاء المؤسسات مع لوحات معلومات متقدمة ورؤى فورية
+                            وتقارير مخصصة للإدارة التنفيذية.
+                        </p>
+                        <ul class="project-features">
+                            <li data-en="Interactive dashboards" data-ar="لوحات معلومات تفاعلية">لوحات معلومات تفاعلية
+                            </li>
+                            <li data-en="Real-time data processing" data-ar="معالجة البيانات في الوقت الفعلي">معالجة
+                                البيانات في الوقت الفعلي</li>
+                            <li data-en="Predictive analytics" data-ar="التحليل التنبؤي">التحليل التنبؤي</li>
+                            <li data-en="Custom report generation" data-ar="إنشاء تقارير مخصصة">إنشاء تقارير مخصصة</li>
+                        </ul>
+                        <div class="project-results">
+                            <h4 data-en="Key Results:" data-ar="النتائج الرئيسية:">النتائج الرئيسية:</h4>
+                            <p data-en="Enhanced decision-making support, instant insights, customized reports for senior management, improved operational efficiency"
+                                data-ar="تعزيز دعم اتخاذ القرار، رؤى فورية، تقارير مخصصة للإدارة العليا، تحسين الكفاءة التشغيلية">
+                                تعزيز دعم اتخاذ القرار، رؤى فورية، تقارير مخصصة للإدارة العليا، تحسين الكفاءة التشغيلية
+                            </p>
+                        </div>
+                        <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Manufacturing Automation -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🏭</span>
+                        <h3 class="project-title" data-en="Manufacturing & Automation Systems"
+                            data-ar="أنظمة التصنيع والأتمتة">أنظمة التصنيع والأتمتة</h3>
+                        <p class="project-sector" data-en="Manufacturing & Production" data-ar="التصنيع والإنتاج">
+                            التصنيع والإنتاج</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-desc"
+                            data-en="Industrial automation solutions and inventory management with IoT sensor integration, real-time monitoring, and intelligent production optimization systems."
+                            data-ar="حلول الأتمتة الصناعية وإدارة المخزون مع تكامل أجهزة الاستشعار وإنترنت الأشياء والمراقبة في الوقت الفعلي وأنظمة تحسين الإنتاج الذكية.">
+                            حلول الأتمتة الصناعية وإدارة المخزون مع تكامل أجهزة الاستشعار وإنترنت الأشياء والمراقبة في
+                            الوقت الفعلي وأنظمة تحسين الإنتاج الذكية.
+                        </p>
+                        <ul class="project-features">
+                            <li data-en="IoT sensor integration" data-ar="تكامل أجهزة استشعار إنترنت الأشياء">تكامل
+                                أجهزة استشعار إنترنت الأشياء</li>
+                            <li data-en="Real-time production monitoring" data-ar="مراقبة الإنتاج في الوقت الفعلي">
+                                مراقبة الإنتاج في الوقت الفعلي</li>
+                            <li data-en="Automated quality control" data-ar="مراقبة الجودة الآلية">مراقبة الجودة الآلية
+                            </li>
+                            <li data-en="Predictive maintenance" data-ar="الصيانة التنبؤية">الصيانة التنبؤية</li>
+                        </ul>
+                        <div class="project-results">
+                            <h4 data-en="Key Results:" data-ar="النتائج الرئيسية:">النتائج الرئيسية:</h4>
+                            <p data-en="Reduced waste by 30%, real-time production monitoring, enhanced operational efficiency, minimized downtime"
+                                data-ar="تقليل الهدر بنسبة 30%، مراقبة الإنتاج في الوقت الفعلي، تحسين الكفاءة التشغيلية، تقليل وقت التوقف">
+                                تقليل الهدر بنسبة 30%، مراقبة الإنتاج في الوقت الفعلي، تحسين الكفاءة التشغيلية، تقليل
+                                وقت التوقف</p>
+                        </div>
+                        <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strong Portfolio -->
+        <section class="content-section fade-in">
+            <h2 class="section-title" data-en="Our Strong Portfolio & Proven Track Record"
+                data-ar="محفظة أعمالنا القوية وسجلنا المثبت">Our Strong Portfolio & Proven Track Record</h2>
+
+            <p class="content-text"
+                data-en="Meta Software takes pride in our strong portfolio of successful projects across various industries. Our proven track record demonstrates our ability to deliver complex solutions on time and within budget, regardless of project size or complexity."
+                data-ar="تفخر شركة ميتا سوفت وير بمحفظة أعمالنا القوية من المشاريع الناجحة عبر صناعات مختلفة. سجلنا المثبت يُظهر قدرتنا على تقديم حلول معقدة في الوقت المحدد وضمن الميزانية، بغض النظر عن حجم المشروع أو تعقيده.">
+                Meta Software takes pride in our strong portfolio of successful projects across various industries. Our
+                proven track record demonstrates our ability to deliver complex solutions on time and within budget,
+                regardless of project size or complexity.
+            </p>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">🔗</div>
+                    <div class="portfolio-content">
+                        <h4 class="portfolio-title" data-en="Healthcare Management Systems"
+                            data-ar="أنظمة إدارة الرعاية الصحية">Healthcare Management Systems</h4>
+                        <p class="portfolio-desc"
+                            data-en="Complete hospital management solutions for major medical institutions"
+                            data-ar="حلول إدارة المستشفيات الكاملة للمؤسسات الطبية الكبرى">Complete hospital management
+                            solutions for major medical institutions</p>
+                    </div>
+                    <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">🔗</div>
+                    <div class="portfolio-content">
+                        <h4 class="portfolio-title" data-en="E-commerce Platforms" data-ar="منصات التجارة الإلكترونية">
+                            E-commerce Platforms</h4>
+                        <p class="portfolio-desc" data-en="Advanced online shopping platforms with payment integration"
+                            data-ar="منصات تسوق متقدمة عبر الإنترنت مع تكامل الدفع">Advanced online shopping platforms
+                            with payment integration</p>
+                    </div>
+                    <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">🔗</div>
+                    <div class="portfolio-content">
+                        <h4 class="portfolio-title" data-en="Educational Platforms" data-ar="المنصات التعليمية">
+                            Educational Platforms</h4>
+                        <p class="portfolio-desc" data-en="Learning management systems for universities and schools"
+                            data-ar="أنظمة إدارة التعلم للجامعات والمدارس">Learning management systems for universities
+                            and schools</p>
+                    </div>
+                    <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">🔗</div>
+                    <div class="portfolio-content">
+                        <h4 class="portfolio-title" data-en="Banking Solutions" data-ar="الحلول المصرفية">Banking
+                            Solutions</h4>
+                        <p class="portfolio-desc" data-en="Secure financial systems and mobile banking applications"
+                            data-ar="أنظمة مالية آمنة وتطبيقات الخدمات المصرفية المحمولة">Secure financial systems and
+                            mobile banking applications</p>
+                    </div>
+                    <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">🔗</div>
+                    <div class="portfolio-content">
+                        <h4 class="portfolio-title" data-en="Business Intelligence" data-ar="ذكاء الأعمال">Business
+                            Intelligence</h4>
+                        <p class="portfolio-desc" data-en="Data analytics and reporting systems for enterprise clients"
+                            data-ar="أنظمة تحليل البيانات والتقارير لعملاء المؤسسات">Data analytics and reporting
+                            systems for enterprise clients</p>
+                    </div>
+                    <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">🔗</div>
+                    <div class="portfolio-content">
+                        <h4 class="portfolio-title" data-en="Manufacturing Systems" data-ar="أنظمة التصنيع">
+                            Manufacturing Systems</h4>
+                        <p class="portfolio-desc" data-en="Industrial automation and inventory management solutions"
+                            data-ar="حلول الأتمتة الصناعية وإدارة المخزون">Industrial automation and inventory
+                            management solutions</p>
+                    </div>
+                    <button class="view-project-btn" data-en="View Project" data-ar="عرض المشروع"
+                            onclick="window.location.href='login.html'">
+                            عرض المشروع
+                        </button>
+                </div>
+            </div>
+        </section>
+        <style>
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin: 2rem 0;
+            }
+
+            .portfolio-card {
+                background: var(--white);
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 8px 30px var(--shadow);
+                transition: all 0.3s ease;
+            }
+
+            .portfolio-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 50px var(--shadow);
+            }
+
+            .portfolio-image {
+                height: 200px;
+                background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+                color: var(--white);
+            }
+
+            .portfolio-content {
+                padding: 1.5rem;
+            }
+
+            .portfolio-title {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: var(--dark-gray);
+                margin-bottom: 0.5rem;
+            }
+
+            .portfolio-desc {
+                color: #666;
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+        </style>
+
+        <!-- Projects Summary Table -->
+        <section class="content-section fade-in">
+            <h2 class="section-title" data-en="Projects Summary" data-ar="ملخص المشاريع">ملخص المشاريع</h2>
+
+            <div class="summary-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-en="Project Name" data-ar="اسم المشروع">اسم المشروع</th>
+                            <th data-en="Industry" data-ar="الصناعة">الصناعة</th>
+                            <th data-en="Brief Description" data-ar="وصف مختصر">وصف مختصر</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-en="Integrated Hospital Management System" data-ar="نظام إدارة مستشفى متكامل">نظام
+                                إدارة مستشفى متكامل</td>
+                            <td data-en="Healthcare" data-ar="الرعاية الصحية">الرعاية الصحية</td>
+                            <td data-en="Patient management, appointments, medical records"
+                                data-ar="إدارة المرضى، المواعيد، السجلات الطبية">إدارة المرضى، المواعيد، السجلات الطبية
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-en="E-commerce Platform" data-ar="منصة تجارة إلكترونية">منصة تجارة إلكترونية</td>
+                            <td data-en="E-commerce" data-ar="التجارة الإلكترونية">التجارة الإلكترونية</td>
+                            <td data-en="Online store with electronic payment and inventory management"
+                                data-ar="متجر إلكتروني مع دفع إلكتروني وإدارة مخزون">متجر إلكتروني مع دفع إلكتروني
+                                وإدارة مخزون</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Interactive Educational Platform" data-ar="منصة تعليمية تفاعلية">منصة تعليمية
+                                تفاعلية</td>
+                            <td data-en="Education" data-ar="التعليم">التعليم</td>
+                            <td data-en="Content management, tests, student reports"
+                                data-ar="إدارة محتوى، اختبارات، تقارير للطلاب">إدارة محتوى، اختبارات، تقارير للطلاب</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Mobile Banking Application" data-ar="تطبيق بنكي للموبايل">تطبيق بنكي للموبايل
+                            </td>
+                            <td data-en="Banking" data-ar="البنوك">البنوك</td>
+                            <td data-en="Transfers, bill payments, account management"
+                                data-ar="تحويلات، دفع فواتير، إدارة حسابات">تحويلات، دفع فواتير، إدارة حسابات</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Business Intelligence System" data-ar="نظام ذكاء أعمال">نظام ذكاء أعمال</td>
+                            <td data-en="All Sectors" data-ar="جميع القطاعات">جميع القطاعات</td>
+                            <td data-en="Interactive dashboards and reports" data-ar="لوحات تحكم وتقارير تفاعلية">لوحات
+                                تحكم وتقارير تفاعلية</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Industrial Factory Automation" data-ar="أتمتة مصنع صناعي">أتمتة مصنع صناعي</td>
+                            <td data-en="Manufacturing" data-ar="الصناعة">الصناعة</td>
+                            <td data-en="Production monitoring, inventory management, real-time reports"
+                                data-ar="مراقبة الإنتاج، إدارة المخزون، تقارير لحظية">مراقبة الإنتاج، إدارة المخزون،
+                                تقارير لحظية</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Virtual Reality Training Platform" data-ar="منصة واقع افتراضي للتدريب">منصة
+                                واقع افتراضي للتدريب</td>
+                            <td data-en="Education/Industry" data-ar="التعليم/الصناعة">التعليم/الصناعة</td>
+                            <td data-en="Interactive training using VR technology"
+                                data-ar="تدريب تفاعلي باستخدام تقنية VR">تدريب تفاعلي باستخدام تقنية VR</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Cybersecurity Protection System" data-ar="نظام حماية سيبراني">نظام حماية
+                                سيبراني</td>
+                            <td data-en="All Sectors" data-ar="جميع القطاعات">جميع القطاعات</td>
+                            <td data-en="Vulnerability detection, data protection, security reports"
+                                data-ar="كشف الثغرات، حماية البيانات، تقارير أمان">كشف الثغرات، حماية البيانات، تقارير
+                                أمان</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <style>
+            .summary-table {
+                overflow-x: auto;
+                overflow-y: auto;
+                max-height: 400px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .summary-table table {
+                min-width: 900px;
+                width: max-content;
+                border-collapse: collapse;
+            }
+
+            .summary-table th,
+            .summary-table td {
+                padding: 12px 16px;
+                border: 1px solid #ccc;
+                text-align: center;
+                white-space: nowrap;
+                /* يمنع تكسير الكلام */
+                font-size: 16px;
+            }
+
+            .summary-table th {
+                background-color: #3498db;
+                color: white;
+            }
+
+            .summary-table tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            .summary-table tr:hover {
+                background-color: #eaf6ff;
+            }
+
+            @media (max-width: 768px) {
+                .summary-table {
+                    max-height: 300px;
+                }
+
+                .summary-table th,
+                .summary-table td {
+                    font-size: 14px;
+                    padding: 10px;
+                }
+            }
+
+            html,
+            body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+        </style>
+
+
+        <!-- Why Choose Meta Software -->
+        <section class="content-section fade-in">
+            <h2 class="section-title" data-en="Why Choose Meta Software for Your Next Project?"
+                data-ar="لماذا تختار Meta Software لمشروعك القادم؟">لماذا تختار Meta Software لمشروعك القادم؟</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <div
+                    style="background: linear-gradient(135deg, var(--light-blue), var(--white)); padding: 2.5rem; border-radius: 15px; border-right: 6px solid var(--primary-blue); box-shadow: 0 8px 30px var(--shadow);">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 800;"
+                        data-en="🎯 Proven Track Record" data-ar="🎯 سجل حافل بالنجاحات">🎯 سجل حافل بالنجاحات</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;"
+                        data-en="With over 500 completed projects across 15+ industries, we have demonstrated our ability to deliver complex solutions on time and within budget, regardless of project scope."
+                        data-ar="مع أكثر من 500 مشروع مكتمل عبر أكثر من 15 صناعة، أثبتنا قدرتنا على تقديم حلول معقدة في الوقت المحدد وضمن الميزانية، بغض النظر عن نطاق المشروع.">
+                        مع أكثر من 500 مشروع مكتمل عبر أكثر من 15 صناعة، أثبتنا قدرتنا على تقديم حلول معقدة في الوقت
+                        المحدد وضمن الميزانية، بغض النظر عن نطاق المشروع.
+                    </p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, var(--light-blue), var(--white)); padding: 2.5rem; border-radius: 15px; border-right: 6px solid var(--secondary-blue); box-shadow: 0 8px 30px var(--shadow);">
+                    <h3 style="color: var(--secondary-blue); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 800;"
+                        data-en="🚀 Innovation & Technology" data-ar="🚀 الابتكار والتكنولوجيا">🚀 الابتكار والتكنولوجيا
+                    </h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;"
+                        data-en="We leverage cutting-edge technologies including AI, IoT, blockchain, and cloud computing to create future-ready solutions that give your business a competitive advantage."
+                        data-ar="نستفيد من التقنيات المتطورة بما في ذلك الذكاء الاصطناعي وإنترنت الأشياء والبلوك تشين والحوسبة السحابية لإنشاء حلول جاهزة للمستقبل تمنح عملك ميزة تنافسية.">
+                        نستفيد من التقنيات المتطورة بما في ذلك الذكاء الاصطناعي وإنترنت الأشياء والبلوك تشين والحوسبة
+                        السحابية لإنشاء حلول جاهزة للمستقبل تمنح عملك ميزة تنافسية.
+                    </p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, var(--light-blue), var(--white)); padding: 2.5rem; border-radius: 15px; border-right: 6px solid var(--egypt-gold); box-shadow: 0 8px 30px var(--shadow);">
+                    <h3 style="color: var(--egypt-gold); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 800;"
+                        data-en="🤝 End-to-End Partnership" data-ar="🤝 شراكة شاملة">🤝 شراكة شاملة</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;"
+                        data-en="From initial consultation to post-deployment support, we provide comprehensive services including training, documentation, and ongoing maintenance to ensure your success."
+                        data-ar="من الاستشارة الأولية إلى الدعم بعد النشر، نقدم خدمات شاملة تشمل التدريب والتوثيق والصيانة المستمرة لضمان نجاحك.">
+                        من الاستشارة الأولية إلى الدعم بعد النشر، نقدم خدمات شاملة تشمل التدريب والتوثيق والصيانة
+                        المستمرة لضمان نجاحك.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section fade-in">
+            <h2 class="cta-title" data-en="Ready to Start Your Next Project?" data-ar="جاهز لبدء مشروعك القادم؟">جاهز
+                لبدء مشروعك القادم؟</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;"
+                data-en="Join our portfolio of success stories. Contact us today for a detailed project consultation and discover how we can transform your business ideas into reality."
+                data-ar="انضم إلى محفظة قصص نجاحنا. اتصل بنا اليوم للحصول على استشارة مفصلة للمشروع واكتشف كيف يمكننا تحويل أفكار عملك إلى واقع.">
+                انضم إلى محفظة قصص نجاحنا. اتصل بنا اليوم للحصول على استشارة مفصلة للمشروع واكتشف كيف يمكننا تحويل أفكار
+                عملك إلى واقع.
+            </p>
+            <button class="cta-btn" onclick="contactUs()" data-en="Contact Us for Project Consultation"
+                data-ar="تواصل معنا لاستشارة المشروع">تواصل معنا لاستشارة المشروع</button>
+        </section>
+    </main>
+
+    <!-- Footer الأصلي بدون تغيير -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h3>
+                <p data-en="📧 Contact@metasoftware.eg" data-ar="📧 Contact@metasoftware.eg">
+                    <a href="mailto:Contact@metasoftware.eg?subject=استفسار%20إلى%20Meta%20Software%20%7C%20Inquiry%20to%20Meta%20Software"
+                        style="text-decoration: none; color: inherit;">
+                        📧 Contact@metasoftware.eg
+                    </a>
+                </p>
+                <p data-en="📍 Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar"
+                    data-ar="📍مصر, الرياض، المملكة العربية السعودية, الكويت, قطر">📍
+                    Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar</p>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Our Projects" data-ar="مشاريعنا">مشاريعنا</h3>
+                <ul style="list-style: none;">
+                    <li data-en="Healthcare Systems" data-ar="أنظمة الرعاية الصحية">أنظمة الرعاية الصحية</li>
+                    <li data-en="E-commerce Platforms" data-ar="منصات التجارة الإلكترونية">منصات التجارة الإلكترونية
+                    </li>
+                    <li data-en="Educational Solutions" data-ar="الحلول التعليمية">الحلول التعليمية</li>
+                    <li data-en="Banking Applications" data-ar="التطبيقات المصرفية">التطبيقات المصرفية</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Technologies" data-ar="التقنيات">التقنيات</h3>
+                <ul style="list-style: none;">
+                    <li data-en="🤖 Artificial Intelligence" data-ar="🤖 الذكاء الاصطناعي">🤖 الذكاء الاصطناعي</li>
+                    <li data-en="⛓️ Blockchain" data-ar="⛓️ البلوك تشين">⛓️ البلوك تشين</li>
+                    <li data-en="☁️ Cloud Computing" data-ar="☁️ الحوسبة السحابية">☁️ الحوسبة السحابية</li>
+                    <li data-en="🔒 Cybersecurity" data-ar="🔒 الأمن السيبراني">🔒 الأمن السيبراني</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Industries Served" data-ar="الصناعات المخدومة">الصناعات المخدومة</h3>
+                <ul style="list-style: none;">
+                    <li data-en="🏥 Healthcare" data-ar="🏥 الرعاية الصحية">🏥 الرعاية الصحية</li>
+                    <li data-en="🏦 Banking & Finance" data-ar="🏦 البنوك والتمويل">🏦 البنوك والتمويل</li>
+                    <li data-en="🎓 Education" data-ar="🎓 التعليم">🎓 التعليم</li>
+                    <li data-en="🏭 Manufacturing" data-ar="🏭 التصنيع">🏭 التصنيع</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-en="© 2025 Meta Software Egypt. All rights reserved. | Complete Technology Portfolio - From Cairo to the Arab World"
+                data-ar="© 2025 ميتا سوفت وير مصر. جميع الحقوق محفوظة. | محفظة تقنية متكاملة - من القاهرة إلى الوطن العربي">
+                © 2025 ميتا سوفت وير مصر. جميع الحقوق محفوظة. | محفظة تقنية متكاملة - من القاهرة إلى الوطن العربي</p>
+            <p data-en="🇪🇬 Proudly Egyptian | Founded 2024 | 500+ Successful Projects"
+                data-ar="🇪🇬 مصريون بفخر | تأسست 2024 | أكثر من 500 مشروع ناجح">🇪🇬 مصريون بفخر | تأسست 2024 | أكثر من
+                500 مشروع ناجح</p>
+        </div>
+    </footer>
+
+    <script>
+        // ==================== Header scroll effect (الأصلي بدون تغيير) ==================== 
+        const header = document.getElementById('header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+        // Enhanced Language switching functionality
+        let currentLang = 'en';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update body direction
+            if (lang === 'ar') {
+                document.body.classList.add('rtl');
+                document.documentElement.dir = 'rtl';
+            } else {
+                document.body.classList.remove('rtl');
+                document.documentElement.dir = 'ltr';
+            }
+
+            document.documentElement.lang = lang;
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+                element.textContent = element.getAttribute('data-' + lang);
+            });
+
+            // Update meta tags for enhanced SEO
+            updateMetaTags(lang);
+        }
+
+        function updateMetaTags(lang) {
+            const titles = {
+                en: 'Portfolio - Meta Software | Completed Projects in Egypt and Arab World',
+                ar: 'سابقة الأعمال - Meta Software | المشاريع المكتملة في مصر والوطن العربي'
+            };
+
+            const descriptions = {
+                en: 'Discover Meta Software\'s impressive portfolio of technology projects: healthcare systems, e-commerce platforms, educational solutions, banking applications, and industrial automation across Egypt and the Arab world.',
+                ar: 'اكتشف محفظة أعمال Meta Software المثيرة للإعجاب من المشاريع التقنية: أنظمة الرعاية الصحية، منصات التجارة الإلكترونية، الحلول التعليمية، التطبيقات المصرفية، والأتمتة الصناعية في مصر والوطن العربي.'
+            };
+
+            document.getElementById('page-title').textContent = titles[lang];
+            document.getElementById('meta-description').setAttribute('content', descriptions[lang]);
+        }
+
+        // Contact us function
+        function contactUs() {
+            window.open('mailto:info@metasoftware.eg?subject=استشارة مشروع&body=مرحباً، أود الاستفسار عن خدماتكم لمشروع جديد.', '_blank');
+        }
+
+        // Fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${Math.random() * 0.3}s`;
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Initialize page with English language
+        document.addEventListener('DOMContentLoaded', function () {
+            switchLanguage('en');
+        });
+        // اجبر اللغة الافتراضية على الإنجليزية دائماً عند تحميل الصفحة
+        function switchLanguage(lang) {
+            // تغيير اتجاه الصفحة حسب اللغة
+            document.documentElement.lang = lang;
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+            // تحديث الأزرار
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            if (lang === 'en') {
+                document.querySelector('.lang-btn[onclick*="en"]').classList.add('active');
+            } else {
+                document.querySelector('.lang-btn[onclick*="ar"]').classList.add('active');
+            }
+
+            // تغيير النصوص
+            document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+                element.textContent = element.getAttribute('data-' + lang);
+            });
+        }
+
+        // عند تحميل الصفحة، اجبر اللغة على الإنجليزية دائماً
+        document.addEventListener('DOMContentLoaded', function () {
+            switchLanguage('en');
+        });
+
+
+    </script>
+    <script src="protection.js"></script>
+
+</body>
+
+</html>

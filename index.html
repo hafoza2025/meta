@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title id="page-title">Meta Software - Premium Digital Solutions | The Arab world</title>
+    <meta name="description" id="meta-description"
+        content="Leading software development company in Saudi Arabia and Gulf region. We provide premium digital solutions, web development, mobile apps, and enterprise software services.">
+    <meta name="keywords"
+        content="software development Saudi Arabia, digital solutions Gulf, web development KSA, mobile apps UAE, enterprise software Middle East, تطوير البرمجيات السعودية, حلول رقمية الخليج">
+    <meta name="author" content="Meta Software">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English, Arabic">
+    <meta name="geo.region" content="SA, AE, KW, QA, BH, OM, EG">
+    <meta name="geo.placename" content="Saudi Arabia, Gulf Countries">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Meta Software - Premium Digital Solutions">
+    <meta property="og:description" content="Leading software development company in Saudi Arabia and Gulf region">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.metasoftware.com">
+    <meta property="og:image" content="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+    <meta property="og:site_name" content="Meta Software">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meta Software - Premium Digital Solutions">
+    <meta name="twitter:description" content="Leading software development company in Saudi Arabia and Gulf region">
+    <meta name="twitter:image" content="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+
+    <!-- Favicon - Updated with new icon -->
+    <link rel="icon" type="image/svg+xml" href="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+    <link rel="apple-touch-icon" href="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Meta Software",
+        "url": "https://www.metasoftware.eg",
+        "logo": "https://metasoftware.eg/assets/images/favourite_icon_2.svg",
+        "description": "Leading software development company in Saudi Arabia and Gulf region",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "SA",
+            "addressRegion": "Riyadh"
+        },
+        "areaServed": ["SA", "AE", "KW", "QA", "BH", "OM", "EG"],
+        "serviceType": ["Software Development", "Web Development", "Mobile Applications", "Digital Solutions"]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #4A90E2;
+            --secondary-blue: #2E86C1;
+            --light-blue: #E3F2FD;
+            --dark-blue: #1565C0;
+            --white: #FFFFFF;
+            --dark-gray: #2C3E50;
+            --light-gray: #BDC3C7;
+            --shadow: rgba(74, 144, 226, 0.15);
+            --blue-shadow: rgba(74, 144, 226, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.rtl {
+            direction: rtl;
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        /* Header Styles - Updated with Blue Theme Only */
+        .header {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 50%, var(--primary-blue) 100%);
+            padding: 1.5rem 0;
+            box-shadow: 0 8px 32px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        /* اللوجو الرئيسي من الشركة */
+        .company-logo {
+            width: 80px;
+            height: 40px;
+            background-image: url('https://metasoftware.eg/assets/images/2trivgoAgJVHgQNIzVMC5uvbZ03.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 4px 8px var(--blue-shadow));
+            position: relative;
+        }
+
+        .company-logo::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--primary-blue), transparent, var(--secondary-blue));
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .company-logo:hover::before {
+            opacity: 0.3;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.1) translateY(-2px);
+            filter: drop-shadow(0 8px 16px var(--blue-shadow));
+        }
+
+        /* أيقونة جديدة مع الـ SVG المحدد */
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 3px solid var(--white);
+            background-image: url('https://metasoftware.eg/assets/images/favourite_icon_2.svg');
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .logo-icon:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 10px 30px var(--blue-shadow);
+        }
+
+        .company-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--dark-gray), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-name::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        .logo-section:hover .company-name::after {
+            width: 100%;
+        }
+
+        /* تأثير لامع */
+        .logo-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .logo-section:hover::before {
+            left: 100%;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-blue);
+            background: var(--white);
+            color: var(--primary-blue);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        /* Services Section */
+        .services-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark-gray);
+            margin-bottom: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px var(--shadow);
+            border-color: var(--primary-blue);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-action {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .action-btn {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            border: none;
+            border-radius: 50%;
+            color: var(--white);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .action-btn:hover {
+            background: var(--secondary-blue);
+            transform: scale(1.1);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue), var(--primary-blue));
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--light-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--light-blue);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        /* إضافة تأثير نبضة للوجو */
+        @keyframes logoPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .company-logo {
+            animation: logoPulse 3s ease-in-out infinite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .logo-section {
+                gap: 1rem;
+            }
+
+            .company-logo {
+                width: 60px;
+                height: 30px;
+            }
+
+            .logo-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.4rem;
+            }
+
+            .company-name {
+                font-size: 1.6rem;
+                letter-spacing: 2px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Spinner */
+        .spinner-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s;
+        }
+
+        .spinner {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid var(--primary-blue);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Service card focus/hover/click improvements */
+        .service-card:focus-within,
+        .service-card:focus,
+        .service-card:active {
+            outline: 2px solid var(--primary-blue);
+            box-shadow: 0 0 0 4px var(--light-blue);
+        }
+
+        .service-card {
+            transition: box-shadow 0.3s, transform 0.2s;
+        }
+
+        .service-card:active {
+            transform: scale(0.97);
+        }
+
+        /* Subtle background effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 80% 20%, var(--light-blue) 0%, transparent 70%),
+                radial-gradient(circle at 20% 80%, var(--primary-blue) 0%, transparent 70%);
+            opacity: 0.12;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Accessibility: high contrast for text */
+        .section-title,
+        .service-title,
+        .footer-section h3 {
+            color: #1a1a1a;
+        }
+
+        /* Responsive improvements */
+        @media (max-width: 500px) {
+
+            .header-container,
+            .footer-container {
+                padding: 0 0.5rem;
+            }
+
+            .service-card {
+                padding: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* منع التحرك يمين وشمال */
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ضبط جميع العناصر الداخلية */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* التأكد أن كل العناصر تأخذ عرض الشاشة فقط */
+        .about-section,
+        .hero-section,
+        .content-section,
+        section,
+        header,
+        footer {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* الصور والفيديوهات لا تتعدى العرض */
+        img,
+        video,
+        iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Spinner -->
+    <div class="spinner-overlay" id="spinner" role="status" aria-label="Loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <!-- اللوجو الرئيسي للشركة -->
+                <div class="company-logo" title="Meta Software Official Logo"></div>
+
+                <!-- أيقونة جديدة مع الـ SVG المحدد -->
+                <div class="logo-icon" title="Meta Software Icon"></div>
+
+                <!-- اسم الشركة -->
+                <h1 class="company-name">Meta Software</h1>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLanguage(event, 'en')" aria-label="Switch to English"
+                    tabindex="0">EN</button>
+                <button class="lang-btn" onclick="switchLanguage(event, 'ar')" aria-label="Switch to Arabic"
+                    tabindex="0">AR</button>
+                <button class="lang-btn"
+                    onclick="window.open('https://metasoftware.com.eg','_blank','noopener,noreferrer')"
+                    tabindex="0">Portal control</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <main class="services-section" aria-label="Our Premium Services">
+        <h2 class="section-title" data-en="Our Premium Services and guide" data-ar="خدماتنا المتميزة والدليل">Our
+            Premium Services and guide</h2>
+
+        <div class="services-grid">
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="About Meta Software"
+                onclick="window.location.href='About-Meta-Software.html'">
+                <div class="service-icon">1</div>
+                <h3 class="service-title" data-en="About Meta Software" data-ar="عن شركة ميتا سوفت وير">About Meta
+                    Software</h3>
+                <p class="service-description" data-en="From the heart of Egypt to
+                    the entire Arab world - We are the comprehensive technology."
+                    data-ar="من قلب مصر إلى الوطن العربي بأكمله - نحن الشريك التقني الشامل.">From the heart of Egypt to
+                    the entire Arab world - We are the comprehensive technology.</p>
+                <div class="service-action">
+                    <button class="action-btn" onclick="window.location.href='About-Meta-Software.html'">→</button>
+                </div>
+
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Complete Programming Services"
+                onclick="window.location.href='Complete-Software-Development-Services.html'">
+                <div class="service-icon">2</div>
+                <h3 class="service-title" data-en="Complete Programming Services" data-ar="خدمات البرمجة المتكاملة">
+                    Complete Programming Services
+                </h3>
+                <p class="service-description"
+                    data-en="Ideas beyond the ordinary, execution ahead of expectations — software that makes a difference."
+                    data-ar="أفكار تتخطى المألوف، وتنفيذ يسبق التوقعات — برمجيات تُحدث الفرق.">Ideas beyond the
+                    ordinary, execution ahead of expectations — software that makes a difference.</p>
+                <div class="service-action">
+                    <button class="action-btn"
+                        onclick="window.location.href='Complete-Software-Development-Services.html'">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Our Portfolio"
+                onclick="window.location.href='Portfolio-Meta-Software.html'">
+                <div class="service-icon">3</div>
+                <h3 class="service-title" data-en="Our Portfolio" data-ar="سابقة أعمالنا">Our Portfolio
+                </h3>
+                <p class="service-description"
+                    data-en="Discover our impressive portfolio of successful technology projects across Egypt and the Arab world."
+                    data-ar="اكتشف محفظة أعمالنا المثيرة للإعجاب من مشاريع التكنولوجيا الناجحة في مصر والوطن العربي.">
+                    Discover our impressive portfolio of successful technology projects across Egypt and the Arab world.
+                </p>
+                <div class="service-action">
+                    <button class="action-btn" onclick="window.location.href='Portfolio-Meta-Software.html'">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Complete Product Catalog"
+                onclick="window.location.href='Complete-Programming-Services.html'">
+                <div class="service-icon">4</div>
+                <h3 class="service-title" data-en="Complete Product Catalog" data-ar="كتالوج المنتجات الكامل">Complete
+                    Product Catalog</h3>
+                <p class="service-description"
+                    data-en="Secure and scalable digital infrastructure solutions for modern businesses with 24/7 support."
+                    data-ar="حلول البنية الرقمية الآمنة والقابلة للتوسع للشركات الحديثة مع دعم على مدار الساعة.">Secure
+                    and scalable digital infrastructure solutions for modern businesses with 24/7 support.</p>
+                <div class="service-action">
+                    <button class="action-btn"
+                        onclick="window.location.href='Complete-Programming-Services.html'">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Customer Reviews & Testimonials"
+                onclick="window.location.href='Customer-opinions.html'">
+                <div class="service-icon">5</div>
+                <h3 class="service-title" data-en="Customer Reviews & Testimonials" data-ar="آراء العملاء والشهادات">
+                    Customer Reviews & Testimonials</h3>
+                <p class="service-description"
+                    data-en="Real experiences from clients who worked with Meta Software and CEO Mohamed Al-Hafez."
+                    data-ar="تجارب حقيقية من العملاء الذين عملوا مع ميتا سوفت وير والرئيس التنفيذي محمد الحافظ.">
+                    Real experiences from clients who worked with Meta Software and CEO Mohamed Al-Hafez.</p>
+                <div class="service-action">
+                    <button class="action-btn" onclick="window.location.href='Customer-opinions.html'">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Contact Us"
+                onclick="window.location.href='contact-us.html'">
+                <div class="service-icon">6</div>
+                <h3 class="service-title" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h3>
+                <p class="service-description"
+                    data-en="From the heart of Egypt to the entire Arab world – we are your comprehensive technology partner."
+                    data-ar="من قلب مصر إلى العالم العربي – نحن شريكك التقني الشامل.">From the heart of Egypt to the
+                    entire Arab world – we are your comprehensive technology partner.</p>
+                <div class="service-action">
+                    <button class="action-btn" onclick="window.location.href='contact-us.html'">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Meta Software Technology Blog"
+                onclick="window.location.href='Blog.html'">
+                <div class="service-icon">7</div>
+                <h3 class="service-title" data-en="Meta Software Technology Blog" data-ar="مدونة ميتا سوفت وير التقنية">
+                    Meta
+                    Software Technology Blog
+                </h3>
+                <p class="service-description"
+                    data-en="Discover cutting-edge technology insights, AI innovations, Vision 2030 updates, and exclusive articles from our expert team about the future of technology in the Arab world."
+                    data-ar="اكتشف أحدث الرؤى التقنية، ابتكارات الذكاء الاصطناعي، تحديثات رؤية 2030، ومقالات حصرية من فريق خبرائنا حول مستقبل التكنولوجيا في الوطن العربي.">
+                    Discover cutting-edge technology insights, AI innovations, Vision 2030 updates, and exclusive
+                    articles from our expert team about the future of technology in the Arab world.</p>
+                <div class="service-action">
+                    <button class="action-btn" onclick="window.location.href='Blog.html'">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Client Portal"
+                onclick="window.open('https://metasoftware.com.eg','_blank','noopener,noreferrer')">
+                <div class="service-icon">8</div>
+                <h3 class="service-title" data-en="Client Portal" data-ar="لوحة تحكم العملاء">Client Portal</h3>
+                <p class="service-description" data-en="Project tracking – File upload – Direct communication."
+                    data-ar="تتبع المشروع – تحميل ملفات – تواصل مباشر.">Project tracking – File upload – Direct
+                    communication.</p>
+                <div class="service-action">
+                    <button class="action-btn"
+                        onclick="window.open('https://metasoftware.com.eg','_blank','noopener,noreferrer')">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Frequently Asked Questions"
+                onclick="window.location.href='faq.html'">
+                <div class="service-icon">9</div>
+                <h3 class="service-title" data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة">Frequently
+                    Asked Questions</h3>
+                <p class="service-description"
+                    data-en="Find answers to common questions about Meta Software, our services, and CEO Mohamed Al-Hafez's remarkable success story."
+                    data-ar="اعثر على إجابات للأسئلة الشائعة حول ميتا سوفت وير وخدماتنا وقصة نجاح الرئيس التنفيذي محمد الحافظ.">
+                    Find answers to common questions about Meta Software, our services, and CEO Mohamed Al-Hafez's
+                    remarkable success story.</p>
+                <div class="service-action">
+                    <button class="action-btn" onclick="window.location.href='faq.html'">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Terms of Use"
+                onclick="window.location.href='Terms-of-Use.html'">
+                <div class="service-icon">10</div>
+                <h3 class="service-title" data-en="Terms of Use" data-ar="سياسة الاستخدام">Terms of Use</h3>
+                <p class="service-description"
+                    data-en="Comprehensive terms and conditions for Meta Software website and services - 100 detailed points."
+                    data-ar="شروط وأحكام استخدام موقع وخدمات Meta Software - ١٠٠ نقطة تفصيلية.">
+                    Comprehensive terms and conditions for Meta Software website and services - 100 detailed points.</p>
+                <div class="service-action">
+                    <button class="action-btn" onclick="window.location.href='Terms-of-Use.html'">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Privacy Policy"
+                onclick="window.location.href='privacy-policy.html'">
+                <div class="service-icon">11</div>
+                <h3 class="service-title" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</h3>
+                <p class="service-description"
+                    data-en="Your privacy is important to us. Learn how we protect and handle your personal data."
+                    data-ar="خصوصيتك مهمة بالنسبة لنا. تعرف على كيفية حماية ومعالجة بياناتك الشخصية.">
+                    Your privacy is important to us. Learn how we protect and handle your personal data.</p>
+                <div class="service-action">
+                    <button class="action-btn" onclick="window.location.href='privacy-policy.html'">→</button>
+                </div>
+            </div>
+
+            <div class="service-card fade-in" tabindex="0" role="button" aria-label="Join Our Innovative Team"
+                onclick="window.location.href='careers.html'">
+                <div class="service-icon">12</div>
+                <h3 class="service-title" data-en="Join Our Innovative Team" data-ar="انضم إلى فريقنا المبتكر">Join Our
+                    Innovative Team</h3>
+                <p class="service-description"
+                    data-en="Be part of Meta Software's success story! Work alongside our 24-year-old CEO Mohamed Al-Hafez and help us continue our journey from startup to 25M EGP in just 5 months."
+                    data-ar="كن جزءًا من قصة نجاح ميتا سوفت وير! اعمل جنبًا إلى جنب مع مؤسسنا البالغ من العمر 24 عامًا، محمد الحافظ، وساعدنا في رحلتنا من شركة ناشئة إلى قيمة 25 مليون جنيه في 5 أشهر فقط.">
+                    Be part of Meta Software's success story! Work alongside our 24-year-old CEO Mohamed Al-Hafez and
+                    help us continue our journey from startup to 25M EGP in just 5 months.</p>
+                <div class="service-action">
+                    <button class="action-btn" onclick="window.location.href='careers.html'">→</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h3>
+                <p data-en="📧 Contact@metasoftware.eg" data-ar="📧 Contact@metasoftware.eg">
+                    <a href="mailto:Contact@metasoftware.com?subject=استفسار%20إلى%20Meta%20Software%20%7C%20Inquiry%20to%20Meta%20Software"
+                        style="text-decoration: none; color: inherit;">
+                        📧 Contact@metasoftware.eg
+                    </a>
+                </p>
+                <p data-en="📍 Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar"
+                    data-ar="📍مصر, الرياض، المملكة العربية السعودية, الكويت, قطر">📍
+                    Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar</p>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Services" data-ar="الخدمات">Services</h3>
+                <ul>
+                    <li><a href="#" data-en="Web Development" data-ar="تطوير المواقع">Web Development</a></li>
+                    <li><a href="#" data-en="Mobile Apps" data-ar="تطبيقات الجوال">Mobile Apps</a></li>
+                    <li><a href="#" data-en="Cloud Solutions" data-ar="الحلول السحابية">Cloud Solutions</a></li>
+                    <li><a href="#" data-en="AI Solutions" data-ar="حلول الذكاء الاصطناعي">AI Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Coverage Areas" data-ar="مناطق التغطية">Coverage Areas</h3>
+                <ul>
+                    <li data-en="🇸🇦 Saudi Arabia" data-ar="🇸🇦 المملكة العربية السعودية">🇸🇦 Saudi Arabia</li>
+                    <li data-en="🇦🇪 United Arab Emirates" data-ar="🇦🇪 الإمارات العربية المتحدة">🇦🇪 United Arab
+                        Emirates</li>
+                    <li data-en="🇰🇼 Kuwait" data-ar="🇰🇼 الكويت">🇰🇼 Kuwait</li>
+                    <li data-en="🇶🇦 Qatar" data-ar="🇶🇦 قطر">🇶🇦 Qatar</li>
+                    <li data-en="🇶🇦 Qatar" data-ar="🇶🇦 مصر  (المقر الرئيسي)">Eg Egypt (Headquarters)</li>
+
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Follow Us" data-ar="تابعنا">Follow Us</h3>
+                <p data-en="Stay connected for updates and tech insights"
+                    data-ar="ابق على اتصال للحصول على التحديثات والرؤى التقنية">Stay connected for updates and tech
+                    insights</p>
+                <div style="margin-top: 1rem;">
+                    <a href="#" style="margin-right: 1rem;">LinkedIn</a>
+                    <a href="#" style="margin-right: 1rem;">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-en="© 2025 Meta Software. All rights reserved. | Premium Digital Solutions for the Arab world"
+                data-ar="© 2025 ميتا سوفت وير. جميع الحقوق محفوظة. | حلول متميزة لمنطقة الوطن العربي">© 2025 Meta
+                Software. All rights reserved. | Premium Digital Solutions for the Arab world</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        let currentLang = 'en';
+
+        function switchLanguage(event, lang) {
+            currentLang = lang;
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update body direction
+            document.body.className = lang === 'ar' ? 'rtl' : '';
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+                element.textContent = element.getAttribute('data-' + lang);
+            });
+
+            // Update meta tags
+            updateMetaTags(lang);
+        }
+
+        function updateMetaTags(lang) {
+            const titles = {
+                en: 'Meta Software - Premium Digital Solutions | The Arab world',
+                ar: 'ميتا سوفت وير - حلول رقمية متميزة | الوطن العربي'
+            };
+
+            const descriptions = {
+                en: 'Leading software development company in Saudi Arabia and Gulf region. We provide premium digital solutions, web development, mobile apps, and enterprise software services.',
+                ar: 'شركة رائدة في تطوير البرمجيات في المملكة العربية السعودية ومنطقة الخليج والوطن العربي بإكملة. نوفر حلول رقمية متميزة وتطوير المواقع وتطبيقات الجوال وخدمات البرمجيات المؤسسية.'
+            };
+
+            document.getElementById('page-title').textContent = titles[lang];
+            document.getElementById('meta-description').setAttribute('content', descriptions[lang]);
+        }
+
+        // Animation on scroll
+        function animateOnScroll() {
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.animationDelay = `${index * 0.1}s`;
+                    card.classList.add('fade-in');
+                }, 100);
+            });
+        }
+
+        // Initialize animations
+        window.addEventListener('load', animateOnScroll);
+
+        // Service card click handling
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function () {
+                // Add click animation
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+
+                // You can add navigation logic here
+                console.log('Service clicked:', this.querySelector('.service-title').textContent);
+            });
+        });
+
+        // SEO enhancements
+        function enhanceSEO() {
+            // Add structured data for services
+            const services = document.querySelectorAll('.service-card');
+            const servicesData = [];
+
+            services.forEach(service => {
+                const title = service.querySelector('.service-title').textContent;
+                const description = service.querySelector('.service-description').textContent;
+
+                servicesData.push({
+                    "@type": "Service",
+                    "name": title,
+                    "description": description,
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Meta Software"
+                    }
+                });
+            });
+
+            const structuredData = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Meta Software Services",
+                "description": "Premium digital solutions and software development services",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Meta Software",
+                    "areaServed": ["SA", "AE", "KW", "QA", "BH", "OM", "EG"]
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Software Development Services",
+                    "itemListElement": servicesData
+                }
+            };
+
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.textContent = JSON.stringify(structuredData);
+            document.head.appendChild(script);
+        }
+
+        // Initialize SEO enhancements
+        window.addEventListener('load', enhanceSEO);
+
+        // Performance optimization
+        function optimizePerformance() {
+            // Preload critical resources
+            const criticalResources = [
+                'https://metasoftware.eg/assets/images/2trivgoAgJVHgQNIzVMC5uvbZ03.svg',
+                'https://metasoftware.eg/assets/images/favourite_icon_2.svg'
+            ];
+
+            criticalResources.forEach(resource => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.href = resource;
+                link.as = 'image';
+                document.head.appendChild(link);
+            });
+        }
+
+        window.addEventListener('load', optimizePerformance);
+
+        // Add focus state for buttons
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('focus', function () {
+                this.style.outline = '2px solid var(--primary-blue)';
+            });
+            el.addEventListener('blur', function () {
+                this.style.outline = '';
+            });
+        });
+
+        // Responsive improvements for mobile
+        window.addEventListener('resize', function () {
+            if (window.innerWidth < 500) {
+                document.body.style.fontSize = '15px';
+            } else {
+                document.body.style.fontSize = '';
+            }
+        });
+
+        // Hide spinner when page is loaded
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.getElementById('spinner').style.opacity = 0;
+                setTimeout(function () {
+                    document.getElementById('spinner').style.display = 'none';
+                }, 300);
+            }, 400); // show spinner for at least 400ms
+        });
+
+        // Smooth scroll for service cards (keyboard accessible)
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+    </script>
+
+    <!-- Sitemap generation script -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Meta Software",
+        "url": "https://www.metasoftware.eg",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.metasoftware.eg/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "sameAs": [
+            "https://linkedin.com/company/metasoftware",
+            "https://twitter.com/metasoftware",
+            "https://instagram.com/metasoftware"
+        ]
+    }
+    </script>
+    <script src="protection.js"></script>
+
+</body>
+
+</html>

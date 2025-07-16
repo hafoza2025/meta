@@ -1,0 +1,3087 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Contact Us | Meta Software - Arab World</title>
+    <meta name="description" id="meta-description"
+        content="Contact Meta Software for complete software development services across the Arab world.">
+    <link rel="icon" type="image/svg+xml" href="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+
+    <style>
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        /* ===== متغيرات الألوان الأساسية ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #4A90E2;
+            --secondary-blue: #2E86C1;
+            --light-blue: #E3F2FD;
+            --white: #FFFFFF;
+            --dark-gray: #2C3E50;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --success-green: #27AE60;
+            --danger-red: #E74C3C;
+            --warning-orange: #F39C12;
+            --shadow: rgba(74, 144, 226, 0.15);
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --headquarters-color: #FF4500;
+            --active-color: #32CD32;
+            --potential-color: #FFB347;
+        }
+
+        /* ===== إعداد الصفحة الكاملة ===== */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.rtl {
+            direction: rtl;
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        /* ===== خلفية الصفحة مع التأثيرات ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 80% 20%, var(--light-blue) 0%, transparent 70%),
+                radial-gradient(circle at 20% 80%, var(--primary-blue) 0%, transparent 70%);
+            opacity: 0.08;
+            z-index: 0;
+            pointer-events: none;
+            animation: backgroundFloat 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundFloat {
+
+            0%,
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                transform: scale(1.1) rotate(2deg);
+            }
+        }
+
+        /* ===== رأس الصفحة (Header) ===== */
+        .header {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 50%, var(--primary-blue) 100%);
+            padding: 1.5rem 0;
+            box-shadow: 0 8px 32px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        /* اللوجو الرئيسي من الشركة */
+        .company-logo {
+            width: 80px;
+            height: 40px;
+            background-image: url('https://metasoftware.eg/assets/images/2trivgoAgJVHgQNIzVMC5uvbZ03.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 4px 8px var(--blue-shadow));
+            position: relative;
+        }
+
+        .company-logo::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--primary-blue), transparent, var(--secondary-blue));
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .company-logo:hover::before {
+            opacity: 0.3;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.1) translateY(-2px);
+            filter: drop-shadow(0 8px 16px var(--blue-shadow));
+        }
+
+        /* أيقونة جديدة مع الـ SVG المحدد */
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 3px solid var(--white);
+            background-image: url('https://metasoftware.eg/assets/images/favourite_icon_2.svg');
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .logo-icon:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 10px 30px var(--blue-shadow);
+        }
+
+        .company-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--dark-gray), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-name::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        .logo-section:hover .company-name::after {
+            width: 100%;
+        }
+
+        /* تأثير لامع */
+        .logo-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .logo-section:hover::before {
+            left: 100%;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-blue);
+            background: var(--white);
+            color: var(--primary-blue);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        /* ===== قسم المحتوى الرئيسي ===== */
+        .contact-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 2rem 2rem;
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 2px;
+            animation: titleUnderline 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleUnderline {
+            0% {
+                width: 100px;
+            }
+
+            100% {
+                width: 150px;
+            }
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        /* ===== شبكة بطاقات التواصل ===== */
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        /* ===== تصميم البطاقات الحديث ===== */
+        .contact-card,
+        .contact-form {
+            width: 100%;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border: none;
+            border-radius: 20px;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+
+        .contact-card::before,
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg,
+                    var(--gradient-1) 0%,
+                    var(--gradient-3) 50%,
+                    var(--gradient-4) 100%);
+            border-radius: 20px;
+            padding: 3px;
+            z-index: -1;
+        }
+
+        .contact-card::after,
+        .contact-form::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 17px;
+            z-index: -1;
+        }
+
+        .contact-card:hover,
+        .contact-form:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.12),
+                0 8px 25px rgba(74, 144, 226, 0.15);
+        }
+
+        .contact-card-content,
+        .contact-form-content {
+            padding: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modern-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(74, 144, 226, 0.1);
+            position: relative;
+        }
+
+        .modern-card-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--gradient-1);
+            border-radius: 1px;
+        }
+
+        .modern-icon-wrapper {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-1);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 8px 25px rgb(96, 159, 231);
+        }
+
+        .modern-icon {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .modern-card-title {
+            flex: 1;
+        }
+
+        .modern-card-title h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0 0 0.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modern-card-title p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .modern-info-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .modern-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.03) 0%, rgba(74, 144, 226, 0.08) 100%);
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-blue);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modern-info-item:hover {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.08) 0%, rgba(74, 144, 226, 0.12) 100%);
+            transform: translateX(8px);
+            border-left-color: var(--secondary-blue);
+        }
+
+        .modern-info-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        .modern-info-details h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin: 0 0 0.3rem 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modern-info-details p {
+            margin: 0;
+            color: var(--text-light);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .modern-info-details a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .modern-info-details a:hover {
+            color: var(--secondary-blue);
+        }
+
+        .modern-social-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(74, 144, 226, 0.1);
+            text-align: center;
+        }
+
+        .modern-social-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modern-social-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .modern-social-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.25);
+        }
+
+        .modern-social-icon:nth-child(1) {
+            background: var(--gradient-1);
+        }
+
+        .modern-social-icon:nth-child(2) {
+            background: var(--gradient-2);
+        }
+
+        .modern-social-icon:nth-child(3) {
+            background: var(--gradient-3);
+        }
+
+        .modern-social-icon:nth-child(4) {
+            background: var(--gradient-4);
+        }
+
+        .modern-social-icon:nth-child(5) {
+            background: var(--gradient-1);
+        }
+
+        .modern-social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.4);
+        }
+
+        .modern-form-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .modern-form-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-4);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(67, 233, 123, 0.3);
+        }
+
+        .modern-form-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0 0 0.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modern-form-subtitle {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .modern-form {
+            position: relative;
+            z-index: 2;
+        }
+
+        .modern-form-group {
+            margin-bottom: 1.8rem;
+            position: relative;
+        }
+
+        .modern-form-label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modern-form-control {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            border: 2px solid rgba(74, 144, 226, 0.15);
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        .modern-form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            background: #ffffff;
+            box-shadow:
+                0 0 0 4px rgba(74, 144, 226, 0.1),
+                0 8px 25px rgba(74, 144, 226, 0.15);
+            transform: translateY(-2px);
+        }
+
+        textarea.modern-form-control {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .modern-form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .modern-btn-submit {
+            width: 100%;
+            padding: 1.3rem 2rem;
+            border: none;
+            background: var(--gradient-4);
+            color: white;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(67, 233, 123, 0.3);
+        }
+
+        .modern-btn-submit:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(67, 233, 123, 0.4);
+        }
+
+        /* ===== الشبكة العالمية بألوان Meta Software ===== */
+        .global-network-section {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #4A90E2 100%);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .global-network-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(74, 144, 226, 0.15) 0%, transparent 70%),
+                radial-gradient(circle at 70% 70%, rgba(227, 242, 253, 0.1) 0%, transparent 70%);
+            animation: metaNetworkPulse 10s ease-in-out infinite;
+        }
+
+        @keyframes metaNetworkPulse {
+
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .network-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .network-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .network-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 25px rgba(74, 144, 226, 0.6);
+        }
+
+        .network-subtitle {
+            font-size: 1.4rem;
+            color: #E3F2FD;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* ===== حاوي الخريطة العالمية ===== */
+        .global-map-container {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow:
+                0 30px 90px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, #4A90E2 0%, #2E86C1 100%);
+            border: 3px solid rgba(74, 144, 226, 0.4);
+        }
+
+        .global-network-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ===== المحيط بألوان Meta ===== */
+        .meta-ocean {
+            background: radial-gradient(circle at 40% 40%, #4A90E2 0%, #2E86C1 100%);
+        }
+
+        /* ===== القارات بألوان هوية الشركة ===== */
+        .continent-meta {
+            transition: all 0.4s ease;
+            cursor: pointer;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+        }
+
+        .continent-meta:hover {
+            fill: url(#metaLandGrad);
+            transform: scale(1.01);
+            filter: drop-shadow(0 6px 18px rgba(74, 144, 226, 0.4));
+        }
+
+        .arab-continent {
+            filter: drop-shadow(0 0 20px rgba(255, 69, 0, 0.5));
+        }
+
+        /* ===== الشبكة العنكبوتية من مصر ===== */
+        .spider-line {
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .egypt-primary {
+            stroke-dasharray: 12, 6;
+            animation: egyptPrimaryFlow 2s linear infinite;
+            filter: drop-shadow(0 0 8px #FF4500);
+        }
+
+        .egypt-global {
+            stroke-dasharray: 8, 4;
+            animation: egyptGlobalFlow 3s linear infinite;
+            filter: drop-shadow(0 0 6px #4A90E2);
+        }
+
+        .secondary-global {
+            stroke-dasharray: 6, 3;
+            animation: secondaryGlobalFlow 4s linear infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes egyptPrimaryFlow {
+            0% {
+                stroke-dashoffset: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 36;
+            }
+        }
+
+        @keyframes egyptGlobalFlow {
+            0% {
+                stroke-dashoffset: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 24;
+            }
+        }
+
+        @keyframes secondaryGlobalFlow {
+            0% {
+                stroke-dashoffset: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 18;
+            }
+        }
+
+        /* ===== نقطة مصر المميزة والبارزة ===== */
+        .egypt-hq-point,
+        .headquarters-marker {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .egypt-hq-point:hover,
+        .headquarters-marker:hover {
+            transform: scale(1.1);
+        }
+
+        /* نبضات مصر المتعددة */
+        .egypt-pulse-1 {
+            animation: egyptPulse1 3s ease-out infinite;
+        }
+
+        .egypt-pulse-2 {
+            animation: egyptPulse2 4s ease-out infinite;
+        }
+
+        .egypt-pulse-3 {
+            animation: egyptPulse3 5s ease-out infinite;
+        }
+
+        @keyframes egyptPulse1 {
+            0% {
+                opacity: 0.6;
+                r: 60;
+            }
+
+            100% {
+                opacity: 0;
+                r: 90;
+            }
+        }
+
+        @keyframes egyptPulse2 {
+            0% {
+                opacity: 0.4;
+                r: 80;
+            }
+
+            100% {
+                opacity: 0;
+                r: 120;
+            }
+        }
+
+        @keyframes egyptPulse3 {
+            0% {
+                opacity: 0.2;
+                r: 100;
+            }
+
+            100% {
+                opacity: 0;
+                r: 150;
+            }
+        }
+
+        /* ===== التسميات المنفصلة والواضحة ===== */
+        .country-label-separated {
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .country-label-separated rect {
+            filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+            transition: all 0.3s ease;
+        }
+
+        .country-name {
+            font-family: 'Segoe UI', sans-serif;
+            text-rendering: optimizeLegibility;
+            transition: all 0.3s ease;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .country-name.ar {
+            font-family: 'Tahoma', 'Arial', sans-serif;
+            direction: rtl;
+            unicode-bidi: embed;
+        }
+
+        /* تسميات مخصصة لكل دولة لتجنب التداخل */
+        .egypt-label {
+            z-index: 100;
+        }
+
+        .saudi-label {
+            z-index: 99;
+        }
+
+        .uae-label {
+            z-index: 98;
+        }
+
+        .kuwait-label {
+            z-index: 97;
+        }
+
+        .qatar-label {
+            z-index: 96;
+        }
+
+        .bahrain-label {
+            z-index: 95;
+        }
+
+        .oman-label {
+            z-index: 94;
+        }
+
+        .jordan-label {
+            z-index: 93;
+        }
+
+        .lebanon-label {
+            z-index: 92;
+        }
+
+        .syria-label {
+            z-index: 91;
+        }
+
+        .iraq-label {
+            z-index: 90;
+        }
+
+        .palestine-label {
+            z-index: 89;
+        }
+
+        .morocco-label {
+            z-index: 88;
+        }
+
+        .algeria-label {
+            z-index: 87;
+        }
+
+        .tunisia-label {
+            z-index: 86;
+        }
+
+        .libya-label {
+            z-index: 85;
+        }
+
+        .sudan-label {
+            z-index: 84;
+        }
+
+        .yemen-label {
+            z-index: 83;
+        }
+
+        /* تأثيرات التمرير المحسنة */
+        .arab-marker:hover .country-label-separated {
+            transform: scale(1.05);
+        }
+
+        .arab-marker:hover .country-label-separated rect {
+            filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        /* ===== النقاط العالمية ===== */
+        .network-point {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .network-point:hover {
+            transform: scale(1.1);
+        }
+
+        .network-point:hover .spider-line {
+            opacity: 1;
+            stroke-width: 5;
+            filter: drop-shadow(0 0 12px currentColor);
+        }
+
+        /* ===== التسميات الذكية للنقاط العالمية ===== */
+        .point-label {
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        .point-label rect {
+            filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+        }
+
+        .label-text {
+            font-family: 'Segoe UI', sans-serif;
+            text-rendering: optimizeLegibility;
+        }
+
+        .label-text.ar {
+            font-family: 'Tahoma', 'Arial', sans-serif;
+            direction: rtl;
+        }
+
+        .network-point:hover .point-label {
+            transform: scale(1.05) translateY(-3px);
+        }
+
+        .network-point:hover .point-label rect {
+            filter: drop-shadow(0 6px 25px rgba(74, 144, 226, 0.3));
+        }
+
+        /* ===== مركز التحكم Meta ===== */
+        .meta-control-center {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: rgba(44, 62, 80, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(74, 144, 226, 0.2);
+            border: 2px solid rgba(74, 144, 226, 0.4);
+            z-index: 15;
+            max-width: 350px;
+        }
+
+        .control-header h4 {
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            border-bottom: 2px solid rgba(74, 144, 226, 0.4);
+            padding-bottom: 10px;
+            text-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+        }
+
+        .control-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .control-group h5 {
+            color: #E3F2FD;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .control-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .control-item:hover {
+            background: rgba(74, 144, 226, 0.15);
+            transform: translateX(5px);
+        }
+
+        .control-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .egypt-hq-dot {
+            background: #FF4500;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+            animation: egyptDotPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes egyptDotPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .arab-active-dot {
+            background: #4A90E2;
+            box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+        }
+
+        .arab-expansion-dot {
+            background: #2E86C1;
+            box-shadow: 0 0 15px rgba(46, 134, 193, 0.5);
+        }
+
+        .global-network-dot {
+            background: #E3F2FD;
+            box-shadow: 0 0 15px rgba(227, 242, 253, 0.5);
+        }
+
+        .connection-line-sample {
+            width: 45px;
+            height: 4px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .egypt-primary-sample {
+            background: #FF4500;
+            box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+            animation: samplePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes samplePulse {
+
+            0%,
+            100% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .egypt-global-sample {
+            background: #4A90E2;
+            box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+        }
+
+        .secondary-global-sample {
+            background: #2E86C1;
+            box-shadow: 0 0 10px rgba(46, 134, 193, 0.5);
+        }
+
+        /* ===== تحكم اللغة Meta المحسن ===== */
+        .meta-language-control {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: rgba(44, 62, 80, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(74, 144, 226, 0.2);
+            border: 2px solid rgba(74, 144, 226, 0.4);
+            z-index: 1000;
+        }
+
+        .meta-lang-btn {
+            padding: 12px 18px;
+            margin: 0 5px;
+            border: 2px solid rgba(74, 144, 226, 0.6);
+            background: transparent;
+            color: #E3F2FD;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 60px;
+        }
+
+        .meta-lang-btn.active {
+            background: linear-gradient(135deg, #4A90E2, #2E86C1);
+            color: #FFFFFF;
+            border-color: #4A90E2;
+            box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+            transform: scale(1.1);
+        }
+
+        .meta-lang-btn:hover:not(.active) {
+            background: rgba(74, 144, 226, 0.15);
+            border-color: #4A90E2;
+            color: #FFFFFF;
+            transform: scale(1.05);
+        }
+
+        /* ===== إحصائيات الشبكة العالمية ===== */
+        .global-network-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .meta-stat-box {
+            background: rgba(44, 62, 80, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(74, 144, 226, 0.2);
+            border: 2px solid rgba(74, 144, 226, 0.3);
+        }
+
+        .meta-stat-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4A90E2, #2E86C1);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .meta-stat-box:nth-child(2)::before {
+            background: linear-gradient(90deg, #FF4500, #FF6347);
+        }
+
+        .meta-stat-box:nth-child(3)::before {
+            background: linear-gradient(90deg, #2E86C1, #4A90E2);
+        }
+
+        .meta-stat-box:nth-child(4)::before {
+            background: linear-gradient(90deg, #E3F2FD, #BBDEFB);
+        }
+
+        .meta-stat-box:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow:
+                0 25px 65px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(74, 144, 226, 0.3);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 15px rgba(74, 144, 226, 0.5));
+        }
+
+        .stat-value {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 25px rgba(74, 144, 226, 0.6);
+            animation: metaStatGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes metaStatGlow {
+            0% {
+                text-shadow: 0 0 25px rgba(74, 144, 226, 0.6);
+            }
+
+            100% {
+                text-shadow: 0 0 35px rgba(74, 144, 226, 0.8);
+            }
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #E3F2FD;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== قسم إيميلات الشركة ===== */
+        .company-emails-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-emails-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(74,144,226,0.1)"/><circle cx="90" cy="20" r="0.5" fill="rgba(74,144,226,0.1)"/><circle cx="20" cy="90" r="1.5" fill="rgba(74,144,226,0.1)"/></svg>');
+            opacity: 0.5;
+            animation: floatPattern 15s linear infinite;
+        }
+
+        @keyframes floatPattern {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-100px);
+            }
+        }
+
+        .emails-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .emails-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .emails-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .emails-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gradient-1);
+            border-radius: 2px;
+        }
+
+        .emails-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .emails-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .email-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .email-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-3) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .email-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .email-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(74, 144, 226, 0.15);
+            border-color: var(--primary-blue);
+        }
+
+        .email-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .email-card:hover .email-icon {
+            transform: scale(1.1);
+        }
+
+        .email-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .email-card a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .email-card a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .email-card:hover a::after {
+            width: 100%;
+        }
+
+        .email-card:hover a {
+            color: var(--secondary-blue);
+        }
+
+        /* ===== تذييل الصفحة (Footer) ===== */
+        .footer {
+            background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+            animation: floatPattern 20s linear infinite;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-section {
+            position: relative;
+        }
+
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: var(--light-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--light-blue);
+            border-radius: 1px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+            padding-left: 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .footer-section li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--light-blue);
+            font-size: 0.7rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section li:hover {
+            padding-left: 1.5rem;
+            color: var(--light-blue);
+        }
+
+        .footer-section li:hover::before {
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== حركات الانزلاق والظهور ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            animation: slideInRight 0.8s ease forwards;
+        }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ===== رسائل حالة النموذج ===== */
+        .form-status {
+            margin-top: 1rem;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .form-status.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .alert-success {
+            background: var(--gradient-4);
+            color: var(--white);
+        }
+
+        .alert-danger {
+            background: var(--gradient-2);
+            color: var(--white);
+        }
+
+        /* ===== مؤشر التحميل ===== */
+        .spinner-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid var(--light-blue);
+            border-top: 6px solid var(--primary-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ===== إصلاح مشاكل الترجمة ===== */
+        .rtl .country-name.ar {
+            text-align: right;
+            direction: rtl;
+        }
+
+        .rtl .meta-lang-btn {
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        /* ===== تحسينات إضافية ===== */
+        .country-label-separated:hover {
+            z-index: 1000;
+        }
+
+        .arab-marker:hover .country-label-separated rect {
+            stroke-width: 3;
+            filter: drop-shadow(0 8px 25px rgba(74, 144, 226, 0.4));
+        }
+
+        /* ===== تحسينات الاستجابة ===== */
+        @media (max-width: 768px) {
+            .contact-section {
+                max-width: 95%;
+                padding: 100px 1rem 2rem;
+            }
+
+            .contact-card-content,
+            .contact-form-content {
+                padding: 2rem;
+            }
+
+            .modern-card-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .modern-info-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.8rem;
+            }
+
+            .modern-form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .company-name {
+                font-size: 1.5rem;
+            }
+
+            .global-map-container {
+                height: 600px;
+            }
+
+            .network-title {
+                font-size: 2.2rem;
+            }
+
+            .meta-control-center {
+                bottom: 15px;
+                left: 15px;
+                padding: 20px;
+                max-width: 300px;
+            }
+
+            .meta-language-control {
+                top: 15px;
+                right: 15px;
+                padding: 12px;
+            }
+
+            .global-network-stats {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .meta-stat-box {
+                padding: 2rem;
+            }
+
+            .stat-value {
+                font-size: 3rem;
+            }
+
+            .emails-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .emails-title {
+                font-size: 1.8rem;
+            }
+
+            .company-emails-section {
+                padding: 3rem 0;
+            }
+
+            .emails-container {
+                padding: 0 1rem;
+            }
+
+            /* تحسينات التسميات للشاشات الصغيرة */
+            .country-label-separated rect {
+                width: 100px;
+                height: 40px;
+            }
+
+            .country-name {
+                font-size: 10px;
+            }
+
+            .egypt-label rect {
+                width: 140px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-section {
+                padding: 120px 1rem 2rem;
+            }
+
+            .contact-card-content,
+            .contact-form-content {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+
+            .company-name {
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+            }
+
+            .global-map-container {
+                height: 500px;
+            }
+
+            .network-title {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+
+            .meta-control-center {
+                max-width: 280px;
+                padding: 15px;
+            }
+
+            .global-network-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-value {
+                font-size: 2.5rem;
+            }
+
+            .emails-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .email-card {
+                padding: 1.2rem;
+            }
+
+            .emails-title {
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+            }
+
+            /* إخفاء المزيد من التسميات في الشاشات الصغيرة جداً */
+            .country-label-separated rect {
+                width: 80px;
+                height: 35px;
+            }
+
+            .country-name {
+                font-size: 9px;
+            }
+
+            .egypt-label rect {
+                width: 120px;
+                height: 40px;
+            }
+        }
+
+        /* ===== تحسينات إضافية للأداء ===== */
+        .network-point,
+        .spider-line,
+        .egypt-hq-point,
+        .arab-marker,
+        .country-label-separated {
+            will-change: transform;
+        }
+
+        /* ===== تحسينات إمكانية الوصول ===== */
+        .network-point:focus,
+        .meta-stat-box:focus,
+        .arab-marker:focus {
+            outline: 3px solid #4A90E2;
+            outline-offset: 2px;
+        }
+
+        /* ===== تحسينات الطباعة ===== */
+        @media print {
+
+            .meta-control-center,
+            .meta-language-control {
+                display: none !important;
+            }
+
+            .global-map-container {
+                height: 500px;
+            }
+
+            .country-label-separated {
+                background: white !important;
+                border: 1px solid black !important;
+            }
+        }
+
+        /* ===== تحسينات الحركة ===== */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== Loading Spinner ===== -->
+    <div class="spinner-overlay" id="spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="company-logo" title="Meta Software Official Logo" aria-label="Meta Software Logo"></div>
+                <div class="logo-icon" title="Meta Software Icon" aria-label="Meta Software Icon"></div>
+                <h1 class="company-name">Meta Software</h1>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLanguage(event, 'en')"
+                    aria-label="Switch to English">EN</button>
+                <button class="lang-btn" onclick="switchLanguage(event, 'ar')" aria-label="Switch to Arabic">AR</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== Contact Section ===== -->
+    <main class="contact-section">
+        <div class="page-header">
+            <h2 class="section-title" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
+            <p class="page-subtitle"
+                data-en="From the heart of Egypt to the entire Arab world – we are your comprehensive technology partner."
+                data-ar="من قلب مصر إلى العالم العربي – نحن شريكك التقني الشامل.">
+                From the heart of Egypt to the entire Arab world – we are your comprehensive technology partner.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- ===== بطاقة معلومات الشركة ===== -->
+            <div class="contact-card fade-in">
+                <div class="contact-card-content">
+                    <div class="modern-card-header">
+                        <div class="modern-icon-wrapper">
+                            <div class="modern-icon">🏢</div>
+                        </div>
+                        <div class="modern-card-title">
+                            <h3 data-en="Meta Software" data-ar="ميتا سوفت وير">Meta Software</h3>
+                            <p data-en="Your Technology Partner" data-ar="شريكك التقني">Your Technology Partner</p>
+                        </div>
+                    </div>
+
+                    <div class="modern-info-grid">
+                        <div class="modern-info-item">
+                            <div class="modern-info-icon">📍</div>
+                            <div class="modern-info-details">
+                                <h4 data-en="Headquarters" data-ar="المقر الرئيسي">Headquarters</h4>
+                                <p data-en="Egypt, Giza, Sheikh Zayed" data-ar="مصر، الجيزة، الشيخ زايد">Egypt, Giza,
+                                    Sheikh Zayed</p>
+                            </div>
+                        </div>
+
+                        <div class="modern-info-item">
+                            <div class="modern-info-icon">📞</div>
+                            <div class="modern-info-details">
+                                <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
+                                <p><a href="tel:+201507743567">201507743567</a></p>
+                            </div>
+                        </div>
+
+                        <div class="modern-info-item">
+                            <div class="modern-info-icon">📧</div>
+                            <div class="modern-info-details">
+                                <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
+                                <p><a href="mailto:Contact@metasoftware.eg">Contact@metasoftware.eg</a></p>
+                            </div>
+                        </div>
+
+                        <div class="modern-info-item">
+                            <div class="modern-info-icon">🕒</div>
+                            <div class="modern-info-details">
+                                <h4 data-en="Working Hours" data-ar="ساعات العمل">Working Hours</h4>
+                                <p data-en="24/7" data-ar="24/7">24/7</p>
+                            </div>
+                        </div>
+
+                        <div class="modern-info-item">
+                            <div class="modern-info-icon">🌍</div>
+                            <div class="modern-info-details">
+                                <h4 data-en="Service Areas" data-ar="مناطق الخدمة">Service Areas</h4>
+                                <p data-en="🇪🇬 Egypt | 🇸🇦 Saudi Arabia | 🇦🇪 UAE | 🇰🇼 Kuwait | 🇶🇦 Qatar"
+                                    data-ar="🇪🇬 مصر | 🇸🇦 السعودية | 🇦🇪 الإمارات | 🇰🇼 الكويت | 🇶🇦 قطر">
+                                    🇪🇬 Egypt | 🇸🇦 Saudi Arabia | 🇦🇪 UAE | 🇰🇼 Kuwait | 🇶🇦 Qatar
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modern-social-section">
+                        <h4 class="modern-social-title" data-en="Follow Us" data-ar="تابعنا">Follow Us</h4>
+                        <div class="modern-social-icons">
+                            <a href="https://www.facebook.com/share/19wsZuVhd4/" class="modern-social-icon"
+                                aria-label="Facebook">📘</a>
+                            <a href="https://www.linkedin.com/company/m-softawre2030" class="modern-social-icon"
+                                aria-label="LinkedIn">💼</a>
+                            <a href="https://www.instagram.com/metasoftware.eg?igsh=YzhxYjM5dGk1MGZs"
+                                class="modern-social-icon" aria-label="Instagram">📷</a>
+                            <a href="https://wa.me/201507743567" class="modern-social-icon" aria-label="WhatsApp">💬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.querySelectorAll('.modern-social-icon').forEach(function (link) {
+                    link.addEventListener("click", function (e) {
+                        const href = this.getAttribute("href");
+                        const platform = this.getAttribute("aria-label") || "الرابط الخارجي";
+
+                        // تحديد اللغة من عنصر HTML الرئيسي أو body
+                        const lang = document.documentElement.lang || document.body.getAttribute("lang") || "en";
+
+                        // الرسالة حسب اللغة
+                        let confirmMsg;
+                        if (lang.startsWith("ar")) {
+                            confirmMsg = `⚠️ هل أنت متأكد أنك تريد مغادرة الموقع وفتح ${platform}؟`;
+                        } else {
+                            confirmMsg = `⚠️ Are you sure you want to leave the site and open ${platform}?`;
+                        }
+
+                        if (href && href !== "#") {
+                            const confirmLeave = confirm(confirmMsg);
+                            if (!confirmLeave) {
+                                e.preventDefault();
+                            }
+                        }
+                    });
+                });
+            </script>
+
+
+
+            <!-- ===== نموذج التواصل ===== -->
+            <div class="contact-form slide-in-right">
+                <div class="contact-form-content">
+                    <div class="modern-form-header">
+                        <div class="modern-form-icon">✉️</div>
+                        <h3 class="modern-form-title" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h3>
+                        <p class="modern-form-subtitle"
+                            data-en="Send us a message and we'll respond as soon as possible"
+                            data-ar="أرسل لنا رسالة وسنرد عليك في أقرب وقت">Send us a message and we'll respond as soon
+                            as possible</p>
+                    </div>
+
+                    <form id="contactForm" action="https://formspree.io/f/your-id" method="POST" novalidate
+                        class="modern-form">
+                        <div class="modern-form-row">
+                            <div class="modern-form-group">
+                                <label for="name" class="modern-form-label" data-en="Full Name *"
+                                    data-ar="الاسم الكامل *">Full Name *</label>
+                                <input type="text" id="name" name="name" class="modern-form-control" required
+                                    placeholder="Enter your full name" data-placeholder-en="Enter your full name"
+                                    data-placeholder-ar="أدخل اسمك الكامل">
+                            </div>
+                            <div class="modern-form-group">
+                                <label for="email" class="modern-form-label" data-en="Email Address *"
+                                    data-ar="البريد الإلكتروني *">Email Address *</label>
+                                <input type="email" id="email" name="_replyto" class="modern-form-control" required
+                                    placeholder="Enter your email address"
+                                    data-placeholder-en="Enter your email address"
+                                    data-placeholder-ar="أدخل بريدك الإلكتروني">
+                            </div>
+                        </div>
+
+                        <div class="modern-form-row">
+                            <div class="modern-form-group">
+                                <label for="phone" class="modern-form-label" data-en="Phone Number"
+                                    data-ar="رقم الهاتف">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="modern-form-control"
+                                    placeholder="أكتب رقمك بكود الدولة"
+                                    data-placeholder-en="Write your number with country code"
+                                    data-placeholder-ar="أكتب رقمك بكود الدولة">
+                            </div>
+                            <div class="modern-form-group">
+                                <label for="subject" class="modern-form-label" data-en="Subject"
+                                    data-ar="الموضوع">Subject</label>
+                                <input type="text" id="subject" name="subject" class="modern-form-control"
+                                    placeholder="Enter message subject" data-placeholder-en="Enter message subject"
+                                    data-placeholder-ar="أدخل موضوع الرسالة">
+                            </div>
+                        </div>
+
+                        <div class="modern-form-group">
+                            <label for="message" class="modern-form-label" data-en="Message *"
+                                data-ar="رسالتك *">Message *</label>
+                            <textarea id="message" name="message" rows="6" class="modern-form-control" required
+                                placeholder="Write your message here..."
+                                data-placeholder-en="Write your message here..."
+                                data-placeholder-ar="اكتب رسالتك هنا..."></textarea>
+                        </div>
+
+                        <button type="submit" class="modern-btn-submit" data-en="Send Message"
+                            data-ar="إرسال الرسالة">Send Message</button>
+                        <div id="form-status" class="form-status" hidden></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- مكتبة EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        const SERVICE_ID = 'service_lmv16th';
+        const TEMPLATE_ID = 'template_wotaywk';
+        const PUBLIC_KEY = 'JJ3nd6_kwp5VcGNFO';
+
+        emailjs.init(PUBLIC_KEY);
+
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            const submitBtn = this.querySelector('.modern-btn-submit');
+
+            // تحديد اللغة الحالية
+            const currentLang = document.documentElement.lang || 'en';
+
+            // حفظ النص الأصلي للزر
+            const originalText = submitBtn.textContent;
+
+            // عرض حالة الإرسال
+            submitBtn.textContent = currentLang.startsWith('ar') ? 'جاري الإرسال...' : 'Sending...';
+            submitBtn.disabled = true;
+
+            try {
+                // إرسال النموذج باستخدام EmailJS
+                await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, '#contactForm');
+
+                // رسالة نجاح
+                status.textContent = currentLang.startsWith('ar')
+                    ? 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.'
+                    : 'Your message has been sent successfully! We will contact you soon.';
+                status.className = 'form-status alert-success show';
+                this.reset();
+            } catch (error) {
+                console.error('EmailJS Error:', error);
+
+                // رسالة خطأ
+                status.textContent = currentLang.startsWith('ar')
+                    ? 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.'
+                    : 'An error occurred while sending. Please try again.';
+                status.className = 'form-status alert-danger show';
+            } finally {
+                // استعادة حالة الزر
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+
+
+
+    <!-- ===== قسم خريطة الانتشار العربي الكاملة ===== -->
+    <!-- ===== قسم الشبكة العالمية المحسن مع تسميات منفصلة ===== -->
+    <section class="global-network-section">
+        <div class="network-container">
+            <div class="network-header">
+                <h3 class="network-title" data-en="Meta Software Global Network Hub"
+                    data-ar="مركز شبكة ميتا سوفت وير العالمية">Meta Software Global Network Hub</h3>
+                <p class="network-subtitle" data-en="Worldwide Strategic Network with Egypt as Central Command"
+                    data-ar="شبكة استراتيجية عالمية مع مصر كمركز القيادة">Worldwide Strategic Network with Egypt as
+                    Central Command</p>
+            </div>
+
+            <div class="global-map-container">
+                <svg viewBox="0 0 1600 800" class="global-network-svg">
+                    <!-- تعريفات الألوان والتأثيرات -->
+                    <defs>
+                        <!-- ألوان هوية Meta Software -->
+                        <radialGradient id="metaOceanGrad" cx="50%" cy="50%" r="60%">
+                            <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#2E86C1;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+                        </radialGradient>
+
+                        <linearGradient id="metaLandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#E3F2FD;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#BBDEFB;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#90CAF9;stop-opacity:1" />
+                        </linearGradient>
+
+                        <!-- تأثير توهج مصر المميز -->
+                        <filter id="egyptGlow">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+
+                        <!-- تأثير النبضة لمصر -->
+                        <filter id="egyptPulse">
+                            <feGaussianBlur stdDeviation="6" result="glowBlur" />
+                            <feColorMatrix in="glowBlur" values="1 0 0 0 0  0 0.5 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+                            <feMerge>
+                                <feMergeNode in="glowBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- خلفية المحيط بألوان Meta -->
+                    <rect width="1600" height="800" fill="url(#metaOceanGrad)" class="meta-ocean" />
+
+                    <!-- القارات بألوان هوية الشركة -->
+                    <g class="meta-continents">
+                        <!-- أمريكا الشمالية -->
+                        <path
+                            d="M100 180 Q180 150 280 170 L380 190 Q480 210 580 230 L620 250 Q600 290 550 280 L450 260 Q350 240 250 220 L150 200 Q110 190 100 180 Z"
+                            fill="url(#metaLandGrad)" stroke="#4A90E2" stroke-width="2" class="continent-meta" />
+
+                        <!-- أوروبا -->
+                        <path
+                            d="M650 150 Q720 130 820 150 L920 170 Q980 190 1020 210 Q1010 250 960 240 L820 220 Q720 200 650 180 Q640 165 650 150 Z"
+                            fill="url(#metaLandGrad)" stroke="#4A90E2" stroke-width="2" class="continent-meta" />
+
+                        <!-- أفريقيا والشرق الأوسط (المنطقة المميزة) -->
+                        <path
+                            d="M700 230 Q780 210 880 230 L980 250 Q1020 280 1040 330 L1060 380 Q1070 450 1050 520 L1030 580 Q1010 620 980 640 L940 660 Q900 670 860 660 L820 640 Q780 620 760 580 L740 520 Q730 450 740 380 L750 330 Q760 280 700 230 Z"
+                            fill="url(#metaLandGrad)" stroke="#4A90E2" stroke-width="2"
+                            class="continent-meta arab-continent" />
+
+                        <!-- آسيا -->
+                        <path
+                            d="M1050 130 Q1150 110 1300 130 L1450 150 Q1520 170 1550 200 Q1540 250 1500 240 L1400 220 Q1300 200 1200 180 Q1100 160 1050 150 Q1040 140 1050 130 Z"
+                            fill="url(#metaLandGrad)" stroke="#4A90E2" stroke-width="2" class="continent-meta" />
+
+                        <!-- أستراليا -->
+                        <path
+                            d="M1200 580 Q1280 560 1350 580 L1400 600 Q1420 630 1400 660 L1350 680 Q1280 690 1200 670 L1180 650 Q1190 630 1200 580 Z"
+                            fill="url(#metaLandGrad)" stroke="#4A90E2" stroke-width="2" class="continent-meta" />
+
+                        <!-- أمريكا الجنوبية -->
+                        <path
+                            d="M400 420 Q480 400 550 430 L600 470 Q620 550 600 630 L580 690 Q560 730 530 750 L500 760 Q470 750 450 730 L430 690 Q420 630 430 550 L440 470 Q450 440 400 420 Z"
+                            fill="url(#metaLandGrad)" stroke="#4A90E2" stroke-width="2" class="continent-meta" />
+                    </g>
+
+                    <!-- الشبكة العنكبوتية العالمية من مصر -->
+                    <g class="global-spider-network">
+                        <!-- خطوط الشبكة الرئيسية من مصر لجميع أنحاء العالم -->
+                        <g class="primary-spider-lines">
+                            <!-- من مصر للدول العربية -->
+                            <line x1="850" y1="350" x2="950" y2="340" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+                            <line x1="850" y1="350" x2="980" y2="370" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+                            <line x1="850" y1="350" x2="920" y2="320" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+                            <line x1="850" y1="350" x2="940" y2="360" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+                            <line x1="850" y1="350" x2="910" y2="340" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+                            <line x1="850" y1="350" x2="1000" y2="390" class="spider-line egypt-primary"
+                                stroke="#FF4500" stroke-width="4" />
+                            <line x1="850" y1="350" x2="820" y2="320" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+                            <line x1="850" y1="350" x2="810" y2="300" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+                            <line x1="850" y1="350" x2="800" y2="280" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+                            <line x1="850" y1="350" x2="880" y2="300" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+                            <line x1="850" y1="350" x2="815" y2="310" class="spider-line egypt-primary" stroke="#FF4500"
+                                stroke-width="4" />
+
+                            <!-- من مصر لأوروبا -->
+                            <line x1="850" y1="350" x2="750" y2="200" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+                            <line x1="850" y1="350" x2="820" y2="180" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+                            <line x1="850" y1="350" x2="900" y2="190" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+                            <line x1="850" y1="350" x2="950" y2="200" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+
+                            <!-- من مصر لأمريكا الشمالية -->
+                            <line x1="850" y1="350" x2="200" y2="220" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+                            <line x1="850" y1="350" x2="300" y2="240" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+                            <line x1="850" y1="350" x2="450" y2="260" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+
+                            <!-- من مصر لآسيا -->
+                            <line x1="850" y1="350" x2="1200" y2="200" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+                            <line x1="850" y1="350" x2="1350" y2="220" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+                            <line x1="850" y1="350" x2="1450" y2="240" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+
+                            <!-- من مصر لأفريقيا -->
+                            <line x1="850" y1="350" x2="800" y2="500" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+                            <line x1="850" y1="350" x2="900" y2="520" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+
+                            <!-- من مصر لأمريكا الجنوبية -->
+                            <line x1="850" y1="350" x2="500" y2="600" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+
+                            <!-- من مصر لأستراليا -->
+                            <line x1="850" y1="350" x2="1300" y2="620" class="spider-line egypt-global" stroke="#4A90E2"
+                                stroke-width="3" />
+                        </g>
+
+                        <!-- خطوط ثانوية بين القارات -->
+                        <g class="secondary-spider-lines">
+                            <line x1="300" y1="240" x2="750" y2="200" class="spider-line secondary-global"
+                                stroke="#2E86C1" stroke-width="2" />
+                            <line x1="750" y1="200" x2="1200" y2="200" class="spider-line secondary-global"
+                                stroke="#2E86C1" stroke-width="2" />
+                            <line x1="1200" y1="200" x2="1300" y2="620" class="spider-line secondary-global"
+                                stroke="#2E86C1" stroke-width="2" />
+                            <line x1="500" y1="600" x2="800" y2="500" class="spider-line secondary-global"
+                                stroke="#2E86C1" stroke-width="2" />
+                        </g>
+                    </g>
+
+                    <!-- النقاط العربية مع التسميات المنفصلة -->
+                    <g class="arab-markers-separated">
+                        <!-- مصر - المركز الرئيسي مع مساحة كافية -->
+                        <g class="arab-marker headquarters-marker" data-country="egypt">
+                            <!-- حلقات النبضة المتعددة لمصر -->
+                            <circle cx="850" cy="350" r="60" fill="none" stroke="#FF4500" stroke-width="3" opacity="0.3"
+                                class="egypt-pulse-1" />
+                            <circle cx="850" cy="350" r="80" fill="none" stroke="#FF4500" stroke-width="2" opacity="0.2"
+                                class="egypt-pulse-2" />
+                            <circle cx="850" cy="350" r="100" fill="none" stroke="#FF4500" stroke-width="1"
+                                opacity="0.1" class="egypt-pulse-3" />
+
+                            <!-- النقطة الرئيسية لمصر -->
+                            <circle cx="850" cy="350" r="25" fill="#FF4500" stroke="#FFFFFF" stroke-width="6"
+                                filter="url(#egyptGlow)" />
+                            <circle cx="850" cy="350" r="18" fill="#FFD700" />
+                            <circle cx="850" cy="350" r="10" fill="#FFFFFF" />
+
+                            <!-- تسمية مصر في موضع منفصل -->
+                            <g class="country-label-separated egypt-label">
+                                <rect x="750" y="250" width="200" height="60" fill="rgba(255,255,255,0.98)"
+                                    stroke="#FF4500" stroke-width="3" rx="15" />
+                                <text x="850" y="275" class="country-name en" text-anchor="middle" font-weight="bold"
+                                    font-size="16" fill="#FF4500">EGYPT (HQ)</text>
+                                <text x="850" y="295" class="country-name ar" text-anchor="middle" font-weight="bold"
+                                    font-size="14" fill="#FF4500" style="display:none;">مصر (المقر الرئيسي)</text>
+                            </g>
+                        </g>
+
+                        <!-- السعودية - موضع منفصل -->
+                        <g class="arab-marker active-marker" data-country="saudi">
+                            <circle cx="950" cy="340" r="16" fill="#4A90E2" stroke="#FFFFFF" stroke-width="4" />
+
+                            <g class="country-label-separated saudi-label">
+                                <rect x="980" y="280" width="160" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#4A90E2" stroke-width="2" rx="12" />
+                                <text x="1060" y="305" class="country-name en" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50">Saudi Arabia</text>
+                                <text x="1060" y="320" class="country-name ar" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50" style="display:none;">المملكة العربية السعودية</text>
+                            </g>
+                        </g>
+
+                        <!-- الإمارات - موضع منفصل -->
+                        <g class="arab-marker active-marker" data-country="uae">
+                            <circle cx="980" cy="370" r="14" fill="#4A90E2" stroke="#FFFFFF" stroke-width="4" />
+
+                            <g class="country-label-separated uae-label">
+                                <rect x="1010" y="390" width="140" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#4A90E2" stroke-width="2" rx="12" />
+                                <text x="1080" y="415" class="country-name en" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50">UAE</text>
+                                <text x="1080" y="430" class="country-name ar" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50" style="display:none;">الإمارات العربية المتحدة</text>
+                            </g>
+                        </g>
+
+                        <!-- الكويت - موضع منفصل -->
+                        <g class="arab-marker active-marker" data-country="kuwait">
+                            <circle cx="920" cy="320" r="14" fill="#4A90E2" stroke="#FFFFFF" stroke-width="4" />
+
+                            <g class="country-label-separated kuwait-label">
+                                <rect x="850" y="260" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#4A90E2" stroke-width="2" rx="12" />
+                                <text x="910" y="285" class="country-name en" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50">Kuwait</text>
+                                <text x="910" y="300" class="country-name ar" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50" style="display:none;">دولة الكويت</text>
+                            </g>
+                        </g>
+
+                        <!-- قطر - موضع منفصل -->
+                        <g class="arab-marker active-marker" data-country="qatar">
+                            <circle cx="940" cy="360" r="13" fill="#4A90E2" stroke="#FFFFFF" stroke-width="4" />
+
+                            <g class="country-label-separated qatar-label">
+                                <rect x="970" y="380" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#4A90E2" stroke-width="2" rx="12" />
+                                <text x="1030" y="405" class="country-name en" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50">Qatar</text>
+                                <text x="1030" y="420" class="country-name ar" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50" style="display:none;">دولة قطر</text>
+                            </g>
+                        </g>
+
+                        <!-- البحرين - موضع منفصل -->
+                        <g class="arab-marker active-marker" data-country="bahrain">
+                            <circle cx="910" cy="340" r="12" fill="#4A90E2" stroke="#FFFFFF" stroke-width="4" />
+
+                            <g class="country-label-separated bahrain-label">
+                                <rect x="820" y="380" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#4A90E2" stroke-width="2" rx="12" />
+                                <text x="880" y="405" class="country-name en" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50">Bahrain</text>
+                                <text x="880" y="420" class="country-name ar" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50" style="display:none;">مملكة البحرين</text>
+                            </g>
+                        </g>
+
+                        <!-- عُمان - موضع منفصل -->
+                        <g class="arab-marker active-marker" data-country="oman">
+                            <circle cx="1000" cy="390" r="14" fill="#4A90E2" stroke="#FFFFFF" stroke-width="4" />
+
+                            <g class="country-label-separated oman-label">
+                                <rect x="1030" y="410" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#4A90E2" stroke-width="2" rx="12" />
+                                <text x="1090" y="435" class="country-name en" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50">Oman</text>
+                                <text x="1090" y="450" class="country-name ar" text-anchor="middle" font-size="13"
+                                    fill="#2C3E50" style="display:none;">سلطنة عُمان</text>
+                            </g>
+                        </g>
+
+                        <!-- الأردن -->
+                        <g class="arab-marker expansion-marker" data-country="jordan">
+                            <circle cx="820" cy="320" r="12" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated jordan-label">
+                                <rect x="720" y="280" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="780" y="305" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Jordan</text>
+                                <text x="780" y="320" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">المملكة الأردنية الهاشمية</text>
+                            </g>
+                        </g>
+
+                        <!-- لبنان -->
+                        <g class="arab-marker expansion-marker" data-country="lebanon">
+                            <circle cx="810" cy="300" r="11" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated lebanon-label">
+                                <rect x="710" y="220" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="770" y="245" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Lebanon</text>
+                                <text x="770" y="260" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">الجمهورية اللبنانية</text>
+                            </g>
+                        </g>
+
+                        <!-- سوريا -->
+                        <g class="arab-marker expansion-marker" data-country="syria">
+                            <circle cx="800" cy="280" r="12" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated syria-label">
+                                <rect x="700" y="200" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="760" y="225" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Syria</text>
+                                <text x="760" y="240" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">الجمهورية العربية السورية</text>
+                            </g>
+                        </g>
+
+                        <!-- العراق -->
+                        <g class="arab-marker expansion-marker" data-country="iraq">
+                            <circle cx="880" cy="300" r="12" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated iraq-label">
+                                <rect x="780" y="200" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="840" y="225" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Iraq</text>
+                                <text x="840" y="240" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">جمهورية العراق</text>
+                            </g>
+                        </g>
+
+                        <!-- فلسطين -->
+                        <g class="arab-marker expansion-marker" data-country="palestine">
+                            <circle cx="815" cy="310" r="10" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated palestine-label">
+                                <rect x="715" y="330" width="140" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="785" y="355" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Palestine</text>
+                                <text x="785" y="370" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">دولة فلسطين</text>
+                            </g>
+                        </g>
+
+                        <!-- المغرب -->
+                        <g class="arab-marker expansion-marker" data-country="morocco">
+                            <circle cx="720" cy="330" r="12" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated morocco-label">
+                                <rect x="620" y="270" width="140" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="690" y="295" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Morocco</text>
+                                <text x="690" y="310" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">المملكة المغربية</text>
+                            </g>
+                        </g>
+
+                        <!-- الجزائر -->
+                        <g class="arab-marker expansion-marker" data-country="algeria">
+                            <circle cx="750" cy="340" r="12" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated algeria-label">
+                                <rect x="650" y="360" width="140" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="720" y="385" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Algeria</text>
+                                <text x="720" y="400" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">الجمهورية الجزائرية</text>
+                            </g>
+                        </g>
+
+                        <!-- تونس -->
+                        <g class="arab-marker expansion-marker" data-country="tunisia">
+                            <circle cx="780" cy="320" r="11" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated tunisia-label">
+                                <rect x="680" y="240" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="740" y="265" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Tunisia</text>
+                                <text x="740" y="280" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">الجمهورية التونسية</text>
+                            </g>
+                        </g>
+
+                        <!-- ليبيا -->
+                        <g class="arab-marker expansion-marker" data-country="libya">
+                            <circle cx="790" cy="360" r="12" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated libya-label">
+                                <rect x="690" y="380" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="750" y="405" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Libya</text>
+                                <text x="750" y="420" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">دولة ليبيا</text>
+                            </g>
+                        </g>
+
+                        <!-- السودان -->
+                        <g class="arab-marker expansion-marker" data-country="sudan">
+                            <circle cx="870" cy="450" r="12" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated sudan-label">
+                                <rect x="770" y="470" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="830" y="495" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Sudan</text>
+                                <text x="830" y="510" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">جمهورية السودان</text>
+                            </g>
+                        </g>
+
+                        <!-- اليمن -->
+                        <g class="arab-marker expansion-marker" data-country="yemen">
+                            <circle cx="920" cy="420" r="12" fill="#2E86C1" stroke="#FFFFFF" stroke-width="3" />
+
+                            <g class="country-label-separated yemen-label">
+                                <rect x="950" y="440" width="120" height="50" fill="rgba(255,255,255,0.98)"
+                                    stroke="#2E86C1" stroke-width="2" rx="12" />
+                                <text x="1010" y="465" class="country-name en" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50">Yemen</text>
+                                <text x="1010" y="480" class="country-name ar" text-anchor="middle" font-size="12"
+                                    fill="#2C3E50" style="display:none;">الجمهورية اليمنية</text>
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- النقاط العالمية -->
+                    <g class="global-network-points">
+                        <!-- أوروبا -->
+                        <g class="network-point global-point" data-region="europe">
+                            <circle cx="750" cy="200" r="14" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="690" y="140" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="750" y="158" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">London</text>
+                                <text x="750" y="170" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">لندن</text>
+                            </g>
+                        </g>
+
+                        <g class="network-point global-point" data-region="europe">
+                            <circle cx="820" cy="180" r="13" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="760" y="120" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="820" y="138" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">Berlin</text>
+                                <text x="820" y="150" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">برلين</text>
+                            </g>
+                        </g>
+
+                        <g class="network-point global-point" data-region="europe">
+                            <circle cx="900" cy="190" r="13" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="840" y="130" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="900" y="148" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">Paris</text>
+                                <text x="900" y="160" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">باريس</text>
+                            </g>
+                        </g>
+
+                        <!-- أمريكا الشمالية -->
+                        <g class="network-point global-point" data-region="north-america">
+                            <circle cx="200" cy="220" r="14" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="140" y="160" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="200" y="178" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">New York</text>
+                                <text x="200" y="190" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">نيويورك</text>
+                            </g>
+                        </g>
+
+                        <g class="network-point global-point" data-region="north-america">
+                            <circle cx="300" cy="240" r="13" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="240" y="180" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="300" y="198" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">Toronto</text>
+                                <text x="300" y="210" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">تورونتو</text>
+                            </g>
+                        </g>
+
+                        <!-- آسيا -->
+                        <g class="network-point global-point" data-region="asia">
+                            <circle cx="1200" cy="200" r="14" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="1140" y="140" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="1200" y="158" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">Tokyo</text>
+                                <text x="1200" y="170" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">طوكيو</text>
+                            </g>
+                        </g>
+
+                        <g class="network-point global-point" data-region="asia">
+                            <circle cx="1350" cy="220" r="13" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="1290" y="160" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="1350" y="178" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">Singapore</text>
+                                <text x="1350" y="190" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">سنغافورة</text>
+                            </g>
+                        </g>
+
+                        <!-- أفريقيا -->
+                        <g class="network-point global-point" data-region="africa">
+                            <circle cx="800" cy="500" r="13" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="740" y="440" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="800" y="458" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">Lagos</text>
+                                <text x="800" y="470" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">لاغوس</text>
+                            </g>
+                        </g>
+
+                        <g class="network-point global-point" data-region="africa">
+                            <circle cx="900" cy="520" r="13" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="840" y="460" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="900" y="478" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">Nairobi</text>
+                                <text x="900" y="490" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">نيروبي</text>
+                            </g>
+                        </g>
+
+                        <!-- أمريكا الجنوبية -->
+                        <g class="network-point global-point" data-region="south-america">
+                            <circle cx="500" cy="600" r="13" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="440" y="540" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="500" y="558" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">São Paulo</text>
+                                <text x="500" y="570" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">ساو باولو</text>
+                            </g>
+                        </g>
+
+                        <!-- أستراليا -->
+                        <g class="network-point global-point" data-region="oceania">
+                            <circle cx="1300" cy="620" r="13" fill="#E3F2FD" stroke="#4A90E2" stroke-width="3" />
+                            <g class="point-label">
+                                <rect x="1240" y="560" width="120" height="40" fill="rgba(255,255,255,0.95)"
+                                    stroke="#4A90E2" stroke-width="2" rx="8" />
+                                <text x="1300" y="578" class="label-text en" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50">Sydney</text>
+                                <text x="1300" y="590" class="label-text ar" text-anchor="middle" font-size="11"
+                                    fill="#2C3E50" style="display:none;">سيدني</text>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+
+                <!-- مركز التحكم المتقدم -->
+                <div class="meta-control-center">
+                    <div class="control-header">
+                        <h4 data-en="Meta Software Command Center" data-ar="مركز قيادة ميتا سوفت وير">Meta Software
+                            Command Center</h4>
+                    </div>
+
+                    <div class="control-sections">
+                        <div class="control-group">
+                            <h5 data-en="Network Hierarchy" data-ar="تسلسل الشبكة">Network Hierarchy</h5>
+                            <div class="control-item">
+                                <div class="control-dot egypt-hq-dot"></div>
+                                <span data-en="Egypt HQ (Central Hub)" data-ar="مصر المقر (المركز الرئيسي)">Egypt HQ
+                                    (Central Hub)</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-dot arab-active-dot"></div>
+                                <span data-en="Arab Active Networks" data-ar="الشبكات العربية النشطة">Arab Active
+                                    Networks</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-dot arab-expansion-dot"></div>
+                                <span data-en="Arab Expansion" data-ar="التوسع العربي">Arab Expansion</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-dot global-network-dot"></div>
+                                <span data-en="Global Partners" data-ar="الشركاء العالميون">Global Partners</span>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <h5 data-en="Connection Matrix" data-ar="مصفوفة الاتصال">Connection Matrix</h5>
+                            <div class="control-item">
+                                <div class="connection-line-sample egypt-primary-sample"></div>
+                                <span data-en="Egypt Primary Links" data-ar="روابط مصر الأساسية">Egypt Primary
+                                    Links</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="connection-line-sample egypt-global-sample"></div>
+                                <span data-en="Egypt Global Network" data-ar="شبكة مصر العالمية">Egypt Global
+                                    Network</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="connection-line-sample secondary-global-sample"></div>
+                                <span data-en="Inter-Continental" data-ar="بين القارات">Inter-Continental</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- إحصائيات الشبكة العالمية -->
+                <div class="global-network-stats">
+                    <div class="meta-stat-box">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label" data-en="Global Cities" data-ar="مدينة عالمية">Global Cities</div>
+                    </div>
+                    <div class="meta-stat-box">
+                        <div class="stat-icon">🏛️</div>
+                        <div class="stat-value">1</div>
+                        <div class="stat-label" data-en="Central Command (Egypt)" data-ar="القيادة المركزية (مصر)">
+                            Central
+                            Command (Egypt)</div>
+                    </div>
+                    <div class="meta-stat-box">
+                        <div class="stat-icon">🔗</div>
+                        <div class="stat-value">17+</div>
+                        <div class="stat-label" data-en="Arab Nations" data-ar="دولة عربية">Arab Nations</div>
+                    </div>
+                    <div class="meta-stat-box">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label" data-en="Egypt Monitoring" data-ar="مراقبة مصر">Egypt Monitoring</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- ===== قسم إيميلات الشركة الكامل ===== -->
+    <section class="company-emails-section">
+        <div class="emails-container">
+            <div class="emails-header">
+                <h3 class="emails-title" data-en="Company Email Addresses" data-ar="عناوين البريد الإلكتروني للشركة">
+                    Company Email Addresses</h3>
+                <p class="emails-subtitle" data-en="Reach us through specialized departments"
+                    data-ar="تواصل معنا عبر الأقسام المتخصصة">Reach us through specialized departments</p>
+            </div>
+
+            <div class="emails-grid">
+                <div class="email-card">
+                    <div class="email-icon">💼</div>
+                    <h4 data-en="General Inquiries" data-ar="الاستفسارات العامة">General Inquiries</h4>
+                    <a href="mailto:info@metasoftware.eg">info@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">🛠️</div>
+                    <h4 data-en="Technical Support" data-ar="الدعم الفني">Technical Support</h4>
+                    <a href="mailto:support@metasoftware.eg">support@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">💰</div>
+                    <h4 data-en="Sales Department" data-ar="قسم المبيعات">Sales Department</h4>
+                    <a href="mailto:sales@metasoftware.eg">sales@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">👥</div>
+                    <h4 data-en="Human Resources" data-ar="الموارد البشرية">Human Resources</h4>
+                    <a href="mailto:hr@metasoftware.eg">hr@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">📊</div>
+                    <h4 data-en="Project Management" data-ar="إدارة المشاريع">Project Management</h4>
+                    <a href="mailto:projects@metasoftware.eg">projects@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">🎨</div>
+                    <h4 data-en="Design Department" data-ar="قسم التصميم">Design Department</h4>
+                    <a href="mailto:design@metasoftware.eg">design@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">💻</div>
+                    <h4 data-en="Development Team" data-ar="فريق التطوير">Development Team</h4>
+                    <a href="mailto:dev@metasoftware.eg">dev@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">🔒</div>
+                    <h4 data-en="Security Department" data-ar="قسم الأمان">Security Department</h4>
+                    <a href="mailto:security@metasoftware.eg">security@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">📈</div>
+                    <h4 data-en="Marketing" data-ar="التسويق">Marketing</h4>
+                    <a href="mailto:marketing@metasoftware.eg">marketing@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">💰</div>
+                    <h4 data-en="Accounting Department" data-ar="قسم المحاسبة">Accounting Department</h4>
+                    <a href="mailto:accounting@metasoftware.eg">accounting@metasoftware.eg</a>
+                </div>
+
+
+                <div class="email-card">
+                    <div class="email-icon">👔</div>
+                    <h4 data-en="CEO Office" data-ar="مكتب المدير التنفيذي">CEO Office</h4>
+                    <a href="mailto:ceo@metasoftware.eg">ceo@metasoftware.eg</a>
+                </div>
+
+                <div class="email-card">
+                    <div class="email-icon">🧑‍💼</div> <!-- تم تغيير الأيقونة -->
+                    <h4 data-en="Regional Manager" data-ar="المدير الإقليمي">Regional Manager</h4>
+                    <a href="mailto:rm@metasoftware.eg">rm@metasoftware.eg</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 data-en="Contact Information" data-ar="معلومات التواصل">Contact Information</h3>
+                <p data-en="📧 Contact@metasoftware.eg" data-ar="📧 Contact@metasoftware.eg">
+                    <a href="mailto:Contact@metasoftware.com?subject=استفسار%20إلى%20Meta%20Software%20%7C%20Inquiry%20to%20Meta%20Software"
+                        style="text-decoration: none; color: inherit;">
+                        📧 Contact@metasoftware.eg
+                    </a>
+                </p>
+                <p data-en="📍 Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar"
+                    data-ar="📍مصر, الرياض، المملكة العربية السعودية, الكويت, قطر">📍
+                    Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar</p>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Main Services" data-ar="الخدمات الرئيسية">Main Services</h3>
+                <ul>
+                    <li data-en="Complete Software Development" data-ar="تطوير البرمجيات المتكامل">Complete Software
+                        Development</li>
+                    <li data-en="Mobile Applications" data-ar="تطبيقات الجوال">Mobile Applications</li>
+                    <li data-en="Web Development" data-ar="تطوير المواقع">Web Development</li>
+                    <li data-en="AI Solutions" data-ar="حلول الذكاء الاصطناعي">AI Solutions</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Service Areas" data-ar="مناطق الخدمة">Service Areas</h3>
+                <ul>
+                    <li data-en="🇪🇬 Egypt (Headquarters)" data-ar="🇪🇬 مصر (المقر الرئيسي)">🇪🇬 Egypt (Headquarters)
+                    </li>
+                    <li data-en="🇸🇦 Saudi Arabia" data-ar="🇸🇦 المملكة العربية السعودية">🇸🇦 Saudi Arabia</li>
+                    <li data-en="🇦🇪 United Arab Emirates" data-ar="🇦🇪 الإمارات العربية المتحدة">🇦🇪 United Arab
+                        Emirates</li>
+                    <li data-en="🇰🇼 Kuwait" data-ar="🇰🇼 الكويت">🇰🇼 Kuwait</li>
+                    <li data-en="🇶🇦 Qatar" data-ar="🇶🇦 قطر">🇶🇦 Qatar</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h3>
+                <ul>
+                    <li data-en="About Us" data-ar="من نحن">About Us</li>
+                    <li data-en="Our Portfolio" data-ar="أعمالنا">Our Portfolio</li>
+                    <li data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</li>
+                    <li data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-en="© 2025 Meta Software. All rights reserved. | Complete Programming Services for the Arab world"
+                data-ar="© 2025 ميتا سوفت وير. جميع الحقوق محفوظة. | خدمات البرمجة المتكاملة للوطن العربي">
+                © 2025 Meta Software. All rights reserved. | Complete Programming Services for the Arab world
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'en'; function switchLanguage(event, lang) { currentLang = lang; document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active')); event.target.classList.add('active'); document.body.className = lang === 'ar' ? 'rtl' : ''; document.documentElement.lang = lang; document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'; document.querySelectorAll('[data-en][data-ar]').forEach(element => { element.textContent = element.getAttribute('data-' + lang) }); document.querySelectorAll('[data-placeholder-en][data-placeholder-ar]').forEach(element => { element.placeholder = element.getAttribute('data-placeholder-' + lang) }); updateMetaTags(lang); saveLanguagePreference(lang) } function updateMetaTags(lang) { const titles = { en: 'Contact Us | Meta Software - Arab World', ar: 'تواصل معنا | Meta Software - الوطن العربي' }; const descriptions = { en: 'Contact Meta Software for complete software development services across the Arab world. We are your comprehensive technology partner from Egypt to Saudi Arabia, UAE, Kuwait and Qatar.', ar: 'تواصل مع شركة Meta Software للحصول على خدمات البرمجة المتكاملة في الوطن العربي. نحن شريكك التقني الشامل من مصر إلى السعودية والإمارات والكويت وقطر.' }; document.getElementById('page-title').textContent = titles[lang]; document.getElementById('meta-description').setAttribute('content', descriptions[lang]) } const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }; const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const delay = Math.random() * 0.3; entry.target.style.animationDelay = `${delay}s`; if (entry.target.classList.contains('fade-in')) { entry.target.classList.add('fade-in') } else if (entry.target.classList.contains('slide-in-left')) { entry.target.classList.add('slide-in-left') } else if (entry.target.classList.contains('slide-in-right')) { entry.target.classList.add('slide-in-right') } observer.unobserve(entry.target) } }) }, observerOptions); document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(element => { observer.observe(element) }); document.getElementById('contactForm').addEventListener('submit', async function (e) { e.preventDefault(); const status = document.getElementById('form-status'); const submitBtn = this.querySelector('.modern-btn-submit'); const originalText = submitBtn.textContent; submitBtn.textContent = currentLang === 'ar' ? 'جاري الإرسال...' : 'Sending...'; submitBtn.disabled = true; try { const response = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } }); if (response.ok) { status.textContent = currentLang === 'ar' ? 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.' : 'Your message has been sent successfully! We will contact you soon.'; status.className = 'form-status alert-success show'; this.reset() } else { throw new Error('Network response was not ok') } } catch (error) { status.textContent = currentLang === 'ar' ? 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.' : 'An error occurred while sending. Please try again.'; status.className = 'form-status alert-danger show' } submitBtn.textContent = originalText; submitBtn.disabled = false; status.hidden = false; setTimeout(() => { status.classList.remove('show'); setTimeout(() => status.hidden = true, 300) }, 5000) }); const formInputs = document.querySelectorAll('.modern-form-control[required]'); formInputs.forEach(input => { input.addEventListener('invalid', function (e) { e.preventDefault(); this.style.borderColor = 'var(--danger-red)'; setTimeout(() => { this.style.borderColor = '' }, 3000) }); input.addEventListener('input', function () { if (this.validity.valid) { this.style.borderColor = 'var(--success-green)' } else { this.style.borderColor = 'var(--danger-red)' } }) }); window.addEventListener('load', function () { setTimeout(function () { const spinner = document.getElementById('spinner'); if (spinner) { spinner.style.opacity = '0'; setTimeout(() => { spinner.style.display = 'none' }, 300) } }, 500) }); document.querySelectorAll('a, button, input, textarea').forEach(el => { el.addEventListener('focus', function () { this.style.outline = '2px solid var(--primary-blue)'; this.style.outlineOffset = '2px' }); el.addEventListener('blur', function () { this.style.outline = ''; this.style.outlineOffset = '' }) }); document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }) } }) }); document.addEventListener('keydown', function (e) { if (e.key === 'Tab') { document.body.classList.add('keyboard-navigation') } }); document.addEventListener('mousedown', function () { document.body.classList.remove('keyboard-navigation') }); let ticking = false; function updateScrollEffects() { const scrolled = window.pageYOffset; const rate = scrolled * -0.5; document.body.style.setProperty('--scroll-offset', `${rate}px`); ticking = false } window.addEventListener('scroll', function () { if (!ticking) { requestAnimationFrame(updateScrollEffects); ticking = true } }); document.querySelectorAll('img, [style*="background-image"]').forEach(element => { if (element.tagName === 'IMG') { element.addEventListener('error', function () { this.style.display = 'none' }) } }); if ('serviceWorker' in navigator) { window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').then(function (registration) { console.log('SW registered: ', registration) }).catch(function (registrationError) { console.log('SW registration failed: ', registrationError) }) }) } document.addEventListener('DOMContentLoaded', function () { updateMetaTags(currentLang); document.querySelectorAll('.contact-card, .contact-form').forEach((element, index) => { element.style.animationDelay = `${index * 0.1}s` }); document.querySelectorAll('[data-placeholder-en]').forEach(element => { element.placeholder = element.getAttribute('data-placeholder-' + currentLang) }); loadLanguagePreference() }); window.addEventListener('popstate', function (event) { if (event.state && event.state.lang) { const langBtn = document.querySelector(`[onclick*="${event.state.lang}"]`); if (langBtn) { langBtn.click() } } }); function saveLanguagePreference(lang) { try { localStorage.setItem('preferredLanguage', lang); history.pushState({ lang: lang }, '', window.location.href) } catch (e) { console.log('LocalStorage not available') } } function loadLanguagePreference() { try { const saved = localStorage.getItem('preferredLanguage'); if (saved && (saved === 'en' || saved === 'ar')) { const langBtn = document.querySelector(`[onclick*="${saved}"]`); if (langBtn && !langBtn.classList.contains('active')) { langBtn.click() } } } catch (e) { console.log('LocalStorage not available') } } function sanitizeInput(input) { const div = document.createElement('div'); div.textContent = input; return div.innerHTML } document.addEventListener('DOMContentLoaded', function () { const contactForm = document.getElementById('contactForm'); if (contactForm) { contactForm.addEventListener('input', function (e) { if (e.target.type === 'text' || e.target.type === 'email' || e.target.tagName === 'TEXTAREA') { const sanitized = sanitizeInput(e.target.value); if (sanitized !== e.target.value) { e.target.value = sanitized } } }) } }); console.warn('🚨 Security Warning: This is a browser feature intended for developers. Do not paste any code here that you do not understand.'); if ('performance' in window) { window.addEventListener('load', function () { setTimeout(function () { const perfData = performance.getEntriesByType('navigation')[0]; if (perfData) { console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms') } }, 0) }) } if ('ontouchstart' in window) { document.body.classList.add('touch-device'); document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('.contact-card, .modern-social-icon, .lang-btn').forEach(element => { element.addEventListener('touchstart', function () { this.classList.add('touch-active') }); element.addEventListener('touchend', function () { setTimeout(() => { this.classList.remove('touch-active') }, 150) }) }) }) } if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { document.body.classList.add('dark-mode-preferred') } if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { document.body.classList.add('reduced-motion') } window.addEventListener('online', function () { console.log('Connection restored'); document.body.classList.remove('offline') }); window.addEventListener('offline', function () { console.log('Connection lost'); document.body.classList.add('offline') }); function debounce(func, wait) { let timeout; return function executedFunction(...args) { const later = () => { clearTimeout(timeout); func(...args) }; clearTimeout(timeout); timeout = setTimeout(later, wait) } } function throttle(func, limit) { let inThrottle; return function () { const args = arguments; const context = this; if (!inThrottle) { func.apply(context, args); inThrottle = true; setTimeout(() => inThrottle = false, limit) } } } const debouncedScrollHandler = debounce(updateScrollEffects, 10); window.addEventListener('scroll', debouncedScrollHandler); document.addEventListener('DOMContentLoaded', function () { const textareas = document.querySelectorAll('textarea.modern-form-control'); textareas.forEach(textarea => { textarea.addEventListener('input', function () { this.style.height = 'auto'; this.style.height = this.scrollHeight + 'px' }) }); const emailInputs = document.querySelectorAll('input[type="email"]'); emailInputs.forEach(input => { input.addEventListener('blur', function () { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (this.value && !emailRegex.test(this.value)) { this.style.borderColor = 'var(--danger-red)'; this.setCustomValidity(currentLang === 'ar' ? 'يرجى إدخال بريد إلكتروني صحيح' : 'Please enter a valid email address') } else { this.style.borderColor = ''; this.setCustomValidity('') } }) }) }); document.addEventListener('DOMContentLoaded', function () { console.log('✅ Meta Software Contact Page initialized successfully'); console.log('🌐 Language system ready'); console.log('📱 Responsive design active'); console.log('🎨 Animations loaded'); console.log('📧 Contact form ready'); console.log('🔒 Security measures active'); console.log('⚡ Performance optimizations loaded') }); window.addEventListener('error', function (e) { console.error('JavaScript Error:', e.error) }); window.addEventListener('unhandledrejection', function (e) { console.error('Unhandled Promise Rejection:', e.reason) });
+        // إجبار اللغة الإنجليزية عند كل ريفرش
+        (function forceEnglishOnRefresh() {
+            // حذف أي لغة محفوظة في localStorage
+            localStorage.removeItem('selectedLanguage');
+            localStorage.removeItem('preferredLanguage');
+            localStorage.removeItem('currentLang');
+
+            // تعيين اللغة الإنجليزية بقوة
+            currentLang = 'en';
+
+            // تعيين خصائص HTML للإنجليزية
+            document.documentElement.lang = 'en';
+            document.documentElement.dir = 'ltr';
+
+            // إزالة أي كلاسات عربية
+            document.body.classList.remove('rtl', 'arabic');
+            document.body.classList.add('ltr', 'english');
+
+            console.log('🔄 Page refreshed - English language forced');
+        })();
+
+        // تشغيل فوري قبل تحميل DOM
+        document.addEventListener('DOMContentLoaded', function () {
+            // التأكد من اللغة الإنجليزية
+            setLang('en');
+
+            // تعيين أزرار اللغة
+            const btnEn = document.getElementById('btnEn');
+            const btnAr = document.getElementById('btnAr');
+
+            if (btnEn) btnEn.classList.add('active');
+            if (btnAr) btnAr.classList.remove('active');
+
+            // تطبيق النصوص الإنجليزية
+            const txt = uiText.en;
+            els.pageTitle.innerText = txt.pageTitle;
+            els.contactTitle.innerText = txt.contactTitle;
+            els.helperText.innerText = txt.helperText;
+            els.generateText.innerText = txt.generate;
+            els.loginTitle.innerText = txt.loginTitle;
+            els.lblUser.innerText = txt.lblUser;
+            els.lblPass.innerText = txt.lblPass;
+            els.loginBtn.innerText = txt.loginBtn;
+            els.loginUser.placeholder = txt.loginPlaceholder.user;
+            els.loginPass.placeholder = txt.loginPlaceholder.pass;
+
+            console.log('✅ English language applied after refresh');
+        });
+
+        // منع حفظ اللغة العربية
+        const originalSetLang = setLang;
+        setLang = function (l) {
+            // تشغيل الدالة الأصلية
+            originalSetLang(l);
+
+            // إذا تم اختيار العربية، لا تحفظها
+            if (l === 'ar') {
+                // السماح بالتبديل للعربية مؤقتاً
+                console.log('🇸🇦 Switched to Arabic (temporary)');
+            } else {
+                // حفظ الإنجليزية فقط
+                console.log('🇺🇸 English language active');
+            }
+        };
+
+    </script>
+        <script src="protection.js"></script>
+
+</body>
+
+</html>

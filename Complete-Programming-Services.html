@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title id="page-title">Meta Software - Complete Programming Services | the Arab world</title>
+    <meta name="description" id="meta-description"
+        content="Leading programming services company in Saudi Arabia and Gulf region. We provide all types of software solutions with comprehensive contracts and documentation.">
+    <meta name="keywords"
+        content="programming services Saudi Arabia, software development Gulf, professional contracts, intellectual property rights, تطوير البرمجيات السعودية, عقود برمجية مهنية, استضافة مواقع, تسجيل دومينات, خوادم VPS, شهادات SSL, بريد إلكتروني احترافي, Microsoft 365">
+    <meta name="author" content="Meta Software">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English, Arabic">
+    <meta name="geo.region" content="SA, AE, KW, QA, BH, OM, EG">
+    <meta name="geo.placename" content="Saudi Arabia, Gulf Region">
+
+    <!-- Bilingual SEO - Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://metasoftware.eg/en/products" />
+    <link rel="alternate" hreflang="ar" href="https://metasoftware.eg/ar/products" />
+    <link rel="alternate" hreflang="en-SA" href="https://metasoftware.eg/en-sa/products" />
+    <link rel="alternate" hreflang="ar-SA" href="https://metasoftware.eg/ar-sa/products" />
+    <link rel="alternate" hreflang="en-AE" href="https://metasoftware.eg/en-ae/products" />
+    <link rel="alternate" hreflang="ar-AE" href="https://metasoftware.eg/ar-ae/products" />
+    <link rel="alternate" hreflang="x-default" href="https://metasoftware.eg/products" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Meta Software - Complete Programming Services">
+    <meta property="og:description" content="Leading programming services company in Saudi Arabia and Gulf region">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.metasoftware.eg">
+    <meta property="og:image" content="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meta Software - Complete Programming Services">
+    <meta name="twitter:description" content="Leading programming services in Saudi Arabia & Gulf">
+    <meta name="twitter:image" content="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+    <link rel="apple-touch-icon" href="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Meta Software",
+        "alternateName": "ميتا سوفت وير",
+        "url": "https://metasoftware.eg",
+        "logo": "https://metasoftware.eg/assets/images/favourite_icon_2.svg",
+        "description": "Leading programming services company in Saudi Arabia and Gulf region",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "SA",
+            "addressRegion": "Riyadh"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+966-11-234-5678",
+            "contactType": "customer service",
+            "availableLanguage": ["Arabic", "English"]
+        },
+        "sameAs": [
+            "https://twitter.com/metasoftware",
+            "https://linkedin.com/company/metasoftware"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data - Service Catalog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Domain Registration Services",
+        "description": "Professional domain registration services for all TLD extensions",
+        "provider": {
+            "@type": "Organization",
+            "name": "Meta Software"
+        },
+        "areaServed": ["SA", "AE", "KW", "QA", "BH", "OM", "EG"],
+        "offers": {
+            "@type": "Offer",
+            "priceRange": "EGP 702 - EGP 16,185",
+            "priceCurrency": "EGP"
+        }
+    }
+    </script>
+
+    <!-- jsPDF Library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+        /* ==================== الأنماط الأساسية (الهيدر الأصلي بدون تغيير) ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #4A90E2;
+            --secondary-blue: #2E86C1;
+            --light-blue: #E3F2FD;
+            --dark-blue: #1565C0;
+            --white: #FFFFFF;
+            --dark-gray: #2C3E50;
+            --light-gray: #BDC3C7;
+            --shadow: rgba(74, 144, 226, 0.15);
+            --blue-shadow: rgba(74, 144, 226, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.rtl {
+            direction: rtl;
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        /* Header Styles (الهيدر الأصلي بالضبط) */
+        .header {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 50%, var(--primary-blue) 100%);
+            padding: 1.5rem 0;
+            box-shadow: 0 8px 32px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        /* اللوجو الرئيسي من الشركة */
+        .company-logo {
+            width: 80px;
+            height: 40px;
+            background-image: url('https://metasoftware.eg/assets/images/2trivgoAgJVHgQNIzVMC5uvbZ03.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 4px 8px var(--blue-shadow));
+            position: relative;
+        }
+
+        .company-logo::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--primary-blue), transparent, var(--secondary-blue));
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .company-logo:hover::before {
+            opacity: 0.3;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.1) translateY(-2px);
+            filter: drop-shadow(0 8px 16px var(--blue-shadow));
+        }
+
+        /* أيقونة جديدة مع الـ SVG المحدد */
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 3px solid var(--white);
+            background-image: url('https://metasoftware.eg/assets/images/favourite_icon_2.svg');
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .logo-icon:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 10px 30px var(--blue-shadow);
+        }
+
+        .company-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--dark-gray), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-name::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        .logo-section:hover .company-name::after {
+            width: 100%;
+        }
+
+        /* تأثير لامع */
+        .logo-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .logo-section:hover::before {
+            left: 100%;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-blue);
+            background: var(--white);
+            color: var(--primary-blue);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        /* المحتوى الرئيسي */
+        .services-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark-gray);
+            margin-bottom: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 2px;
+        }
+
+        .product-category {
+            margin: 2rem 0 1rem;
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            background: var(--light-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: left 0.5s ease;
+        }
+
+        .product-card:hover::before {
+            left: 0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px var(--shadow);
+            border-color: var(--primary-blue);
+        }
+
+        .product-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .book-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .book-btn:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+        }
+
+        /* Footer الأصلي */
+        .footer {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--light-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes logoPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .company-name {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* VAT Notice */
+        .vat-notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header الأصلي بدون تغيير -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="company-logo" title="Meta Software Official Logo"></div>
+                <div class="logo-icon" title="Meta Software Icon"></div>
+                <h1 class="company-name">Meta Software</h1>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                <button class="lang-btn" onclick="switchLanguage('ar')">AR</button>
+                <button class="lang-btn"
+                    onclick="window.open('https://metasoftware.com.eg','_blank','noopener,noreferrer')"
+                    tabindex="0">Portal control</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <main class="services-section">
+        <h1 class="section-title" data-en="Complete Product Catalog" data-ar="كتالوج المنتجات الكامل">Complete Product
+            Catalog</h1>
+
+        <!-- VAT Notice -->
+        <div class="vat-notice" data-en="* All prices exclude 14% VAT"
+            data-ar="* جميع الأسعار لا تشمل ضريبة القيمة المضافة 14%">
+            * All prices exclude 14% VAT
+        </div>
+
+        <!-- 1. Domain Registration -->
+        <div class="product-category" data-en="Domain Registration - International & Local Extensions"
+            data-ar="تسجيل الدومينات - الامتدادات الدولية والمحلية">
+            Domain Registration - International & Local Extensions
+        </div>
+
+        <div class="product-grid">
+            <!-- International Domains -->
+            <div class="product-card">
+                <h3 class="product-name" data-en=".COM Domain" data-ar="دومين .COM">.COM Domain</h3>
+                <div class="product-price">USD 18.94/year</div>
+                <ul class="product-features">
+                    <li data-en="Most popular extension worldwide" data-ar="أشهر امتداد في العالم">Most popular
+                        extension worldwide</li>
+                    <li data-en="Perfect for commercial websites" data-ar="مثالي للمواقع التجارية">Perfect for
+                        commercial websites</li>
+                    <li data-en="High search engine trust" data-ar="ثقة عالية من محركات البحث">High search engine trust
+                    </li>
+                    <li data-en="Global recognition" data-ar="اعتراف عالمي">Global recognition</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".NET Domain" data-ar="دومين .NET">.NET Domain</h3>
+                <div class="product-price">USD 22.34/year</div>
+                <ul class="product-features">
+                    <li data-en="Great for tech companies" data-ar="رائع للشركات التقنية">Great for tech companies</li>
+                    <li data-en="Network services branding" data-ar="علامة تجارية لخدمات الشبكة">Network services
+                        branding</li>
+                    <li data-en="Professional alternative to .com" data-ar="بديل احترافي لـ .com">Professional
+                        alternative to .com</li>
+                    <li data-en="Trusted by major ISPs" data-ar="موثوق من مزودي الإنترنت الكبار">Trusted by major ISPs
+                    </li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".ORG Domain" data-ar="دومين .ORG">.ORG Domain</h3>
+                <div class="product-price">USD 24.45/year</div>
+                <ul class="product-features">
+                    <li data-en="Perfect for organizations" data-ar="مثالي للمنظمات">Perfect for organizations</li>
+                    <li data-en="Non-profit credibility" data-ar="مصداقية المنظمات غير الربحية">Non-profit credibility
+                    </li>
+                    <li data-en="Community trust building" data-ar="بناء ثقة المجتمع">Community trust building</li>
+                    <li data-en="Educational institutions" data-ar="المؤسسات التعليمية">Educational institutions</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".INFO Domain" data-ar="دومين .INFO">.INFO Domain</h3>
+                <div class="product-price">USD 31.66/year</div>
+                <ul class="product-features">
+                    <li data-en="Information websites" data-ar="مواقع المعلومات">Information websites</li>
+                    <li data-en="News and media portals" data-ar="بوابات الأخبار والإعلام">News and media portals</li>
+                    <li data-en="Knowledge sharing platforms" data-ar="منصات تبادل المعرفة">Knowledge sharing platforms
+                    </li>
+                    <li data-en="Educational content" data-ar="المحتوى التعليمي">Educational content</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".agency Domain" data-ar="دومين .agency">.agency Domain</h3>
+                <div class="product-price">USD 34.44/year</div>
+                <ul class="product-features">
+                    <li data-en="Business-focused extension" data-ar="امتداد مركز على الأعمال">Business-focused
+                        extension</li>
+                    <li data-en="E-commerce websites" data-ar="مواقع التجارة الإلكترونية">E-commerce websites</li>
+                    <li data-en="Corporate branding" data-ar="العلامة التجارية للشركات">Corporate branding</li>
+                    <li data-en="Commercial credibility" data-ar="المصداقية التجارية">Commercial credibility</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".ONLINE Domain" data-ar="دومين .ONLINE">.ONLINE Domain</h3>
+                <div class="product-price">USD 44.08/year</div>
+                <ul class="product-features">
+                    <li data-en="Modern digital presence" data-ar="حضور رقمي حديث">Modern digital presence</li>
+                    <li data-en="Online business emphasis" data-ar="تأكيد على الأعمال الإلكترونية">Online business
+                        emphasis</li>
+                    <li data-en="Memorable and catchy" data-ar="لا يُنسى وجذاب">Memorable and catchy</li>
+                    <li data-en="Growing popularity" data-ar="شعبية متزايدة">Growing popularity</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".co Domain" data-ar="دومين .co">.co Domain</h3>
+                <div class="product-price">USD 44.68/year</div>
+                <ul class="product-features">
+                    <li data-en="Most affordable option" data-ar="الخيار الأكثر اقتصادية">Most affordable option</li>
+                    <li data-en="Creative and flexible" data-ar="إبداعي ومرن">Creative and flexible</li>
+                    <li data-en="Perfect for startups" data-ar="مثالي للشركات الناشئة">Perfect for startups</li>
+                    <li data-en="Tech-savvy branding" data-ar="علامة تجارية تقنية">Tech-savvy branding</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".net.co Domain" data-ar="دومين .net.co">.net.co Domain</h3>
+                <div class="product-price">USD 15.83/year</div>
+                <ul class="product-features">
+                    <li data-en="Personal branding" data-ar="العلامة التجارية الشخصية">Personal branding</li>
+                    <li data-en="Portfolio websites" data-ar="مواقع المعرض الشخصي">Portfolio websites</li>
+                    <li data-en="Professional profiles" data-ar="الملفات الشخصية المهنية">Professional profiles</li>
+                    <li data-en="Creative professionals" data-ar="المهنيين المبدعين">Creative professionals</li>
+                </ul>
+                <a href="https://booking.metasoftware.eg/domain/me" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+        </div>
+
+        <!-- Egyptian Domains -->
+        <h3 style="margin-top: 2rem; color: var(--primary-blue);" data-en="Egyptian Domain Extensions"
+            data-ar="الامتدادات المصرية">Egyptian Domain Extensions</h3>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-name" data-en=".EG Domain" data-ar="دومين .EG">.EG Domain</h3>
+                <div class="product-price">USD 90.15/year</div>
+                <ul class="product-features">
+                    <li data-en="Official Egyptian extension" data-ar="الامتداد المصري الرسمي">Official Egyptian
+                        extension</li>
+                    <li data-en="Government recognition" data-ar="اعتراف حكومي">Government recognition</li>
+                    <li data-en="National identity" data-ar="هوية وطنية">National identity</li>
+                    <li data-en="Local SEO advantage" data-ar="ميزة SEO محلية">Local SEO advantage</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".COM.EG Domain" data-ar="دومين .COM.EG">.COM.EG Domain</h3>
+                <div class="product-price">USD 24.03/year</div>
+                <ul class="product-features">
+                    <li data-en="Egyptian commercial businesses" data-ar="الأعمال التجارية المصرية">Egyptian commercial
+                        businesses</li>
+                    <li data-en="Local market credibility" data-ar="مصداقية السوق المحلي">Local market credibility</li>
+                    <li data-en="Affordable Egyptian option" data-ar="خيار مصري بأسعار معقولة">Affordable Egyptian
+                        option</li>
+                    <li data-en="Business registration support" data-ar="دعم تسجيل الأعمال">Business registration
+                        support</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <!-- باقي الدومينات المصرية -->
+            <div class="product-card">
+                <h3 class="product-name" data-en=".ORG.EG Domain" data-ar="دومين .ORG.EG">.ORG.EG Domain</h3>
+                <div class="product-price">USD 24.03/year</div>
+                <ul class="product-features">
+                    <li data-en="Egyptian organizations" data-ar="المنظمات المصرية">Egyptian organizations</li>
+                    <li data-en="NGOs and charities" data-ar="المنظمات غير الحكومية والخيرية">NGOs and charities</li>
+                    <li data-en="Community organizations" data-ar="منظمات المجتمع">Community organizations</li>
+                    <li data-en="Local trust building" data-ar="بناء الثقة المحلية">Local trust building</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".NET.EG Domain" data-ar="دومين .NET.EG">.NET.EG Domain</h3>
+                <div class="product-price">USD 24.03/year</div>
+                <ul class="product-features">
+                    <li data-en="Egyptian network providers" data-ar="مزودو الشبكة المصريون">Egyptian network providers
+                    </li>
+                    <li data-en="Internet service companies" data-ar="شركات خدمات الإنترنت">Internet service companies
+                    </li>
+                    <li data-en="Technical organizations" data-ar="المنظمات التقنية">Technical organizations</li>
+                    <li data-en="Infrastructure services" data-ar="خدمات البنية التحتية">Infrastructure services</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".EDU.EG Domain" data-ar="دومين .EDU.EG">.EDU.EG Domain</h3>
+                <div class="product-price">USD 260.47/year</div>
+                <ul class="product-features">
+                    <li data-en="Egyptian educational institutions" data-ar="المؤسسات التعليمية المصرية">Egyptian
+                        educational institutions</li>
+                    <li data-en="Universities and colleges" data-ar="الجامعات والكليات">Universities and colleges</li>
+                    <li data-en="Academic credibility" data-ar="المصداقية الأكاديمية">Academic credibility</li>
+                    <li data-en="Restricted registration" data-ar="تسجيل مقيد">Restricted registration</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en=".AC.EG Domain" data-ar="دومين .AC.EG">.AC.EG Domain</h3>
+                <div class="product-price">USD 260.47/year</div>
+                <ul class="product-features">
+                    <li data-en="Academic research institutions" data-ar="مؤسسات البحث الأكاديمي">Academic research
+                        institutions</li>
+                    <li data-en="Higher education institutions" data-ar="مؤسسات التعليم العالي">Higher education
+                        institutions</li>
+                    <li data-en="Research centers" data-ar="مراكز البحوث">Research centers</li>
+                    <li data-en="Scientific organizations" data-ar="المنظمات العلمية">Scientific organizations</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register" class="book-btn" target="_blank"
+                    rel="noopener noreferrer" data-en="Register Now" data-ar="سجل الآن">Register Now</a>
+            </div>
+        </div>
+
+        <!-- 2. Linux Hosting Plans -->
+        <div class="product-category" data-en="Linux Shared Hosting Plans" data-ar="خطط استضافة لينكس المشتركة">
+            Linux Shared Hosting Plans
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-name" data-en="Linux Economy" data-ar="لينكس اقتصادي">Linux Economy</h3>
+                <div class="product-price">USD 2.22/monthly</div>
+                <div class="product-price">USD 25.41/year</div>
+                <ul class="product-features">
+                    <li>1 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="Unlimited FTP Access accounts" data-ar="حسابات FTP غير محدودة">Unlimited FTP Access
+                        accounts</li>
+                    <li>Perl, PHP Support</li>
+                    <li data-en="1 x Subdomain" data-ar="نطاق فرعي واحد">1 x Subdomain</li>
+                    <li data-en="Malware scanner and Antivirus" data-ar="فحص البرمجيات الخبيثة ومضاد الفيروسات">Malware
+                        scanner and Antivirus</li>
+                    <li data-en="Unlimited Cronjobs" data-ar="مهام مجدولة غير محدودة">Unlimited Cronjobs</li>
+                    <li>cPanel Control Panel</li>
+                    <li data-en="GIT access" data-ar="وصول GIT">GIT access</li>
+                    <li data-en="One click installation for popular CMS"
+                        data-ar="تثبيت بنقرة واحدة لأنظمة إدارة المحتوى">One click installation for popular CMS</li>
+                    <li data-en="FREE Website Builder" data-ar="منشئ مواقع مجاني">FREE Website Builder</li>
+                    <li data-en="FREE SSL Certificate" data-ar="شهادة SSL مجانية">FREE SSL Certificate</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/linux-shared-hosting/linux-economy"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Linux Plus" data-ar="لينكس بلس">Linux Plus</h3>
+                <div class="product-price">USD 4.87/monthly</div>
+                <div class="product-price">USD 52.64/year</div>
+                <ul class="product-features">
+                    <li>2 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="2 x MySQL Database" data-ar="قاعدتا بيانات MySQL">2 x MySQL Database</li>
+                    <li data-en="50 x Email Mailboxes" data-ar="50 صندوق بريد إلكتروني">50 x Email Mailboxes</li>
+                    <li data-en="Unlimited FTP Access Accounts" data-ar="حسابات FTP غير محدودة">Unlimited FTP Access
+                        Accounts</li>
+                    <li>Perl, PHP Support</li>
+                    <li data-en="2 x Subdomains" data-ar="نطاقان فرعيان">2 x Subdomains</li>
+                    <li data-en="Malware scanner and Antivirus" data-ar="فحص البرمجيات الخبيثة ومضاد الفيروسات">Malware
+                        scanner and Antivirus</li>
+                    <li data-en="Unlimited Cronjobs" data-ar="مهام مجدولة غير محدودة">Unlimited Cronjobs</li>
+                    <li>cPanel Control Panel</li>
+                    <li data-en="GIT access" data-ar="وصول GIT">GIT access</li>
+                    <li data-en="One click installation for popular CMS"
+                        data-ar="تثبيت بنقرة واحدة لأنظمة إدارة المحتوى">One click installation for popular CMS</li>
+                    <li data-en="FREE Website Builder" data-ar="منشئ مواقع مجاني">FREE Website Builder</li>
+                    <li data-en="FREE SSL Certificate" data-ar="شهادة SSL مجانية">FREE SSL Certificate</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/linux-shared-hosting/linux-plus" class="book-btn"
+                    target="_blank" rel="noopener noreferrer" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Linux Ultimate" data-ar="لينكس متقدم">Linux Ultimate</h3>
+                <div class="product-price">USD 7.51/monthly</div>
+                <div class="product-price">USD 60.69/year</div>
+                <ul class="product-features">
+                    <li>5 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="5 x MySQL Database" data-ar="5 قواعد بيانات MySQL">5 x MySQL Database</li>
+                    <li data-en="100 x Email Mailboxes" data-ar="100 صندوق بريد إلكتروني">100 x Email Mailboxes</li>
+                    <li data-en="Unlimited FTP Access Accounts" data-ar="حسابات FTP غير محدودة">Unlimited FTP Access
+                        Accounts</li>
+                    <li>Perl, PHP Support</li>
+                    <li data-en="5 x Subdomains" data-ar="5 نطاقات فرعية">5 x Subdomains</li>
+                    <li data-en="Malware scanner and Antivirus" data-ar="فحص البرمجيات الخبيثة ومضاد الفيروسات">Malware
+                        scanner and Antivirus</li>
+                    <li data-en="Unlimited Cronjobs" data-ar="مهام مجدولة غير محدودة">Unlimited Cronjobs</li>
+                    <li>cPanel Control Panel</li>
+                    <li data-en="GIT access" data-ar="وصول GIT">GIT access</li>
+                    <li data-en="One click installation for popular CMS"
+                        data-ar="تثبيت بنقرة واحدة لأنظمة إدارة المحتوى">One click installation for popular CMS</li>
+                    <li data-en="FREE Website Builder" data-ar="منشئ مواقع مجاني">FREE Website Builder</li>
+                    <li data-en="FREE SSL Certificate" data-ar="شهادة SSL مجانية">FREE SSL Certificate</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/linux-shared-hosting/linux-ultimate"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Linux Power" data-ar="لينكس قوي">Linux Power</h3>
+                <div class="product-price">USD 15.53/monthly</div>
+                <div class="product-price">USD 88.27/year</div>
+                <ul class="product-features">
+                    <li>10 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="Unlimited MySQL Database" data-ar="قواعد بيانات MySQL غير محدودة">Unlimited MySQL
+                        Database</li>
+                    <li data-en="200 x Email Mailboxes" data-ar="200 صندوق بريد إلكتروني">200 x Email Mailboxes</li>
+                    <li data-en="Unlimited FTP Access Accounts" data-ar="حسابات FTP غير محدودة">Unlimited FTP Access
+                        Accounts</li>
+                    <li>Perl, PHP Support</li>
+                    <li data-en="Unlimited Subdomains" data-ar="نطاقات فرعية غير محدودة">Unlimited Subdomains</li>
+                    <li data-en="Malware scanner and Antivirus" data-ar="فحص البرمجيات الخبيثة ومضاد الفيروسات">Malware
+                        scanner and Antivirus</li>
+                    <li data-en="Unlimited Cronjobs" data-ar="مهام مجدولة غير محدودة">Unlimited Cronjobs</li>
+                    <li>cPanel Control Panel</li>
+                    <li data-en="GIT access" data-ar="وصول GIT">GIT access</li>
+                    <li data-en="One click installation for popular CMS"
+                        data-ar="تثبيت بنقرة واحدة لأنظمة إدارة المحتوى">One click installation for popular CMS</li>
+                    <li data-en="FREE Website Builder" data-ar="منشئ مواقع مجاني">FREE Website Builder</li>
+                    <li data-en="FREE SSL Certificate" data-ar="شهادة SSL مجانية">FREE SSL Certificate</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/linux-shared-hosting/linux-power" class="book-btn"
+                    target="_blank" rel="noopener noreferrer" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+        </div>
+
+        <!-- 3. Windows Hosting Plans -->
+        <div class="product-category" data-en="Windows Shared Hosting Plans" data-ar="خطط استضافة ويندوز المشتركة">
+            Windows Shared Hosting Plans
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-name" data-en="Windows Economy" data-ar="ويندوز اقتصادي">Windows Economy</h3>
+                <div class="product-price">USD 2.22/monthly</div>
+                <div class="product-price">USD 25.41/year</div>
+                <ul class="product-features">
+                    <li>300 MB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="2 x FTP Access accounts" data-ar="حسابا FTP">2 x FTP Access accounts</li>
+                    <li>ASP, ASP.Net, .NET Framework 4.5</li>
+                    <li data-en="Web Statistics" data-ar="إحصائيات الويب">Web Statistics</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/windows-shared-hosting/windows-economy"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Windows Plus" data-ar="ويندوز بلس">Windows Plus</h3>
+                <div class="product-price">USD 4.87/monthly</div>
+                <div class="product-price">USD 52.64/year</div>
+                <ul class="product-features">
+                    <li>1 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="1 MSSQL database, ODBC" data-ar="قاعدة بيانات MSSQL واحدة، ODBC">1 MSSQL database, ODBC
+                    </li>
+                    <li data-en="2 x FTP Access accounts" data-ar="حسابا FTP">2 x FTP Access accounts</li>
+                    <li>ASP, ASP.Net, .NET Framework 4.5</li>
+                    <li data-en="Web Statistics" data-ar="إحصائيات الويب">Web Statistics</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/windows-shared-hosting/windows-plus"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Windows Ultimate" data-ar="ويندوز متقدم">Windows Ultimate</h3>
+                <div class="product-price">USD 7.51/monthly</div>
+                <div class="product-price">USD 60.69/year</div>
+                <ul class="product-features">
+                    <li>2 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="2 x MSSQL database, ODBC" data-ar="قاعدتا بيانات MSSQL، ODBC">2 x MSSQL database, ODBC
+                    </li>
+                    <li data-en="2 x FTP Access accounts" data-ar="حسابا FTP">2 x FTP Access accounts</li>
+                    <li>ASP, ASP.Net, .NET Framework 4.5</li>
+                    <li data-en="Web Statistics" data-ar="إحصائيات الويب">Web Statistics</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/windows-shared-hosting/windows-ultimate"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Windows Power" data-ar="ويندوز قوي">Windows Power</h3>
+                <div class="product-price">USD 15.53/monthly</div>
+                <div class="product-price">USD 88.27/year</div>
+                <ul class="product-features">
+                    <li>5 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="4 x MS-SQL database, ODBC" data-ar="4 قواعد بيانات MS-SQL، ODBC">4 x MS-SQL database,
+                        ODBC</li>
+                    <li data-en="Unlimited FTP Access accounts" data-ar="حسابات FTP غير محدودة">Unlimited FTP Access
+                        accounts</li>
+                    <li>ASP, ASP.Net, .NET Framework 4.5</li>
+                    <li data-en="Web Statistics" data-ar="إحصائيات الويب">Web Statistics</li>
+                    <li data-en="FREE domain: .com /.net/.org" data-ar="دومين مجاني: .com /.net/.org">FREE domain: .com
+                        /.net/.org</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/windows-shared-hosting/windows-power"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+        </div>
+
+        <!-- 4. SSL Certificates -->
+        <div class="product-category" data-en="SSL Security Certificates" data-ar="شهادات الأمان SSL">
+            SSL Security Certificates
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-name" data-en="Single Essential SSL" data-ar="SSL أساسي فردي">Single Essential SSL
+                </h3>
+                <div class="product-price">USD 19.16/year</div>
+                <ul class="product-features">
+                    <li data-en="1 Domain Protection" data-ar="حماية نطاق واحد">1 Domain Protection</li>
+                    <li data-en="www.site.com + site.com" data-ar="www.site.com + site.com">www.site.com + site.com</li>
+                    <li data-en="Trusted by 99.9% of browsers" data-ar="موثوق من 99.9% من المتصفحات">Trusted by 99.9% of
+                        browsers</li>
+                    <li data-en="Convenient & visible trust sign" data-ar="علامة ثقة مرئية ومريحة">Convenient & visible
+                        trust sign</li>
+                    <li data-en="Domain Validation" data-ar="تحقق النطاق">Domain Validation</li>
+                    <li data-en="256-bit encryption" data-ar="تشفير 256 بت">256-bit encryption</li>
+                    <li data-en="Mobile browser compatibility" data-ar="توافق مع متصفحات الجوال">Mobile browser
+                        compatibility</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/ssl-certificates/single-essential" class="book-btn"
+                    target="_blank" rel="noopener noreferrer" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Single EV SSL" data-ar="SSL فردي EV">Single EV SSL</h3>
+                <div class="product-price">USD 107.10/year</div>
+                <ul class="product-features">
+                    <li data-en="1 Domain Issuance" data-ar="إصدار نطاق واحد">1 Domain Issuance</li>
+                    <li data-en="www.site.com + site.com" data-ar="www.site.com + site.com">www.site.com + site.com</li>
+                    <li data-en="Trusted by 99.9% of browsers" data-ar="موثوق من 99.9% من المتصفحات">Trusted by 99.9% of
+                        browsers</li>
+                    <li data-en="Convenient & visible trust sign" data-ar="علامة ثقة مرئية ومريحة">Convenient & visible
+                        trust sign</li>
+                    <li data-en="Extended Domain Validation - EV (greenbar)"
+                        data-ar="تحقق النطاق الممتد - EV (الشريط الأخضر)">Extended Domain Validation - EV (greenbar)
+                    </li>
+                    <li data-en="Highest level of authentication" data-ar="أعلى مستوى من المصادقة">Highest level of
+                        authentication</li>
+                    <li data-en="Company verification included" data-ar="تحقق الشركة مضمن">Company verification included
+                    </li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/ssl-certificates/single-ev" class="book-btn"
+                    target="_blank" rel="noopener noreferrer" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Wildcard SSL" data-ar="SSL وايلد كارد">Wildcard SSL</h3>
+                <div class="product-price">USD 108.36/year</div>
+                <ul class="product-features">
+                    <li data-en="1 Domain + all subdomains" data-ar="نطاق واحد + جميع النطاقات الفرعية">1 Domain + all
+                        subdomains</li>
+                    <li data-en="www.site.com or site.com" data-ar="www.site.com أو site.com">www.site.com or site.com
+                    </li>
+                    <li data-en="Trusted by 99.9% of browsers" data-ar="موثوق من 99.9% من المتصفحات">Trusted by 99.9% of
+                        browsers</li>
+                    <li data-en="Convenient & visible trust sign" data-ar="علامة ثقة مرئية ومريحة">Convenient & visible
+                        trust sign</li>
+                    <li data-en="Domain Validation" data-ar="تحقق النطاق">Domain Validation</li>
+                    <li data-en="Unlimited subdomains protection" data-ar="حماية نطاقات فرعية غير محدودة">Unlimited
+                        subdomains protection</li>
+                    <li data-en="Cost-effective for multiple subdomains"
+                        data-ar="فعال من حيث التكلفة للنطاقات الفرعية المتعددة">Cost-effective for multiple subdomains
+                    </li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/ssl-certificates/wildcard" class="book-btn"
+                    target="_blank" rel="noopener noreferrer" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Multi Domain SSL (3 domains)" data-ar="SSL متعدد النطاقات (3 نطاقات)">
+                    Multi Domain SSL (3 domains)</h3>
+                <div class="product-price">USD 62.18/year</div>
+                <ul class="product-features">
+                    <li data-en="3 Domains Issuance" data-ar="إصدار 3 نطاقات">3 Domains Issuance</li>
+                    <li data-en="www.site.com + site.com" data-ar="www.site.com + site.com">www.site.com + site.com</li>
+                    <li data-en="Trusted by 99.9% of browsers" data-ar="موثوق من 99.9% من المتصفحات">Trusted by 99.9% of
+                        browsers</li>
+                    <li data-en="Convenient & visible trust sign" data-ar="علامة ثقة مرئية ومريحة">Convenient & visible
+                        trust sign</li>
+                    <li data-en="Domain Validation" data-ar="تحقق النطاق">Domain Validation</li>
+                    <li data-en="Multiple domain protection" data-ar="حماية نطاقات متعددة">Multiple domain protection
+                    </li>
+                    <li data-en="Single certificate management" data-ar="إدارة شهادة واحدة">Single certificate
+                        management</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/ssl-certificates/multi-domain-3-domains"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Multi Domain EV SSL" data-ar="SSL متعدد النطاقات EV">Multi Domain EV
+                    SSL</h3>
+                <div class="product-price">USD 173.62/year</div>
+                <ul class="product-features">
+                    <li data-en="3 Domains Issuance" data-ar="إصدار 3 نطاقات">3 Domains Issuance</li>
+                    <li data-en="www.site.com + site.com" data-ar="www.site.com + site.com">www.site.com + site.com</li>
+                    <li data-en="Trusted by 99.9% of browsers" data-ar="موثوق من 99.9% من المتصفحات">Trusted by 99.9% of
+                        browsers</li>
+                    <li data-en="Convenient & visible trust sign" data-ar="علامة ثقة مرئية ومريحة">Convenient & visible
+                        trust sign</li>
+                    <li data-en="Extended Validation - EV (greenbar)" data-ar="التحقق الممتد - EV (الشريط الأخضر)">
+                        Extended Validation - EV (greenbar)</li>
+                    <li data-en="Highest security for multiple domains" data-ar="أعلى أمان للنطاقات المتعددة">Highest
+                        security for multiple domains</li>
+                    <li data-en="Company verification for all domains" data-ar="تحقق الشركة لجميع النطاقات">Company
+                        verification for all domains</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/ssl-certificates/multi-domain-ev" class="book-btn"
+                    target="_blank" rel="noopener noreferrer" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+        </div>
+
+        <!-- 5. VPS Hosting -->
+        <div class="product-category" data-en="VPS Virtual Private Servers" data-ar="خوادم VPS الافتراضية الخاصة">
+            VPS Virtual Private Servers
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-name" data-en="VPS Economy" data-ar="VPS اقتصادي">VPS Economy</h3>
+                <div class="product-price">USD 15.27/month</div>
+                <ul class="product-features">
+                    <li data-en="Single VCPU" data-ar="معالج افتراضي واحد">Single VCPU</li>
+                    <li>1 GB RAM</li>
+                    <li>50 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="Web Statistics Report" data-ar="تقرير إحصائيات الويب">Web Statistics Report</li>
+                    <li data-en="Dedicated IP Address" data-ar="عنوان IP مخصص">Dedicated IP Address</li>
+                    <li data-en="Windows License Included" data-ar="ترخيص Windows مضمن">Windows License Included</li>
+                    <li data-en="Full Root Access" data-ar="وصول كامل للجذر">Full Root Access</li>
+                    <li data-en="1 Gb/s Network" data-ar="شبكة 1 جيجا/ثانية">1 Gb/s Network</li>
+                    <li data-en="IPV4 & IPV6 Support" data-ar="دعم IPV4 و IPV6">IPV4 & IPV6 Support</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/virtual-dedicated-servers/vps-economy"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="VPS Plus" data-ar="VPS بلس">VPS Plus</h3>
+                <div class="product-price">USD 19.18/month</div>
+                <ul class="product-features">
+                    <li data-en="Single VCPU" data-ar="معالج افتراضي واحد">Single VCPU</li>
+                    <li>2 GB RAM</li>
+                    <li>100 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="Web Statistics Report" data-ar="تقرير إحصائيات الويب">Web Statistics Report</li>
+                    <li data-en="Dedicated IP Address" data-ar="عنوان IP مخصص">Dedicated IP Address</li>
+                    <li data-en="Windows License Included" data-ar="ترخيص Windows مضمن">Windows License Included</li>
+                    <li data-en="Full Root Access" data-ar="وصول كامل للجذر">Full Root Access</li>
+                    <li data-en="1 Gb/s Network" data-ar="شبكة 1 جيجا/ثانية">1 Gb/s Network</li>
+                    <li data-en="IPV4 & IPV6 Support" data-ar="دعم IPV4 و IPV6">IPV4 & IPV6 Support</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/virtual-dedicated-servers/vps-plus"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="VPS Ultimate" data-ar="VPS متقدم">VPS Ultimate</h3>
+                <div class="product-price">USD 27.21/month</div>
+                <ul class="product-features">
+                    <li data-en="2 x VCPU" data-ar="معالجان افتراضيان">2 x VCPU</li>
+                    <li>4 GB RAM</li>
+                    <li>150 GB SSD Storage</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="Web Statistics Report" data-ar="تقرير إحصائيات الويب">Web Statistics Report</li>
+                    <li data-en="Dedicated IP Address" data-ar="عنوان IP مخصص">Dedicated IP Address</li>
+                    <li data-en="Windows License Included" data-ar="ترخيص Windows مضمن">Windows License Included</li>
+                    <li data-en="Full Root Access" data-ar="وصول كامل للجذر">Full Root Access</li>
+                    <li data-en="1 Gb/s Network" data-ar="شبكة 1 جيجا/ثانية">1 Gb/s Network</li>
+                    <li data-en="IPV4 & IPV6 Support" data-ar="دعم IPV4 و IPV6">IPV4 & IPV6 Support</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/virtual-dedicated-servers/vps-ultimate"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="VPS Power" data-ar="VPS قوي">VPS Power</h3>
+                <div class="product-price">USD 47.65/month</div>
+                <ul class="product-features">
+                    <li data-en="4 VCPUs" data-ar="4 معالجات افتراضية">4 VCPUs</li>
+                    <li>8 GB RAM</li>
+                    <li>300 GB SSD Storage</li>
+                    <li data-en="Operating System Available" data-ar="نظام التشغيل متاح">Operating System Available</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="Domain Name.com" data-ar="اسم نطاق .com">Domain Name.com</li>
+                    <li data-en="Web Statistics Report" data-ar="تقرير إحصائيات الويب">Web Statistics Report</li>
+                    <li data-en="Dedicated IP Address" data-ar="عنوان IP مخصص">Dedicated IP Address</li>
+                    <li data-en="Windows License Included" data-ar="ترخيص Windows مضمن">Windows License Included</li>
+                    <li data-en="Full Root Access" data-ar="وصول كامل للجذر">Full Root Access</li>
+                    <li data-en="1 Gb/s Network" data-ar="شبكة 1 جيجا/ثانية">1 Gb/s Network</li>
+                    <li data-en="IPV4 & IPV6 Support" data-ar="دعم IPV4 و IPV6">IPV4 & IPV6 Support</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/virtual-dedicated-servers/vps-power"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="VPS Super Power" data-ar="VPS سوبر قوي">VPS Super Power</h3>
+                <div class="product-price">USD 68.11/month</div>
+                <ul class="product-features">
+                    <li data-en="8 VCPUS" data-ar="8 معالجات افتراضية">8 VCPUS</li>
+                    <li>16 GB RAM</li>
+                    <li>300 GB SSD Storage</li>
+                    <li data-en="Operating System Available" data-ar="نظام التشغيل متاح">Operating System Available</li>
+                    <li data-en="Unlimited Bandwidth" data-ar="نقل بيانات غير محدود">Unlimited Bandwidth</li>
+                    <li data-en="Domain Name.com" data-ar="اسم نطاق .com">Domain Name.com</li>
+                    <li data-en="Web Statistics Report" data-ar="تقرير إحصائيات الويب">Web Statistics Report</li>
+                    <li data-en="Dedicated IP Address" data-ar="عنوان IP مخصص">Dedicated IP Address</li>
+                    <li data-en="Windows License Included" data-ar="ترخيص Windows مضمن">Windows License Included</li>
+                    <li data-en="Full Root Access" data-ar="وصول كامل للجذر">Full Root Access</li>
+                    <li data-en="1 Gb/s Network" data-ar="شبكة 1 جيجا/ثانية">1 Gb/s Network</li>
+                    <li data-en="IPV4 & IPV6 Support" data-ar="دعم IPV4 و IPV6">IPV4 & IPV6 Support</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/virtual-dedicated-servers/vps-super-power"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+        </div>
+
+        <!-- 6. Professional Business Email -->
+        <div class="product-category" data-en="Professional Business Email Services"
+            data-ar="خدمات البريد الإلكتروني الاحترافي للأعمال">
+            Professional Business Email Services
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-name" data-en="Business Email Standard" data-ar="بريد الأعمال القياسي">Business Email
+                    Standard</h3>
+                <div class="product-price">USD 0.58/mailbox/month</div>
+                <ul class="product-features">
+                    <li>2 GB Email Storage</li>
+                    <li data-en="Advanced Anti-Virus & Anti Spam" data-ar="مضاد فيروسات وسبام متقدم">Advanced Anti-Virus
+                        & Anti Spam</li>
+                    <li data-en="Unlimited Email Aliases" data-ar="أسماء مستعارة غير محدودة">Unlimited Email Aliases
+                    </li>
+                    <li data-en="iOS & Android Apps" data-ar="تطبيقات iOS و Android">iOS & Android Apps</li>
+                    <li data-en="Bulk Mailbox Creation" data-ar="إنشاء صناديق بريد جماعي">Bulk Mailbox Creation</li>
+                    <li data-en="Calendar, Contacts & Tasks" data-ar="تقويم وجهات اتصال ومهام">Calendar, Contacts &
+                        Tasks</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/business-email-seat-based/business-email-standard"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Business Email Plus" data-ar="بريد الأعمال بلس">Business Email Plus
+                </h3>
+                <div class="product-price">USD 0.98/mailbox/month</div>
+                <ul class="product-features">
+                    <li>5 GB Email Storage</li>
+                    <li data-en="Advanced Anti-Virus & Anti Spam" data-ar="مضاد فيروسات وسبام متقدم">Advanced Anti-Virus
+                        & Anti Spam</li>
+                    <li data-en="Unlimited Email Aliases" data-ar="أسماء مستعارة غير محدودة">Unlimited Email Aliases
+                    </li>
+                    <li data-en="iOS & Android Apps" data-ar="تطبيقات iOS و Android">iOS & Android Apps</li>
+                    <li data-en="Bulk Mailbox Creation" data-ar="إنشاء صناديق بريد جماعي">Bulk Mailbox Creation</li>
+                    <li data-en="Calendar, Contacts & Tasks" data-ar="تقويم وجهات اتصال ومهام">Calendar, Contacts &
+                        Tasks</li>
+                    <li data-en="Secure Webmail, POP3 & IMAP" data-ar="بريد ويب آمن، POP3 و IMAP">Secure Webmail, POP3 &
+                        IMAP</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/business-email-seat-based/business-email-plus"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Business Email Premium" data-ar="بريد الأعمال المميز">Business Email
+                    Premium</h3>
+                <div class="product-price">USD 1.38/mailbox/month</div>
+                <ul class="product-features">
+                    <li>10 GB Email Storage</li>
+                    <li data-en="Advanced Anti-Virus & Anti Spam" data-ar="مضاد فيروسات وسبام متقدم">Advanced Anti-Virus
+                        & Anti Spam</li>
+                    <li data-en="Unlimited Email Aliases" data-ar="أسماء مستعارة غير محدودة">Unlimited Email Aliases
+                    </li>
+                    <li data-en="iOS & Android Apps" data-ar="تطبيقات iOS و Android">iOS & Android Apps</li>
+                    <li data-en="Bulk Mailbox Creation" data-ar="إنشاء صناديق بريد جماعي">Bulk Mailbox Creation</li>
+                    <li data-en="Active Sync" data-ar="مزامنة نشطة">Active Sync</li>
+                    <li data-en="Shared Calendar, Contacts & Tasks" data-ar="تقويم وجهات اتصال ومهام مشتركة">Shared
+                        Calendar, Contacts & Tasks</li>
+                    <li data-en="Secure Webmail, POP3, IMAP & MAPI" data-ar="بريد ويب آمن، POP3، IMAP و MAPI">Secure
+                        Webmail, POP3, IMAP & MAPI</li>
+                </ul>
+                <a href="https://metasoftware.com.eg/index.php/store/business-email-seat-based/business-email-premium"
+                    class="book-btn" target="_blank" rel="noopener noreferrer" data-en="Order Now"
+                    data-ar="اطلب الآن">Order Now</a>
+            </div>
+        </div>
+
+        <!-- 7. Microsoft 365 Business -->
+        <div class="product-category" data-en="Microsoft 365 for Business" data-ar="Microsoft 365 للأعمال">
+            Microsoft 365 for Business
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-name" data-en="Microsoft 365 Business Basic" data-ar="Microsoft 365 الأساسي للأعمال">
+                    Microsoft 365 Business Basic</h3>
+                <div class="product-price">USD 10.42/month</div>
+                <ul class="product-features">
+                    <li data-en="Web and mobile versions of Microsoft 365 apps only"
+                        data-ar="إصدارات الويب والجوال من تطبيقات Microsoft 365 فقط">Web and mobile versions of
+                        Microsoft 365 apps only</li>
+                    <li data-en="Chat, call, meet up to 300 attendees" data-ar="دردشة ومكالمات واجتماعات حتى 300 مشارك">
+                        Chat, call, meet up to 300 attendees</li>
+                    <li data-en="1 TB of cloud storage per user" data-ar="1 تيرابايت تخزين سحابي لكل مستخدم">1 TB of
+                        cloud storage per user</li>
+                    <li data-en="Business-class email" data-ar="بريد إلكتروني للأعمال">Business-class email</li>
+                    <li data-en="Standard security" data-ar="أمان قياسي">Standard security</li>
+                    <li data-en="Anytime phone and web support" data-ar="دعم هاتفي وويب في أي وقت">Anytime phone and web
+                        support</li>
+                    <li data-en="Includes Word, Excel, PowerPoint, Outlook, OneDrive, Access (PC only), Publisher (PC only)"
+                        data-ar="يشمل Word، Excel، PowerPoint، Outlook، OneDrive، Access (الكمبيوتر فقط)، Publisher (الكمبيوتر فقط)">
+                        Includes Word, Excel, PowerPoint, Outlook, OneDrive, Access (PC only), Publisher (PC only)</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Microsoft 365 Apps for Business"
+                    data-ar="تطبيقات Microsoft 365 للأعمال">Microsoft 365 Apps for Business</h3>
+                <div class="product-price">USD 13.83/month</div>
+                <ul class="product-features">
+                    <li data-en="Desktop versions of Microsoft 365 apps with premium features"
+                        data-ar="إصدارات سطح المكتب من تطبيقات Microsoft 365 مع ميزات مميزة">Desktop versions of
+                        Microsoft 365 apps with premium features</li>
+                    <li data-en="1 TB of cloud storage per user" data-ar="1 تيرابايت تخزين سحابي لكل مستخدم">1 TB of
+                        cloud storage per user</li>
+                    <li data-en="Standard security" data-ar="أمان قياسي">Standard security</li>
+                    <li data-en="Anytime phone and web support" data-ar="دعم هاتفي وويب في أي وقت">Anytime phone and web
+                        support</li>
+                    <li data-en="Includes Word, Excel, PowerPoint, Outlook, OneDrive, Access (PC only), Publisher (PC only)"
+                        data-ar="يشمل Word، Excel، PowerPoint، Outlook، OneDrive، Access (الكمبيوتر فقط)، Publisher (الكمبيوتر فقط)">
+                        Includes Word, Excel, PowerPoint, Outlook, OneDrive, Access (PC only), Publisher (PC only)</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Microsoft 365 Business Standard"
+                    data-ar="Microsoft 365 القياسي للأعمال">Microsoft 365 Business Standard</h3>
+                <div class="product-price">USD 21.64/month</div>
+                <ul class="product-features">
+                    <li data-en="Web and mobile versions of Microsoft 365 apps only"
+                        data-ar="إصدارات الويب والجوال من تطبيقات Microsoft 365 فقط">Web and mobile versions of
+                        Microsoft 365 apps only</li>
+                    <li data-en="Chat, call, meet up to 300 attendees" data-ar="دردشة ومكالمات واجتماعات حتى 300 مشارك">
+                        Chat, call, meet up to 300 attendees</li>
+                    <li data-en="1 TB of cloud storage per user" data-ar="1 تيرابايت تخزين سحابي لكل مستخدم">1 TB of
+                        cloud storage per user</li>
+                    <li data-en="Business-class email" data-ar="بريد إلكتروني للأعمال">Business-class email</li>
+                    <li data-en="Standard security" data-ar="أمان قياسي">Standard security</li>
+                    <li data-en="Anytime phone and web support" data-ar="دعم هاتفي وويب في أي وقت">Anytime phone and web
+                        support</li>
+                    <li data-en="Includes Word, Excel, PowerPoint, Teams, Outlook, OneDrive, SharePoint, Exchange, Access (PC only), Publisher (PC only)"
+                        data-ar="يشمل Word، Excel، PowerPoint، Teams، Outlook، OneDrive، SharePoint، Exchange، Access (الكمبيوتر فقط)، Publisher (الكمبيوتر فقط)">
+                        Includes Word, Excel, PowerPoint, Teams, Outlook, OneDrive, SharePoint, Exchange, Access (PC
+                        only), Publisher (PC only)</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Microsoft 365 Business Premium"
+                    data-ar="Microsoft 365 المميز للأعمال">Microsoft 365 Business Premium</h3>
+                <div class="product-price">USD 37.87/month</div>
+                <ul class="product-features">
+                    <li data-en="Web and mobile versions of Microsoft 365 apps only"
+                        data-ar="إصدارات الويب والجوال من تطبيقات Microsoft 365 فقط">Web and mobile versions of
+                        Microsoft 365 apps only</li>
+                    <li data-en="Chat, call, meet up to 300 attendees" data-ar="دردشة ومكالمات واجتماعات حتى 300 مشارك">
+                        Chat, call, meet up to 300 attendees</li>
+                    <li data-en="1 TB of cloud storage per user" data-ar="1 تيرابايت تخزين سحابي لكل مستخدم">1 TB of
+                        cloud storage per user</li>
+                    <li data-en="Business-class email" data-ar="بريد إلكتروني للأعمال">Business-class email</li>
+                    <li data-en="Advanced security" data-ar="أمان متقدم">Advanced security</li>
+                    <li data-en="Anytime phone and web support" data-ar="دعم هاتفي وويب في أي وقت">Anytime phone and web
+                        support</li>
+                    <li data-en="Access and data control" data-ar="التحكم في الوصول والبيانات">Access and data control
+                    </li>
+                    <li data-en="Cyberthreat protection" data-ar="حماية من التهديدات السيبرانية">Cyberthreat protection
+                    </li>
+                    <li data-en="Includes Word, Excel, PowerPoint, Teams, Outlook, OneDrive, SharePoint, Exchange, Access (PC only), Publisher (PC only), Intune, Azure Information Protection"
+                        data-ar="يشمل Word، Excel، PowerPoint، Teams، Outlook، OneDrive، SharePoint، Exchange، Access (الكمبيوتر فقط)، Publisher (الكمبيوتر فقط)، Intune، Azure Information Protection">
+                        Includes Word, Excel, PowerPoint, Teams, Outlook, OneDrive, SharePoint, Exchange, Access (PC
+                        only), Publisher (PC only), Intune, Azure Information Protection</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+        </div>
+
+        <!-- 8. Microsoft 365 Enterprise -->
+        <div class="product-category" data-en="Microsoft 365 for Enterprise" data-ar="Microsoft 365 للمؤسسات">
+            Microsoft 365 for Enterprise
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-name" data-en="Microsoft 365 Apps for Enterprise"
+                    data-ar="تطبيقات Microsoft 365 للمؤسسات">Microsoft 365 Apps for Enterprise</h3>
+                <div class="product-price">USD 20.64/month</div>
+                <ul class="product-features">
+                    <li data-en="Business email hosting not included"
+                        data-ar="استضافة البريد الإلكتروني للأعمال غير مضمنة">Business email hosting not included</li>
+                    <li data-en="Web versions of Word, Excel, and PowerPoint"
+                        data-ar="إصدارات الويب من Word و Excel و PowerPoint">Web versions of Word, Excel, and PowerPoint
+                    </li>
+                    <li data-en="File storage and sharing with 1 TB OneDrive storage"
+                        data-ar="تخزين ومشاركة الملفات مع تخزين OneDrive 1 تيرابايت">File storage and sharing with 1 TB
+                        OneDrive storage</li>
+                    <li data-en="Maximum number of users: unlimited" data-ar="الحد الأقصى لعدد المستخدمين: غير محدود">
+                        Maximum number of users: unlimited</li>
+                    <li data-en="FastTrack deployment support with purchase of 150+ seats at no extra cost"
+                        data-ar="دعم نشر FastTrack مع شراء أكثر من 150 مقعد دون تكلفة إضافية">FastTrack deployment
+                        support with purchase of 150+ seats at no extra cost</li>
+                    <li data-en="Phone and web support" data-ar="دعم هاتفي وويب">Phone and web support</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Office 365 E1" data-ar="Office 365 E1">Office 365 E1</h3>
+                <div class="product-price">USD 17.23/month</div>
+                <ul class="product-features">
+                    <li data-en="Email hosting with 50 GB mailbox and custom email domain address"
+                        data-ar="استضافة البريد الإلكتروني مع صندوق بريد 50 جيجابايت وعنوان نطاق بريد إلكتروني مخصص">
+                        Email hosting with 50 GB mailbox and custom email domain address</li>
+                    <li data-en="Web versions of Outlook, Word, Excel, and PowerPoint (desktop versions of applications not included)"
+                        data-ar="إصدارات الويب من Outlook و Word و Excel و PowerPoint (إصدارات سطح المكتب من التطبيقات غير مضمنة)">
+                        Web versions of Outlook, Word, Excel, and PowerPoint (desktop versions of applications not
+                        included)</li>
+                    <li data-en="Get web versions of Office apps on iOS, Android, and Windows devices with screen sizes of 10.1\"
+                        or less"
+                        data-ar="احصل على إصدارات الويب من تطبيقات Office على أجهزة iOS و Android و Windows بأحجام شاشة 10.1 بوصة أو أقل">
+                        Get web versions of Office apps on iOS, Android, and Windows devices with screen sizes of 10.1"
+                        or less</li>
+                    <li data-en="Each user can install Office mobile apps on 5 tablets and 5 phones"
+                        data-ar="يمكن لكل مستخدم تثبيت تطبيقات Office المحمولة على 5 أجهزة لوحية و 5 هواتف">Each user
+                        can install Office mobile apps on 5 tablets and 5 phones</li>
+                    <li data-en="Office desktop apps not included" data-ar="تطبيقات Office لسطح المكتب غير مضمنة">Office
+                        desktop apps not included</li>
+                    <li data-en="File storage and sharing with 1 TB OneDrive storage"
+                        data-ar="تخزين ومشاركة الملفات مع تخزين OneDrive 1 تيرابايت">File storage and sharing with 1 TB
+                        OneDrive storage</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Office 365 E3" data-ar="Office 365 E3">Office 365 E3</h3>
+                <div class="product-price">USD 39.67/month</div>
+                <ul class="product-features">
+                    <li data-en="Email hosting with 100 GB mailbox and custom email domain address"
+                        data-ar="استضافة البريد الإلكتروني مع صندوق بريد 100 جيجابايت وعنوان نطاق بريد إلكتروني مخصص">
+                        Email hosting with 100 GB mailbox and custom email domain address</li>
+                    <li data-en="Desktop versions of Office applications: Outlook, Word, Excel, PowerPoint, plus Access and Publisher for PC only"
+                        data-ar="إصدارات سطح المكتب من تطبيقات Office: Outlook و Word و Excel و PowerPoint، بالإضافة إلى Access و Publisher للكمبيوتر فقط">
+                        Desktop versions of Office applications: Outlook, Word, Excel, PowerPoint, plus Access and
+                        Publisher for PC only</li>
+                    <li data-en="OneNote: Access to additional OneNote features (features vary)"
+                        data-ar="OneNote: الوصول إلى ميزات OneNote الإضافية (تختلف الميزات)">OneNote: Access to
+                        additional OneNote features (features vary)</li>
+                    <li data-en="One license covers 5 phones, 5 tablets, and 5 PCs or Macs per user"
+                        data-ar="ترخيص واحد يغطي 5 هواتف و 5 أجهزة لوحية و 5 أجهزة كمبيوتر أو Mac لكل مستخدم">One
+                        license covers 5 phones, 5 tablets, and 5 PCs or Macs per user</li>
+                    <li data-en="Unlimited personal cloud storage" data-ar="تخزين سحابي شخصي غير محدود">Unlimited
+                        personal cloud storage</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Office 365 E5" data-ar="Office 365 E5">Office 365 E5</h3>
+                <div class="product-price">USD 65.52/month</div>
+                <ul class="product-features">
+                    <li data-en="Email hosting with 100 GB mailbox and custom email domain address"
+                        data-ar="استضافة البريد الإلكتروني مع صندوق بريد 100 جيجابايت وعنوان نطاق بريد إلكتروني مخصص">
+                        Email hosting with 100 GB mailbox and custom email domain address</li>
+                    <li data-en="Desktop versions of Office applications: Outlook, Word, Excel, PowerPoint, plus Access and Publisher for PC only"
+                        data-ar="إصدارات سطح المكتب من تطبيقات Office: Outlook و Word و Excel و PowerPoint، بالإضافة إلى Access و Publisher للكمبيوتر فقط">
+                        Desktop versions of Office applications: Outlook, Word, Excel, PowerPoint, plus Access and
+                        Publisher for PC only</li>
+                    <li data-en="OneNote: Access to additional OneNote features (features vary)"
+                        data-ar="OneNote: الوصول إلى ميزات OneNote الإضافية (تختلف الميزات)">OneNote: Access to
+                        additional OneNote features (features vary)</li>
+                    <li data-en="One license covers 5 phones, 5 tablets, and 5 PCs or Macs per user"
+                        data-ar="ترخيص واحد يغطي 5 هواتف و 5 أجهزة لوحية و 5 أجهزة كمبيوتر أو Mac لكل مستخدم">One
+                        license covers 5 phones, 5 tablets, and 5 PCs or Macs per user</li>
+                    <li data-en="Unlimited personal cloud storage" data-ar="تخزين سحابي شخصي غير محدود">Unlimited
+                        personal cloud storage</li>
+                    <li data-en="Advanced security and compliance features" data-ar="ميزات أمان وامتثال متقدمة">Advanced
+                        security and compliance features</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+        </div>
+
+        <!-- 9. Exchange Online -->
+        <div class="product-category" data-en="Microsoft Exchange Online" data-ar="Microsoft Exchange Online">
+            Microsoft Exchange Online
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-name" data-en="Exchange Online (Plan 1)" data-ar="Exchange Online (الخطة 1)">Exchange
+                    Online (Plan 1)</h3>
+                <div class="product-price">USD 6.81/month</div>
+                <ul class="product-features">
+                    <li data-en="50 GB mailbox and messages up to 150 MB"
+                        data-ar="صندوق بريد 50 جيجابايت ورسائل حتى 150 ميجابايت">50 GB mailbox and messages up to 150 MB
+                    </li>
+                    <li data-en="Outlook on the web provides a premium browser-based experience"
+                        data-ar="Outlook على الويب يوفر تجربة متميزة قائمة على المتصفح">Outlook on the web provides a
+                        premium browser-based experience</li>
+                    <li data-en="Focused Inbox makes it easy to track email that matters most"
+                        data-ar="صندوق الوارد المركز يجعل من السهل تتبع البريد الإلكتروني الأكثر أهمية">Focused Inbox
+                        makes it easy to track email that matters most</li>
+                    <li data-en="Real-time collaboration" data-ar="تعاون في الوقت الفعلي">Real-time collaboration</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-name" data-en="Exchange Online (Plan 2)" data-ar="Exchange Online (الخطة 2)">Exchange
+                    Online (Plan 2)</h3>
+                <div class="product-price">USD 13.83/month</div>
+                <ul class="product-features">
+                    <li data-en="100 GB mailbox and messages up to 150 MB"
+                        data-ar="صندوق بريد 100 جيجابايت ورسائل حتى 150 ميجابايت">100 GB mailbox and messages up to 150
+                        MB</li>
+                    <li data-en="Outlook on the web provides a premium browser-based experience"
+                        data-ar="Outlook على الويب يوفر تجربة متميزة قائمة على المتصفح">Outlook on the web provides a
+                        premium browser-based experience</li>
+                    <li data-en="Focused Inbox makes it easy to track email that matters most"
+                        data-ar="صندوق الوارد المركز يجعل من السهل تتبع البريد الإلكتروني الأكثر أهمية">Focused Inbox
+                        makes it easy to track email that matters most</li>
+                    <li data-en="Real-time collaboration" data-ar="تعاون في الوقت الفعلي">Real-time collaboration</li>
+                    <li data-en="Built-in data loss prevention (DLP)" data-ar="منع فقدان البيانات المدمج (DLP)">Built-in
+                        data loss prevention (DLP)</li>
+                    <li data-en="Cloud Voicemail services with call answering, dial-in UI, and automated attendant"
+                        data-ar="خدمات البريد الصوتي السحابي مع الرد على المكالمات وواجهة المستخدم الهاتفية والمساعد الآلي">
+                        Cloud Voicemail services with call answering, dial-in UI, and automated attendant</li>
+                </ul>
+                <a href="https://metasoftware.com.eg" class="book-btn" target="_blank" rel="noopener noreferrer"
+                    data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer الأصلي بدون تغيير -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h3>
+                <p data-en="📧 Contact@metasoftware.eg" data-ar="📧 Contact@metasoftware.eg">
+                    <a href="mailto:Contact@metasoftware.com?subject=استفسار%20إلى%20Meta%20Software%20%7C%20Inquiry%20to%20Meta%20Software"
+                        style="text-decoration: none; color: inherit;">
+                        📧 Contact@metasoftware.eg
+                    </a>
+                </p>
+                <p data-en="📍 Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar"
+                    data-ar="📍مصر, الرياض، المملكة العربية السعودية, الكويت, قطر">📍
+                    Egypt, Riyadh, Saudi
+                    Arabia, United Arab Emirates, Kuwait, Qatar</p>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Our Services" data-ar="خدماتنا">Our Services</h3>
+                <ul>
+                    <li data-en="Domain Registration" data-ar="تسجيل الدومينات">Domain Registration</li>
+                    <li data-en="Web Hosting" data-ar="استضافة المواقع">Web Hosting</li>
+                    <li data-en="VPS Solutions" data-ar="حلول VPS">VPS Solutions</li>
+                    <li data-en="Email Services" data-ar="خدمات البريد الإلكتروني">Email Services</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Technologies" data-ar="التقنيات">Technologies</h3>
+                <ul>
+                    <li data-en="🤖 Artificial Intelligence" data-ar="🤖 الذكاء الاصطناعي">🤖 Artificial Intelligence
+                    </li>
+                    <li data-en="⛓️ Blockchain" data-ar="⛓️ البلوك تشين">⛓️ Blockchain</li>
+                    <li data-en="☁️ Cloud Computing" data-ar="☁️ الحوسبة السحابية">☁️ Cloud Computing</li>
+                    <li data-en="🔒 Cybersecurity" data-ar="🔒 الأمن السيبراني">🔒 Cybersecurity</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Service Areas" data-ar="مناطق الخدمة">Service Areas</h3>
+                <ul>
+                    <li data-en="🇸🇦 Saudi Arabia" data-ar="🇸🇦 المملكة العربية السعودية">🇸🇦 Saudi Arabia</li>
+                    <li data-en="🇦🇪 United Arab Emirates" data-ar="🇦🇪 الإمارات العربية المتحدة">🇦🇪 United Arab
+                        Emirates</li>
+                    <li data-en="🇰🇼 Kuwait" data-ar="🇰🇼 الكويت">🇰🇼 Kuwait</li>
+                    <li data-en="🇶🇦 Qatar" data-ar="🇶🇦 قطر">🇶🇦 Qatar</li>
+                    <li data-en="🇶🇦 Qatar" data-ar="🇶🇦 مصر  (المقر الرئيسي)">Eg Egypt (Headquarters)</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-en="© 2025 Meta Software. All rights reserved. | Complete Technology Solutions for The Arab world"
+                data-ar="© 2025 ميتا سوفت وير. جميع الحقوق محفوظة. | حلول تقنية متكاملة لمنطقة الوطن العربي">© 2025 Meta
+                Software. All rights reserved. | Complete Technology Solutions for The Arab world</p>
+            <p data-en="* All prices exclude 14% VAT" data-ar="* جميع الأسعار لا تشمل ضريبة القيمة المضافة 14%">* All
+                prices exclude 14% VAT</p>
+        </div>
+    </footer>
+
+    <script>
+        // ==================== Header scroll effect (الأصلي بدون تغيير) ==================== 
+        const header = document.getElementById('header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            // Add scrolled class when scrolled down
+            if (currentScrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+        // Language switching functionality
+        let currentLang = 'en';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update body direction
+            document.body.className = lang === 'ar' ? 'rtl' : '';
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+                element.textContent = element.getAttribute('data-' + lang);
+            });
+
+            // Update meta tags for SEO
+            updateMetaTags(lang);
+        }
+
+        function updateMetaTags(lang) {
+            const titles = {
+                en: 'Meta Software - Complete Technology Solutions | Saudi Arabia & Gulf',
+                ar: 'ميتا سوفت وير - حلول تقنية متكاملة | السعودية والخليج'
+            };
+
+            const descriptions = {
+                en: 'Leading technology solutions provider in Saudi Arabia and Gulf region. Domain registration, web hosting, VPS, SSL certificates, email services, and Microsoft 365.',
+                ar: 'مقدم حلول تقنية رائد في المملكة العربية السعودية ومنطقة الخليج. تسجيل الدومينات، استضافة المواقع، VPS، شهادات SSL، خدمات البريد الإلكتروني، و Microsoft 365.'
+            };
+
+            document.getElementById('page-title').textContent = titles[lang];
+            document.getElementById('meta-description').setAttribute('content', descriptions[lang]);
+        }
+
+        // Fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${Math.random() * 0.3}s`;
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('.product-card, .product-category').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Enhanced tracking for analytics
+        document.querySelectorAll('.book-btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                // Track button clicks for analytics
+                const productName = this.closest('.product-card').querySelector('.product-name').textContent;
+                const productPrice = this.closest('.product-card').querySelector('.product-price').textContent;
+
+                // Send analytics event (if Google Analytics is setup)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'product_click', {
+                        'product_name': productName,
+                        'product_price': productPrice,
+                        'language': currentLang
+                    });
+                }
+            });
+        });
+    </script>
+        <script src="protection.js"></script>
+
+</body>
+
+</html>

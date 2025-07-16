@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags - English -->
+    <title>Privacy Policy - Meta Software | Data Protection & Privacy Rights</title>
+    <meta name="description"
+        content="Comprehensive privacy policy for Meta Software - How we collect, use, and protect your personal data. GDPR compliant privacy practices and user rights.">
+    <meta name="keywords"
+        content="meta software, privacy policy, data protection, GDPR, personal data, privacy rights, data security, egypt software company">
+    <meta name="author" content="Meta Software">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- SEO Meta Tags - Arabic -->
+    <meta name="description" lang="ar"
+        content="سياسة الخصوصية الشاملة لشركة ميتا سوفت وير - كيف نجمع ونستخدم ونحمي بياناتك الشخصية. ممارسات خصوصية متوافقة مع اللائحة العامة لحماية البيانات وحقوق المستخدمين.">
+    <meta name="keywords" lang="ar"
+        content="ميتا سوفت وير, سياسة الخصوصية, حماية البيانات, اللائحة العامة لحماية البيانات, البيانات الشخصية, حقوق الخصوصية, أمان البيانات">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Privacy Policy - Meta Software">
+    <meta property="og:description"
+        content="Comprehensive privacy policy for Meta Software - Data protection and privacy rights.">
+    <meta property="og:image" content="https://metasoftware.eg/assets/images/privacy-policy-og.jpg">
+    <meta property="og:url" content="https://metasoftware.eg/privacy-policy">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Meta Software">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_EG">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy - Meta Software">
+    <meta name="twitter:description"
+        content="Comprehensive privacy policy for Meta Software - Data protection and privacy rights.">
+    <meta name="twitter:image" content="https://metasoftware.eg/assets/images/privacy-policy-twitter.jpg">
+    <meta name="twitter:site" content="@metasoftware_eg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://metasoftware.eg/privacy-policy">
+
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="en" href="https://metasoftware.eg/privacy-policy">
+    <link rel="alternate" hreflang="ar" href="https://metasoftware.eg/ar/privacy-policy">
+    <link rel="alternate" hreflang="x-default" href="https://metasoftware.eg/privacy-policy">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://metasoftware.eg/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://metasoftware.eg/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+    <link rel="apple-touch-icon" href="https://metasoftware.eg/assets/images/favourite_icon_2.svg">
+    <style>
+        /* ===== متغيرات ألوان هوية Meta Software ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #4A90E2;
+            --secondary-blue: #6BB6FF;
+            --light-blue: #E8F4FD;
+            --white: #FFFFFF;
+            --dark-gray: #2C3E50;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --card-background: #F8FBFF;
+            --border-light: #E1ECFA;
+            --shadow: rgba(74, 144, 226, 0.15);
+            --gradient-primary: linear-gradient(135deg, #4A90E2 0%, #6BB6FF 100%);
+            --gradient-light: linear-gradient(135deg, #E8F4FD 0%, #FFFFFF 100%);
+            --gradient-header: linear-gradient(135deg, #FFFFFF 0%, #E8F4FD 50%, #4A90E2 100%);
+            --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F8FBFF 100%);
+        }
+
+        /* ===== إعداد الصفحة الكاملة ===== */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--gradient-light);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.rtl {
+            direction: rtl;
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        body.ltr {
+            direction: ltr;
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+        }
+
+        /* ===== خلفية الصفحة مع التأثيرات ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 80% 20%, var(--light-blue) 0%, transparent 70%),
+                radial-gradient(circle at 20% 80%, var(--primary-blue) 0%, transparent 70%);
+            opacity: 0.05;
+            z-index: 0;
+            pointer-events: none;
+            animation: backgroundFloat 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundFloat {
+
+            0%,
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                transform: scale(1.1) rotate(2deg);
+            }
+        }
+
+        /* ===== رأس الصفحة (Header) ===== */
+        .header {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 50%, var(--primary-blue) 100%);
+            padding: 1.5rem 0;
+            box-shadow: 0 8px 32px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        /* اللوجو الرئيسي من الشركة */
+        .company-logo {
+            width: 80px;
+            height: 40px;
+            background-image: url('https://metasoftware.eg/assets/images/2trivgoAgJVHgQNIzVMC5uvbZ03.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 4px 8px var(--blue-shadow));
+            position: relative;
+        }
+
+        .company-logo::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--primary-blue), transparent, var(--secondary-blue));
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .company-logo:hover::before {
+            opacity: 0.3;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.1) translateY(-2px);
+            filter: drop-shadow(0 8px 16px var(--blue-shadow));
+        }
+
+        /* أيقونة جديدة مع الـ SVG المحدد */
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 3px solid var(--white);
+            background-image: url('https://metasoftware.eg/assets/images/favourite_icon_2.svg');
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .logo-icon:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 10px 30px var(--blue-shadow);
+        }
+
+        .company-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--dark-gray), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-name::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        .logo-section:hover .company-name::after {
+            width: 100%;
+        }
+
+        /* تأثير لامع */
+        .logo-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .logo-section:hover::before {
+            left: 100%;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-blue);
+            background: var(--white);
+            color: var(--primary-blue);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        /* ===== تبديل اللغة ===== */
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 0.8rem;
+            border: 2px solid var(--primary-blue);
+            background: var(--white);
+            color: var(--primary-blue);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lang-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-blue);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .lang-btn:hover::before,
+        .lang-btn.active::before {
+            left: 0;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        /* ===== قسم المحتوى الرئيسي ===== */
+        .privacy-section {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 2rem 2rem;
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+            animation: titleUnderline 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleUnderline {
+            0% {
+                width: 100px;
+            }
+
+            100% {
+                width: 150px;
+            }
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        /* ===== بطاقة المحتوى الرئيسية ===== */
+        .privacy-card {
+            width: 100%;
+            background: var(--gradient-card);
+            border: none;
+            border-radius: 20px;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(74, 144, 226, 0.08);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-light);
+        }
+
+        .privacy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            padding: 3px;
+            z-index: -1;
+        }
+
+        .privacy-card::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: var(--gradient-card);
+            border-radius: 17px;
+            z-index: -1;
+        }
+
+        .privacy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(74, 144, 226, 0.12);
+        }
+
+        .privacy-card-content {
+            padding: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== أقسام المحتوى ===== */
+        .content-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.03) 0%, rgba(107, 182, 255, 0.05) 100%);
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-blue);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .content-section:hover::before {
+            left: 100%;
+        }
+
+        .content-section:hover {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.08) 0%, rgba(107, 182, 255, 0.1) 100%);
+            transform: translateX(8px);
+            border-left-color: var(--secondary-blue);
+            box-shadow: 0 5px 20px rgba(74, 144, 226, 0.15);
+        }
+
+        .content-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin: 0 0 1rem 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-section p {
+            margin: 0 0 1rem 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 1rem;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-section ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .content-section li::marker {
+            color: var(--primary-blue);
+        }
+
+        /* ===== إخفاء المحتوى ===== */
+        .hidden {
+            display: none;
+        }
+
+        /* ===== تذييل الصفحة ===== */
+        .footer {
+            background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--light-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+        }
+
+        /* ===== تحسينات الاستجابة ===== */
+        @media (max-width: 768px) {
+            .privacy-section {
+                max-width: 95%;
+                padding: 100px 1rem 2rem;
+            }
+
+            .privacy-card-content {
+                padding: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .company-name {
+                font-size: 1.5rem;
+            }
+
+            .content-section {
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-section {
+                padding: 120px 1rem 2rem;
+            }
+
+            .privacy-card-content {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+
+            .company-name {
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+            }
+
+            .content-section {
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* ===== تحسينات إمكانية الوصول ===== */
+        .content-section:focus,
+        .lang-btn:focus,
+        .company-logo:focus,
+        .logo-icon:focus {
+            outline: 3px solid var(--primary-blue);
+            outline-offset: 2px;
+        }
+
+        /* ===== حركات الانزلاق والظهور ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تصميم الإضافات الحكومية */
+        .government-section {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(107, 182, 255, 0.15) 100%);
+            border: 2px solid var(--primary-blue);
+            position: relative;
+        }
+
+        .government-section::before {
+            content: '🏛️';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .government-note,
+        .government-addition {
+            background: rgba(74, 144, 226, 0.05);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-blue);
+        }
+
+        .government-transparency {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, rgba(107, 182, 255, 0.1) 100%);
+            border: 2px dashed var(--primary-blue);
+        }
+
+        .certification-box,
+        .transparency-measures {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-blue);
+        }
+
+        .certification-box h4,
+        .transparency-measures h4,
+        .government-addition h4 {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy - Meta Software",
+        "description": "Comprehensive privacy policy for Meta Software - Data protection and privacy rights.",
+        "url": "https://metasoftware.eg/privacy-policy",
+        "inLanguage": ["en", "ar"],
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Meta Software",
+            "url": "https://metasoftware.eg"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Meta Software",
+            "url": "https://metasoftware.eg",
+            "logo": "https://metasoftware.eg/assets/images/logo.png"
+        },
+        "dateModified": "2025-06-28",
+        "datePublished": "2025-01-01"
+    }
+    </script>
+
+
+</head>
+
+<body class="ltr">
+    <!-- Header -->
+        <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="company-logo" title="Meta Software Official Logo"></div>
+                <div class="logo-icon" title="Meta Software Icon"></div>
+                <h1 class="company-name">Meta Software</h1>
+            </div>
+
+             <div class="lang-switch">
+                <button class="lang-btn active" id="enBtn" aria-label="Switch to English">EN</button>
+                <button class="lang-btn" id="arBtn" aria-label="Switch to Arabic">AR</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="privacy-section">
+        <div class="page-header">
+            <h1 class="section-title" id="pageTitle">Privacy Policy</h1>
+            <p class="page-subtitle" id="pageSubtitle">Your privacy is important to us. Learn how we protect and handle
+                your personal data.</p>
+        </div>
+
+        <div class="privacy-card">
+            <div class="privacy-card-content">
+                <!-- English Content -->
+                <div id="enContent">
+                    <div class="content-section private-company-section">
+                        <h3>1. Official Private Company Registration & Authorizations</h3>
+                        <p>Meta Software is a privately-owned Egyptian software development company, officially
+                            registered with the Ministry of Communications and Information Technology, and an active
+                            member of the Information Technology and Communications Industry Chamber. We are licensed by
+                            the Investment Authority and authorized by all relevant governmental entities while
+                            maintaining our independent private sector status. Our company operates under comprehensive
+                            regulatory oversight and maintains all required certifications for providing advanced
+                            software solutions throughout the Arab world.</p>
+                        <div class="certification-box">
+                            <h4>Official Private Company Certifications:</h4>
+                            <ul>
+                                <li>Ministry of Communications and Information Technology - Official Private Company
+                                    Registration</li>
+                                <li>Information Technology and Communications Industry Chamber - Active Membership</li>
+                                <li>Investment Authority - Private Technology Company License</li>
+                                <li>All Relevant Government Entities - Comprehensive Operating Authorizations</li>
+                                <li>Private Sector Technology Excellence Certifications</li>
+                                <li>Independent Software Development Company Status</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>2. Introduction - Private Company Privacy Framework</h3>
+                        <p>Meta Software, as a comprehensive private software company committed to enhancing practical
+                            technological awareness throughout the entire Arab world, is dedicated to protecting your
+                            privacy and ensuring the security of your personal information. This Privacy Policy explains
+                            how we, as an independent private entity with strong governmental approvals and technical
+                            capabilities, collect, use, disclose, and safeguard your information when you visit our
+                            website or use our services.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>3. Information We Collect - Private Company Standards</h3>
+                        <p>As a private technology company with official governmental approvals, we collect information
+                            you provide directly to us through secure channels that comply with private sector standards
+                            and regulatory requirements. This includes personal identification information (name, email
+                            address, phone number), professional information (company name, job title, industry),
+                            technical information (IP address, browser type, device information), usage data (pages
+                            visited, time spent, interactions), and project-specific data for our technological
+                            awareness initiatives in the Arab world.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>4. How We Use Your Information - Private Sector Operations</h3>
+                        <p>We use the information we collect to advance technological awareness in the Arab world while
+                            maintaining the highest standards of privacy and security. This includes providing,
+                            maintaining, and improving our private sector technology services, processing transactions,
+                            sending technical notices and updates, responding to inquiries, monitoring usage patterns,
+                            enhancing practical technological awareness throughout the Arab world, developing innovative
+                            software solutions, supporting digital transformation initiatives, and maintaining
+                            compliance with regulatory requirements.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>5. Information Sharing and Disclosure - Private Company Policy</h3>
+                        <p>As a private company, we do not sell, trade, or otherwise transfer your personal information
+                            to third parties without your consent, except as described in this policy. We may share
+                            information with trusted private sector service providers, to comply with legal obligations,
+                            in connection with business transactions, with your explicit consent, with regulatory
+                            authorities when required by law, for industry chamber reporting, to support Arab world
+                            technological development initiatives, and with approved private sector partners.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>6. Data Security - Private Company Standards</h3>
+                        <p>As a private technology company with strong governmental approvals and technical
+                            capabilities, we implement robust security measures including advanced encryption of data in
+                            transit and at rest, regular security assessments and updates, access controls and
+                            authentication measures, employee training on data protection, proprietary security
+                            technologies developed in-house, compliance with private sector cybersecurity best
+                            practices, regular third-party security audits, investment in cutting-edge security
+                            infrastructure, and continuous innovation in data protection technologies.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>7. Your Rights Under Egyptian Law</h3>
+                        <p>You have comprehensive rights regarding your personal information under Egyptian law,
+                            including the right to access your personal data, rectify inaccurate information, erase your
+                            personal data, restrict processing, data portability, object to processing, file complaints
+                            with Egyptian Data Protection Authority, legal representation in data protection matters,
+                            and constitutional rights to privacy and data protection.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>8. Cookies and Tracking Technologies</h3>
+                        <p>We use cookies and similar tracking technologies that comply with Egyptian cybersecurity
+                            regulations and private sector standards. This includes essential cookies for website
+                            functionality, analytics cookies for usage analysis, security cookies for fraud prevention,
+                            performance cookies for service optimization, and marketing cookies with appropriate consent
+                            mechanisms.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>9. International Data Transfers - Government Authorization</h3>
+                        <p>Any international data transfers are conducted with appropriate safeguards and regulatory
+                            compliance, including prior assessment of data protection adequacy, standard contractual
+                            clauses, binding corporate rules, regular monitoring and reporting, and compliance with
+                            Egyptian national security requirements.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>10. Data Retention</h3>
+                        <p>We retain your personal information only for as long as necessary to fulfill the purposes
+                            outlined in this Privacy Policy, with specific retention periods including personal data as
+                            required by Egyptian law, financial records for 10 years as mandated by Egyptian Tax
+                            Authority, project data as specified in contracts, security logs for 7 years for
+                            cybersecurity compliance, and audit trails for regulatory oversight.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>11. Children's Privacy - Egyptian Legal Protection</h3>
+                        <p>Our services are not intended for children under 16 years of age, and we implement
+                            government-approved age verification systems, parental consent mechanisms compliant with
+                            Egyptian law, immediate deletion of underage user data when discovered, and reporting to
+                            relevant child protection authorities when required.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>12. Changes to This Privacy Policy</h3>
+                        <p>We may update this Privacy Policy from time to time with regulatory review by Egyptian
+                            authorities, legal compliance verification, public notification through approved channels,
+                            and 30-day advance notice to users and authorities.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>13. Contact Us</h3>
+                        <p>For all privacy-related inquiries, please contact us at privacy@metasoftware.eg,
+                            government@metasoftware.eg for government relations, legal@metasoftware.eg for legal
+                            matters, compliance@metasoftware.eg for compliance issues, or call +20 123 456 7890. Our
+                            registered address is Cairo, Egypt.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>14. Data Protection Officer</h3>
+                        <p>Our designated Data Protection Officer oversees all data protection activities, ensures
+                            compliance with Egyptian and international data protection laws, serves as the primary
+                            contact for data protection inquiries, conducts regular privacy impact assessments, manages
+                            data breach response procedures, and provides ongoing training to staff on data protection
+                            best practices.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>15. Third-Party Services</h3>
+                        <p>We carefully vet all third-party service providers to ensure they meet our strict data
+                            protection standards. All third parties must sign comprehensive data processing agreements,
+                            undergo regular security audits, maintain equivalent protection levels, and comply with our
+                            data protection requirements.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>16. Data Breach Procedures</h3>
+                        <p>In the event of a data breach, we have established procedures including immediate containment
+                            and assessment, notification to relevant authorities within 72 hours, communication to
+                            affected users when required, investigation and remediation, documentation of the incident,
+                            and implementation of additional safeguards to prevent future breaches.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>17. User Responsibilities</h3>
+                        <p>Users are responsible for maintaining the confidentiality of their account credentials, using
+                            strong passwords and enabling two-factor authentication when available, keeping their
+                            contact information up to date, reporting any suspicious activity or security concerns, and
+                            complying with our terms of service and acceptable use policies.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>18. Data Access and Correction</h3>
+                        <p>You have the right to access your personal data held by us and request corrections to any
+                            inaccurate or incomplete information. We provide user-friendly mechanisms for accessing and
+                            updating personal information, respond to access requests within 30 days, and maintain audit
+                            trails of all data access and modification activities.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>19. Data Portability</h3>
+                        <p>You have the right to receive your personal data in a structured, commonly used, and
+                            machine-readable format. We provide data export tools that allow you to download your
+                            information, assist with data transfers to other services when requested, and ensure data
+                            portability rights are respected while maintaining security standards.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>20. Data Deletion</h3>
+                        <p>You have the right to request deletion of your personal data under certain circumstances. We
+                            provide clear procedures for data deletion requests, ensure secure deletion of data from all
+                            systems and backups, maintain records of deletion activities for compliance purposes, and
+                            respect legal retention requirements.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>21. Data Security Measures</h3>
+                        <p>We implement comprehensive security measures including encryption at rest and in transit,
+                            multi-factor authentication, regular security assessments, access controls and monitoring,
+                            incident response procedures, employee security training, secure development practices, and
+                            continuous monitoring for threats and vulnerabilities.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>22. Use of Personal Data</h3>
+                        <p>We use personal data only for specified, explicit, and legitimate purposes including service
+                            provision, customer support, legal compliance, security monitoring, service improvement,
+                            communication with users, and fulfillment of contractual obligations. We do not use personal
+                            data for purposes incompatible with the original collection purpose.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>23. Legal Basis for Processing</h3>
+                        <p>We process personal data based on legitimate legal grounds including user consent,
+                            contractual necessity, legal obligations, vital interests protection, public task
+                            performance, and legitimate interests. We clearly identify the legal basis for each
+                            processing activity and respect the specific requirements associated with each basis.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>24. Data Minimization</h3>
+                        <p>We adhere to the principle of data minimization by collecting only the personal data that is
+                            necessary for the specified purposes, regularly reviewing data collection practices,
+                            deleting unnecessary data, and implementing privacy-by-design principles in all our systems
+                            and processes.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>25. Data Accuracy</h3>
+                        <p>We take reasonable steps to ensure that personal data is accurate, complete, and up-to-date.
+                            This includes providing mechanisms for users to update their information, implementing data
+                            validation procedures, regularly reviewing and updating data, and correcting inaccuracies
+                            when identified.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>26. Data Storage</h3>
+                        <p>Personal data is stored in secure, access-controlled environments with appropriate physical
+                            and technical safeguards. We use encrypted storage systems, implement backup and recovery
+                            procedures, maintain data integrity controls, and ensure storage locations comply with
+                            applicable data protection laws.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>27. Data Transfer</h3>
+                        <p>When transferring personal data, we ensure appropriate safeguards are in place including
+                            encryption during transmission, secure transfer protocols, verification of recipient
+                            security measures, documentation of transfer activities, and compliance with applicable data
+                            protection regulations.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>28. Data Processing Locations</h3>
+                        <p>We process personal data primarily within Egypt and maintain transparency about processing
+                            locations. When processing occurs outside Egypt, we ensure adequate protection levels,
+                            implement appropriate safeguards, and comply with data localization requirements where
+                            applicable.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>29. User Consent</h3>
+                        <p>When we rely on consent as the legal basis for processing, we ensure consent is freely given,
+                            specific, informed, and unambiguous. We provide clear consent mechanisms, allow withdrawal
+                            of consent at any time, maintain records of consent, and respect user choices regarding
+                            their personal data.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>30. Automated Decision Making</h3>
+                        <p>We are transparent about any automated decision-making processes that may affect users. When
+                            such processing occurs, we provide information about the logic involved, the significance
+                            and consequences of the processing, and offer opportunities for human review and
+                            intervention.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>31. Marketing Communications</h3>
+                        <p>We obtain appropriate consent for marketing communications, provide clear opt-out mechanisms,
+                            respect user preferences regarding communication frequency and content, maintain suppression
+                            lists for users who have opted out, and comply with applicable marketing and communications
+                            laws.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>32. User Rights</h3>
+                        <p>We respect and facilitate the exercise of user rights including access, rectification,
+                            erasure, restriction of processing, data portability, objection, and rights related to
+                            automated decision-making. We provide clear procedures for exercising these rights and
+                            respond to requests in a timely manner.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>33. Complaints and Disputes</h3>
+                        <p>We have established procedures for handling privacy-related complaints and disputes including
+                            internal complaint mechanisms, escalation procedures, cooperation with supervisory
+                            authorities, and alternative dispute resolution options. Users can file complaints with
+                            relevant data protection authorities.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>34. Policy Updates</h3>
+                        <p>We regularly review and update this Privacy Policy to reflect changes in our practices, legal
+                            requirements, and technological developments. Updates are communicated through our website,
+                            email notifications, and other appropriate channels with advance notice when significant
+                            changes are made.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>35. Data Protection Training</h3>
+                        <p>We provide comprehensive data protection training to all employees, contractors, and relevant
+                            third parties. Training covers data protection principles, legal requirements, company
+                            policies, incident response procedures, and best practices for handling personal data.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>36. Data Protection Impact Assessments</h3>
+                        <p>We conduct Data Protection Impact Assessments (DPIAs) for processing activities that pose
+                            high risks to individual privacy. DPIAs help us identify and mitigate privacy risks, ensure
+                            compliance with data protection laws, and implement appropriate safeguards.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>37. Data Retention Periods</h3>
+                        <p>We establish specific retention periods for different categories of personal data based on
+                            legal requirements, business needs, and privacy principles. Retention schedules are
+                            regularly reviewed and updated, and data is securely deleted when retention periods expire.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>38. Security Incident Response</h3>
+                        <p>We maintain a comprehensive incident response plan that includes procedures for detecting,
+                            responding to, and recovering from security incidents. The plan covers incident
+                            classification, notification requirements, investigation procedures, and post-incident
+                            review and improvement processes.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>39. Data Encryption</h3>
+                        <p>We use strong encryption methods to protect personal data both at rest and in transit.
+                            Encryption keys are managed securely, and we regularly review and update our encryption
+                            standards to ensure they remain effective against current threats.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>40. Access Controls</h3>
+                        <p>We implement strict access controls to ensure that personal data is only accessible to
+                            authorized individuals who need it for legitimate business purposes. Access controls include
+                            user authentication, role-based permissions, regular access reviews, and monitoring of
+                            access activities.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>41. Data Anonymization</h3>
+                        <p>Where appropriate, we use data anonymization techniques to reduce privacy risks while still
+                            enabling legitimate uses of data. Anonymization processes are designed to ensure that
+                            individuals cannot be re-identified from the anonymized data.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>42. Data Backup</h3>
+                        <p>We maintain secure backup systems to ensure data availability and business continuity.
+                            Backups are encrypted, stored in secure locations, regularly tested for integrity, and
+                            subject to the same security controls as primary data systems.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>43. Data Recovery</h3>
+                        <p>We have established procedures for data recovery in the event of system failures, disasters,
+                            or other incidents. Recovery procedures are regularly tested, documented, and updated to
+                            ensure they remain effective and meet business continuity requirements.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>44. Data Integrity</h3>
+                        <p>We implement measures to ensure the integrity and accuracy of personal data including data
+                            validation procedures, integrity checks, audit trails, and regular data quality assessments.
+                            We promptly correct any data integrity issues that are identified.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>45. Data Breach Notification</h3>
+                        <p>We have established procedures for notifying relevant authorities and affected individuals in
+                            the event of a data breach. Notifications are made within required timeframes and include
+                            information about the nature of the breach, potential consequences, and measures taken to
+                            address the breach.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>46. Privacy by Design</h3>
+                        <p>We incorporate privacy considerations into the design and development of all our systems,
+                            processes, and services. Privacy by design ensures that privacy protection is built into our
+                            operations from the ground up rather than added as an afterthought.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>47. Privacy by Default</h3>
+                        <p>Our systems and services are configured to provide the highest level of privacy protection by
+                            default. Users do not need to take any action to benefit from privacy protections, and
+                            privacy-friendly settings are applied automatically.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>48. Data Protection Officer Contact</h3>
+                        <p>Our Data Protection Officer can be contacted at dpo@metasoftware.eg for any privacy-related
+                            inquiries, complaints, or requests. The DPO serves as an independent point of contact for
+                            data protection matters and works to ensure our compliance with applicable laws.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>49. User Authentication</h3>
+                        <p>We implement robust user authentication mechanisms to verify user identities and prevent
+                            unauthorized access. Authentication methods may include passwords, multi-factor
+                            authentication, biometric verification, and other security measures appropriate to the
+                            sensitivity of the data and services.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>50. Password Policies</h3>
+                        <p>We enforce strong password policies that require users to create complex, unique passwords.
+                            Password policies include requirements for length, complexity, regular updates, and
+                            restrictions on password reuse. We also provide guidance on creating and managing secure
+                            passwords.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>51. Two-Factor Authentication</h3>
+                        <p>We offer two-factor authentication (2FA) as an additional security layer for user accounts.
+                            2FA requires users to provide a second form of verification in addition to their password,
+                            significantly enhancing account security and protecting against unauthorized access.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>52. User Account Management</h3>
+                        <p>We provide users with tools to manage their accounts including updating personal information,
+                            changing privacy settings, reviewing account activity, and deactivating or deleting
+                            accounts. Account management features are designed to be user-friendly while maintaining
+                            security.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>53. Data Sharing with Authorities</h3>
+                        <p>We may share personal data with government authorities when required by law, court order, or
+                            other legal process. Such sharing is limited to what is necessary to comply with legal
+                            requirements, and we take steps to protect user privacy to the extent permitted by law.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>54. Data Sharing with Third Parties</h3>
+                        <p>We limit data sharing with third parties to what is necessary for legitimate business
+                            purposes. All third-party data sharing is governed by strict contractual protections, and we
+                            regularly monitor third-party compliance with our data protection requirements.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>55. Data Sharing with Service Providers</h3>
+                        <p>We work with carefully selected service providers who assist us in delivering our services.
+                            All service providers must meet our strict data protection standards, sign comprehensive
+                            data processing agreements, and undergo regular security assessments.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>56. Data Sharing for Legal Reasons</h3>
+                        <p>We may share personal data when necessary to comply with legal obligations, protect our
+                            rights and interests, prevent fraud or illegal activities, or respond to legal process. Such
+                            sharing is limited to what is necessary and proportionate to the circumstances.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>57. Data Sharing for Business Transfers</h3>
+                        <p>In the event of a merger, acquisition, or other business transfer, personal data may be
+                            transferred as part of the transaction. We ensure that any such transfers include
+                            appropriate privacy protections and that users are notified of any changes to data handling
+                            practices.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>58. Data Sharing with Consent</h3>
+                        <p>When we share personal data based on user consent, we ensure that consent is informed,
+                            specific, and freely given. Users can withdraw their consent at any time, and we respect
+                            user choices regarding data sharing.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>59. Data Security Audits</h3>
+                        <p>We conduct regular security audits to assess the effectiveness of our data protection
+                            measures. Audits are performed by qualified internal and external auditors, and audit
+                            findings are used to improve our security posture and address any identified
+                            vulnerabilities.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>60. Data Protection Certifications</h3>
+                        <p>We pursue relevant data protection certifications and comply with industry standards to
+                            demonstrate our commitment to privacy and security. Certifications provide independent
+                            validation of our data protection practices and help build trust with users and partners.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>61. Data Protection Governance</h3>
+                        <p>We have established a comprehensive data protection governance framework that includes
+                            policies, procedures, roles and responsibilities, oversight mechanisms, and accountability
+                            measures. Governance ensures that data protection is integrated into all aspects of our
+                            operations.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>62. Data Protection Policies</h3>
+                        <p>We maintain detailed data protection policies that cover all aspects of personal data
+                            handling including collection, use, storage, sharing, retention, and deletion. Policies are
+                            regularly reviewed and updated to reflect legal changes and best practices.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>63. Data Protection Procedures</h3>
+                        <p>We have implemented specific procedures for handling personal data in various contexts
+                            including data collection, processing, sharing, breach response, user rights requests, and
+                            data deletion. Procedures are documented, regularly reviewed, and updated as needed.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>64. Data Protection Roles and Responsibilities</h3>
+                        <p>We have clearly defined roles and responsibilities for data protection throughout our
+                            organization. All employees understand their data protection obligations, and specific roles
+                            such as Data Protection Officer and data controllers have additional responsibilities for
+                            ensuring compliance.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>65. Data Protection Training Programs</h3>
+                        <p>We provide comprehensive data protection training programs for all personnel who handle
+                            personal data. Training is tailored to specific roles and responsibilities, regularly
+                            updated to reflect legal changes, and includes both initial training and ongoing education.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>66. Data Protection Compliance Monitoring</h3>
+                        <p>We continuously monitor our compliance with data protection laws and regulations through
+                            regular assessments, audits, and reviews. Monitoring helps us identify potential issues
+                            early and take corrective action to maintain compliance.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>67. Data Protection Risk Management</h3>
+                        <p>We have established a comprehensive risk management framework for data protection that
+                            includes risk identification, assessment, mitigation, and monitoring. Risk management helps
+                            us proactively address privacy risks and maintain appropriate protection levels.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>68. Data Protection Incident Management</h3>
+                        <p>We have established procedures for managing data protection incidents including detection,
+                            response, investigation, notification, and remediation. Incident management ensures that we
+                            can respond quickly and effectively to any privacy-related incidents.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>69. Data Protection Reporting</h3>
+                        <p>We maintain comprehensive reporting on our data protection activities including compliance
+                            status, incident reports, audit findings, and performance metrics. Reporting provides
+                            transparency and accountability for our data protection practices.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>70. Data Protection Documentation</h3>
+                        <p>We maintain detailed documentation of our data protection activities including processing
+                            records, consent records, breach logs, training records, and policy documentation.
+                            Documentation supports compliance efforts and provides evidence of our data protection
+                            practices.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>71. Data Protection Communication</h3>
+                        <p>We communicate clearly and transparently about our data protection practices through privacy
+                            notices, policy updates, breach notifications, and other communications. Communication helps
+                            users understand how their data is handled and their rights regarding that data.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>72. Data Protection Awareness</h3>
+                        <p>We promote data protection awareness throughout our organization and among our users through
+                            training, communications, and educational resources. Awareness helps ensure that everyone
+                            understands the importance of data protection and their role in maintaining privacy.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>73. Data Protection Culture</h3>
+                        <p>We foster a culture of privacy and data protection throughout our organization where privacy
+                            considerations are integrated into decision-making processes and all personnel understand
+                            their responsibility to protect personal data.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>74. Data Protection Technology</h3>
+                        <p>We leverage advanced technologies to enhance data protection including encryption, access
+                            controls, monitoring systems, anonymization tools, and privacy-enhancing technologies.
+                            Technology solutions are regularly evaluated and updated to address evolving threats and
+                            requirements.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>75. Data Protection Innovation</h3>
+                        <p>We continuously innovate in data protection by developing new technologies, processes, and
+                            approaches to privacy protection. Innovation helps us stay ahead of emerging threats and
+                            provide enhanced privacy protection for our users.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>76. Data Protection Best Practices</h3>
+                        <p>We follow industry best practices for data protection and regularly review and update our
+                            practices based on evolving standards, legal requirements, and technological developments.
+                            Best practices help ensure that we maintain high standards of privacy protection.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>77. Data Protection Legal Framework</h3>
+                        <p>We operate within a comprehensive legal framework for data protection that includes Egyptian
+                            data protection laws, international regulations, industry standards, and contractual
+                            obligations. We regularly monitor legal developments and update our practices accordingly.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>78. Data Protection International Standards</h3>
+                        <p>We align our data protection practices with international standards including GDPR, ISO
+                            27001, and other relevant frameworks. International standards help ensure that our practices
+                            meet global expectations for privacy protection.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>79. Data Protection Regulatory Requirements</h3>
+                        <p>We comply with all applicable data protection regulatory requirements including registration,
+                            notification, reporting, and cooperation obligations. Compliance with regulatory
+                            requirements is monitored and maintained through ongoing compliance programs.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>80. Data Protection Enforcement</h3>
+                        <p>We cooperate with data protection authorities in enforcement activities and take appropriate
+                            action to address any compliance issues that are identified. Enforcement cooperation
+                            demonstrates our commitment to maintaining high standards of data protection.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>81. Data Protection User Rights</h3>
+                        <p>We respect and facilitate the exercise of user rights under data protection laws including
+                            access, rectification, erasure, restriction, portability, objection, and rights related to
+                            automated decision-making. User rights are fundamental to our approach to data protection.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>82. Data Protection Transparency</h3>
+                        <p>We are committed to transparency in our data protection practices through clear privacy
+                            notices, regular reporting, open communication about our practices, and providing users with
+                            meaningful information about how their data is handled.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>83. Data Protection Accountability</h3>
+                        <p>We take full accountability for our data protection practices and can demonstrate compliance
+                            with applicable laws and regulations. Accountability includes maintaining appropriate
+                            documentation, conducting regular assessments, and taking responsibility for our data
+                            handling practices.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>84. Data Protection Ethics</h3>
+                        <p>We are guided by strong ethical principles in our approach to data protection including
+                            respect for individual privacy, fairness in data handling, minimization of data collection,
+                            and consideration of the broader social impact of our data practices.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>85. Data Protection Social Responsibility</h3>
+                        <p>We recognize our social responsibility to protect personal data and contribute to a
+                            trustworthy digital environment. Social responsibility includes considering the broader
+                            impact of our data practices on society and individuals.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>86. Data Protection Sustainability</h3>
+                        <p>We are committed to sustainable data protection practices that balance privacy protection
+                            with business needs and technological innovation. Sustainability includes long-term thinking
+                            about data protection and consideration of environmental and social impacts.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>87. Data Protection Future Trends</h3>
+                        <p>We monitor and prepare for future trends in data protection including emerging technologies,
+                            evolving legal requirements, changing user expectations, and new privacy challenges.
+                            Future-oriented thinking helps us maintain effective data protection over time.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>88. Data Protection Challenges</h3>
+                        <p>We recognize and actively address the challenges of data protection in a rapidly evolving
+                            technological landscape including balancing privacy with innovation, managing complex data
+                            flows, and meeting diverse regulatory requirements across multiple jurisdictions.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>89. Data Protection Opportunities</h3>
+                        <p>We view data protection as an opportunity to build trust with users, differentiate our
+                            services, drive innovation in privacy-enhancing technologies, and contribute to the
+                            development of responsible data practices in the technology industry.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>90. Data Protection Collaboration</h3>
+                        <p>We collaborate with industry partners, regulatory authorities, academic institutions, and
+                            other stakeholders to advance data protection practices, share knowledge and best practices,
+                            and contribute to the development of effective privacy protection frameworks.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>91. Data Protection Partnerships</h3>
+                        <p>We form strategic partnerships with organizations that share our commitment to data
+                            protection including technology vendors, service providers, industry associations, and
+                            privacy advocacy groups. Partnerships help us enhance our data protection capabilities and
+                            contribute to broader privacy protection efforts.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>92. Data Protection Community Engagement</h3>
+                        <p>We actively engage with the broader data protection community through participation in
+                            industry forums, conferences, working groups, and other collaborative initiatives. Community
+                            engagement helps us stay current with developments in the field and contribute to collective
+                            knowledge.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>93. Data Protection Continuous Improvement</h3>
+                        <p>We are committed to continuous improvement in our data protection practices through regular
+                            review and assessment, incorporation of feedback and lessons learned, adoption of new
+                            technologies and approaches, and ongoing enhancement of our privacy protection capabilities.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>94. Data Protection Excellence</h3>
+                        <p>We strive for excellence in data protection by setting high standards for privacy protection,
+                            continuously improving our practices, investing in privacy-enhancing technologies, and
+                            maintaining a culture of privacy throughout our organization. Excellence in data protection
+                            is fundamental to our mission of enhancing technological awareness throughout the Arab world
+                            while maintaining the highest standards of privacy and security.</p>
+                    </div>
+                </div>
+
+                <!-- Arabic Content -->
+                <div id="arContent" class="hidden">
+                    <div class="content-section private-company-section">
+                        <h3>1. التسجيل والتراخيص الرسمية للشركة الخاصة</h3>
+                        <p>شركة ميتا سوفت وير هي شركة برمجة مصرية مملوكة ملكية خاصة، مسجلة رسمياً في وزارة الاتصالات
+                            وتكنولوجيا المعلومات، وعضو فعال في غرفة صناعة تكنولوجيا المعلومات والاتصالات. نحن مرخصون من
+                            هيئة الاستثمار ومعتمدون من جميع الجهات الحكومية ذات الصلة مع الحفاظ على وضعنا المستقل في
+                            القطاع الخاص. تعمل شركتنا تحت إشراف تنظيمي شامل وتحتفظ بجميع الشهادات المطلوبة لتقديم حلول
+                            برمجية متقدمة في جميع أنحاء الوطن العربي.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>2. مقدمة - إطار الخصوصية للشركة الخاصة</h3>
+                        <p>شركة ميتا سوفت وير، كشركة برمجة خاصة شاملة ملتزمة بتعزيز الوعي التكنولوجي العملي في جميع
+                            أنحاء الوطن العربي، مكرسة لحماية خصوصيتك وضمان أمان معلوماتك الشخصية. توضح سياسة الخصوصية
+                            هذه كيف نجمع ونستخدم ونكشف ونحمي معلوماتك كجهة خاصة مستقلة ذات موافقات حكومية قوية وقدرات
+                            تقنية عالية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>3. المعلومات التي نجمعها - معايير الشركة الخاصة</h3>
+                        <p>كشركة تكنولوجيا خاصة ذات موافقات حكومية رسمية، نجمع المعلومات التي تقدمها لنا مباشرة من خلال
+                            قنوات آمنة تتوافق مع معايير القطاع الخاص والمتطلبات التنظيمية. يشمل ذلك معلومات التعريف
+                            الشخصي والمعلومات المهنية والمعلومات التقنية وبيانات الاستخدام والبيانات الخاصة بالمشاريع
+                            لمبادرات الوعي التكنولوجي في الوطن العربي.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>4. كيفية استخدام معلوماتك - عمليات القطاع الخاص</h3>
+                        <p>نستخدم المعلومات التي نجمعها لتعزيز الوعي التكنولوجي في الوطن العربي مع الحفاظ على أعلى
+                            معايير الخصوصية والأمان. يشمل ذلك تقديم وصيانة وتحسين خدماتنا التقنية في القطاع الخاص،
+                            ومعالجة المعاملات، وإرسال الإشعارات والتحديثات التقنية، والرد على الاستفسارات، ومراقبة أنماط
+                            الاستخدام.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>5. مشاركة المعلومات والكشف - سياسة الشركة الخاصة</h3>
+                        <p>كشركة خاصة، لا نبيع أو نتاجر أو ننقل معلوماتك الشخصية إلى أطراف ثالثة دون موافقتك، باستثناء
+                            ما هو موضح في هذه السياسة. قد نشارك المعلومات مع مقدمي الخدمات الموثوقين في القطاع الخاص،
+                            للامتثال للالتزامات القانونية، فيما يتعلق بالمعاملات التجارية، وبموافقتك الصريحة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>6. أمان البيانات - معايير الشركة الخاصة</h3>
+                        <p>كشركة تكنولوجيا خاصة ذات موافقات حكومية قوية وقدرات تقنية عالية، نطبق تدابير أمنية قوية تشمل
+                            التشفير المتقدم للبيانات أثناء النقل والتخزين، والتقييمات والتحديثات الأمنية المنتظمة،
+                            وضوابط الوصول وتدابير المصادقة، وتدريب الموظفين على حماية البيانات.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>7. حقوقك بموجب القانون المصري</h3>
+                        <p>لديك حقوق شاملة فيما يتعلق بمعلوماتك الشخصية بموجب القانون المصري، بما في ذلك الحق في الوصول
+                            إلى بياناتك الشخصية، وتصحيح المعلومات غير الدقيقة، ومحو بياناتك الشخصية، وتقييد المعالجة،
+                            وقابلية نقل البيانات، والاعتراض على المعالجة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>8. ملفات تعريف الارتباط وتقنيات التتبع</h3>
+                        <p>نستخدم ملفات تعريف الارتباط وتقنيات التتبع المماثلة التي تتوافق مع لوائح الأمن السيبراني
+                            المصرية ومعايير القطاع الخاص. يشمل ذلك ملفات تعريف الارتباط الأساسية لوظائف الموقع، وملفات
+                            تعريف الارتباط التحليلية لتحليل الاستخدام، وملفات تعريف الارتباط الأمنية لمنع الاحتيال.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>9. نقل البيانات الدولية - الترخيص الحكومي</h3>
+                        <p>يتم إجراء أي عمليات نقل بيانات دولية مع الضمانات المناسبة والامتثال التنظيمي، بما في ذلك
+                            التقييم المسبق لكفاءة حماية البيانات، والبنود التعاقدية المعيارية، وقواعد الشركات الملزمة،
+                            والمراقبة والتقارير المنتظمة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>10. الاحتفاظ بالبيانات</h3>
+                        <p>نحتفظ بمعلوماتك الشخصية فقط للمدة اللازمة لتحقيق الأغراض المحددة في سياسة الخصوصية هذه، ما لم
+                            تكن هناك حاجة لفترة احتفاظ أطول أو يسمح بها القانون.</p>
+                        <div class="government-addition">
+                            <h4>فترات الاحتفاظ المطلوبة حكومياً:</h4>
+                            <ul>
+                                <li>السجلات المالية: 10 سنوات كما تتطلب مصلحة الضرائب المصرية</li>
+                                <li>بيانات المشاريع الحكومية: كما هو محدد في العقود الرسمية</li>
+                                <li>سجلات الأمان: 7 سنوات للامتثال للأمن السيبراني</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>11. خصوصية الأطفال - الحماية القانونية المصرية</h3>
+                        <p>خدماتنا غير مخصصة للأطفال دون سن 16 عامًا. لا نجمع عن قصد معلومات شخصية من الأطفال دون سن 16
+                            عامًا.</p>
+                        <div class="government-addition">
+                            <p><strong>الحماية القانونية المصرية:</strong> تدابير حماية الطفل لدينا تتوافق مع قوانين
+                                حماية الطفل المصرية وتشمل أنظمة التحقق من العمر المعتمدة حكومياً وإجراءات موافقة
+                                الوالدين.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>12. التغييرات على سياسة الخصوصية هذه</h3>
+                        <p>قد نحدث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات عن طريق نشر سياسة الخصوصية الجديدة
+                            على هذه الصفحة وتحديث تاريخ "آخر تحديث".</p>
+                        <div class="government-addition">
+                            <p><strong>عملية المراجعة الحكومية:</strong> جميع تحديثات سياسة الخصوصية هذه تتطلب مراجعة
+                                وموافقة حكومية. التغييرات تتم فقط في امتثال مع المتطلبات التنظيمية المصرية ومع الإخطار
+                                المناسب للسلطات ذات الصلة.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>13. اتصل بنا</h3>
+                        <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا على:</p>
+                        <ul>
+                            <li>البريد الإلكتروني: privacy@metasoftware.eg</li>
+                            <li>الهاتف: +20 123 456 7890</li>
+                            <li>العنوان: القاهرة، مصر</li>
+                        </ul>
+                        <div class="government-addition">
+                            <h4>جهة الاتصال للعلاقات الحكومية:</h4>
+                            <ul>
+                                <li>العلاقات الحكومية: government@metasoftware.eg</li>
+                                <li>القسم القانوني: legal@metasoftware.eg</li>
+                                <li>مكتب الامتثال: compliance@metasoftware.eg</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>14. مسؤول حماية البيانات</h3>
+                        <p>مسؤول حماية البيانات المعين لدينا يشرف على جميع أنشطة حماية البيانات، ويضمن الامتثال لقوانين
+                            حماية البيانات المصرية والدولية، ويعمل كنقطة الاتصال الأساسية لاستفسارات حماية البيانات،
+                            ويجري تقييمات تأثير الخصوصية المنتظمة، ويدير إجراءات الاستجابة لانتهاك البيانات، ويوفر
+                            التدريب المستمر للموظفين على أفضل ممارسات حماية البيانات.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>15. خدمات الأطراف الثالثة</h3>
+                        <p>نفحص بعناية جميع مقدمي الخدمات من الأطراف الثالثة لضمان تلبيتهم لمعايير حماية البيانات
+                            الصارمة لدينا. يجب على جميع الأطراف الثالثة توقيع اتفاقيات معالجة البيانات الشاملة، والخضوع
+                            لمراجعات أمنية منتظمة، والحفاظ على مستويات حماية مكافئة، والامتثال لمتطلبات حماية البيانات
+                            الخاصة بنا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>16. إجراءات انتهاك البيانات</h3>
+                        <p>في حالة حدوث انتهاك للبيانات، لدينا إجراءات راسخة تشمل الاحتواء والتقييم الفوري، الإخطار
+                            للسلطات ذات الصلة خلال 72 ساعة، التواصل مع المستخدمين المتأثرين عند الحاجة، التحقيق
+                            والمعالجة، توثيق الحادث، وتنفيذ ضمانات إضافية لمنع الانتهاكات المستقبلية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>17. مسؤوليات المستخدم</h3>
+                        <p>المستخدمون مسؤولون عن الحفاظ على سرية بيانات اعتماد حساباتهم، استخدام كلمات مرور قوية وتمكين
+                            المصادقة الثنائية عند توفرها، الحفاظ على معلومات الاتصال محدثة، الإبلاغ عن أي نشاط مشبوه أو
+                            مخاوف أمنية، والامتثال لشروط الخدمة وسياسات الاستخدام المقبول الخاصة بنا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>18. الوصول إلى البيانات وتصحيحها</h3>
+                        <p>لديك الحق في الوصول إلى بياناتك الشخصية المحتفظ بها لدينا وطلب تصحيحات لأي معلومات غير دقيقة
+                            أو غير مكتملة. نوفر آليات سهلة الاستخدام للوصول إلى المعلومات الشخصية وتحديثها، نستجيب
+                            لطلبات الوصول خلال 30 يومًا، ونحتفظ بمسارات تدقيق لجميع أنشطة الوصول إلى البيانات وتعديلها.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>19. قابلية نقل البيانات</h3>
+                        <p>لديك الحق في تلقي بياناتك الشخصية بتنسيق منظم وشائع الاستخدام وقابل للقراءة آليًا. نوفر أدوات
+                            تصدير البيانات التي تسمح لك بتنزيل معلوماتك، نساعد في عمليات نقل البيانات إلى خدمات أخرى عند
+                            الطلب، ونضمن احترام حقوق قابلية نقل البيانات مع الحفاظ على معايير الأمان.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>20. حذف البيانات</h3>
+                        <p>لديك الحق في طلب حذف بياناتك الشخصية في ظروف معينة. نوفر إجراءات واضحة لطلبات حذف البيانات،
+                            نضمن الحذف الآمن للبيانات من جميع الأنظمة والنسخ الاحتياطية، نحتفظ بسجلات أنشطة الحذف لأغراض
+                            الامتثال، ونحترم متطلبات الاحتفاظ القانونية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>21. تدابير أمان البيانات</h3>
+                        <p>نطبق تدابير أمنية شاملة تشمل التشفير أثناء الراحة والنقل، المصادقة متعددة العوامل، التقييمات
+                            الأمنية المنتظمة، ضوابط الوصول والمراقبة، إجراءات الاستجابة للحوادث، التدريب الأمني
+                            للموظفين، ممارسات التطوير الآمن، والمراقبة المستمرة للتهديدات والثغرات الأمنية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>22. استخدام البيانات الشخصية</h3>
+                        <p>نستخدم البيانات الشخصية فقط لأغراض محددة وصريحة ومشروعة تشمل تقديم الخدمة، دعم العملاء،
+                            الامتثال القانوني، مراقبة الأمان، تحسين الخدمة، التواصل مع المستخدمين، وتنفيذ الالتزامات
+                            التعاقدية. لا نستخدم البيانات الشخصية لأغراض غير متوافقة مع الغرض الأصلي للجمع.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>23. الأساس القانوني للمعالجة</h3>
+                        <p>نعالج البيانات الشخصية بناءً على أسس قانونية مشروعة تشمل موافقة المستخدم، الضرورة التعاقدية،
+                            الالتزامات القانونية، حماية المصالح الحيوية، أداء المهام العامة، والمصالح المشروعة. نحدد
+                            بوضوح الأساس القانوني لكل نشاط معالجة ونحترم المتطلبات المحددة المرتبطة بكل أساس.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>24. تقليل البيانات</h3>
+                        <p>نلتزم بمبدأ تقليل البيانات من خلال جمع البيانات الشخصية الضرورية فقط للأغراض المحددة، مراجعة
+                            ممارسات جمع البيانات بانتظام، حذف البيانات غير الضرورية، وتنفيذ مبادئ الخصوصية في التصميم في
+                            جميع أنظمتنا وعملياتنا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>25. دقة البيانات</h3>
+                        <p>نتخذ خطوات معقولة لضمان أن البيانات الشخصية دقيقة وكاملة ومحدثة. يشمل ذلك توفير آليات
+                            للمستخدمين لتحديث معلوماتهم، تنفيذ إجراءات التحقق من صحة البيانات، مراجعة وتحديث البيانات
+                            بانتظام، وتصحيح عدم الدقة عند تحديدها.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>26. تخزين البيانات</h3>
+                        <p>يتم تخزين البيانات الشخصية في بيئات آمنة ومحكومة الوصول مع ضمانات مادية وتقنية مناسبة. نستخدم
+                            أنظمة تخزين مشفرة، ننفذ إجراءات النسخ الاحتياطي والاستعادة، نحافظ على ضوابط سلامة البيانات،
+                            ونضمن أن مواقع التخزين تتوافق مع قوانين حماية البيانات المعمول بها.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>27. نقل البيانات</h3>
+                        <p>عند نقل البيانات الشخصية، نضمن وجود ضمانات مناسبة تشمل التشفير أثناء النقل، بروتوكولات النقل
+                            الآمن، التحقق من تدابير أمان المستلم، توثيق أنشطة النقل، والامتثال للوائح حماية البيانات
+                            المعمول بها.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>28. مواقع معالجة البيانات</h3>
+                        <p>نعالج البيانات الشخصية بشكل أساسي داخل مصر ونحافظ على الشفافية حول مواقع المعالجة. عندما تحدث
+                            المعالجة خارج مصر، نضمن مستويات حماية كافية، ننفذ ضمانات مناسبة، ونمتثل لمتطلبات توطين
+                            البيانات حيثما ينطبق.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>29. موافقة المستخدم</h3>
+                        <p>عندما نعتمد على الموافقة كأساس قانوني للمعالجة، نضمن أن الموافقة معطاة بحرية ومحددة ومدروسة
+                            وواضحة. نوفر آليات موافقة واضحة، نسمح بسحب الموافقة في أي وقت، نحتفظ بسجلات الموافقة، ونحترم
+                            خيارات المستخدم فيما يتعلق ببياناتهم الشخصية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>30. اتخاذ القرار الآلي</h3>
+                        <p>نحن شفافون حول أي عمليات اتخاذ قرار آلي قد تؤثر على المستخدمين. عندما تحدث مثل هذه المعالجة،
+                            نوفر معلومات حول المنطق المعني، أهمية وعواقب المعالجة، ونقدم فرصًا للمراجعة والتدخل البشري.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>31. اتصالات التسويق</h3>
+                        <p>نحصل على الموافقة المناسبة لاتصالات التسويق، نوفر آليات إلغاء اشتراك واضحة، نحترم تفضيلات
+                            المستخدم فيما يتعلق بتكرار ومحتوى الاتصال، نحتفظ بقوائم منع للمستخدمين الذين ألغوا اشتراكهم،
+                            ونمتثل لقوانين التسويق والاتصالات المعمول بها.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>32. حقوق المستخدم</h3>
+                        <p>نحترم ونسهل ممارسة حقوق المستخدم تشمل الوصول، التصحيح، المحو، تقييد المعالجة، قابلية نقل
+                            البيانات، الاعتراض، والحقوق المتعلقة باتخاذ القرار الآلي. نوفر إجراءات واضحة لممارسة هذه
+                            الحقوق ونستجيب للطلبات في الوقت المناسب.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>33. الشكاوى والنزاعات</h3>
+                        <p>لدينا إجراءات راسخة للتعامل مع الشكاوى والنزاعات المتعلقة بالخصوصية تشمل آليات الشكاوى
+                            الداخلية، إجراءات التصعيد، التعاون مع السلطات الإشرافية، وخيارات حل النزاعات البديلة. يمكن
+                            للمستخدمين تقديم شكاوى لسلطات حماية البيانات ذات الصلة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>34. تحديثات السياسة</h3>
+                        <p>نراجع ونحدث سياسة الخصوصية هذه بانتظام لتعكس التغييرات في ممارساتنا والمتطلبات القانونية
+                            والتطورات التكنولوجية. يتم إبلاغ التحديثات من خلال موقعنا الإلكتروني وإشعارات البريد
+                            الإلكتروني وقنوات أخرى مناسبة مع إشعار مسبق عند إجراء تغييرات كبيرة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>35. تدريب حماية البيانات</h3>
+                        <p>نوفر تدريبًا شاملاً لحماية البيانات لجميع الموظفين والمقاولين والأطراف الثالثة ذات الصلة.
+                            يغطي التدريب مبادئ حماية البيانات والمتطلبات القانونية وسياسات الشركة وإجراءات الاستجابة
+                            للحوادث وأفضل الممارسات للتعامل مع البيانات الشخصية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>36. تقييمات تأثير حماية البيانات</h3>
+                        <p>نجري تقييمات تأثير حماية البيانات (DPIAs) لأنشطة المعالجة التي تشكل مخاطر عالية على خصوصية
+                            الأفراد. تساعدنا تقييمات تأثير حماية البيانات في تحديد وتخفيف مخاطر الخصوصية وضمان الامتثال
+                            لقوانين حماية البيانات وتنفيذ ضمانات مناسبة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>37. فترات الاحتفاظ بالبيانات</h3>
+                        <p>نضع فترات احتفاظ محددة لفئات مختلفة من البيانات الشخصية بناءً على المتطلبات القانونية
+                            واحتياجات العمل ومبادئ الخصوصية. تتم مراجعة وتحديث جداول الاحتفاظ بانتظام، ويتم حذف البيانات
+                            بأمان عند انتهاء فترات الاحتفاظ.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>38. الاستجابة للحوادث الأمنية</h3>
+                        <p>نحتفظ بخطة استجابة شاملة للحوادث تتضمن إجراءات للكشف عن الحوادث الأمنية والاستجابة لها
+                            والتعافي منها. تغطي الخطة تصنيف الحوادث ومتطلبات الإخطار وإجراءات التحقيق وعمليات المراجعة
+                            والتحسين اللاحقة للحادث.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>39. تشفير البيانات</h3>
+                        <p>نستخدم طرق تشفير قوية لحماية البيانات الشخصية أثناء الراحة والنقل. يتم إدارة مفاتيح التشفير
+                            بأمان، ونراجع ونحدث معايير التشفير لدينا بانتظام لضمان بقائها فعالة ضد التهديدات الحالية.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>40. ضوابط الوصول</h3>
+                        <p>نطبق ضوابط وصول صارمة لضمان أن البيانات الشخصية يمكن الوصول إليها فقط من قبل الأفراد المخولين
+                            الذين يحتاجونها لأغراض عمل مشروعة. تشمل ضوابط الوصول مصادقة المستخدم والأذونات القائمة على
+                            الأدوار ومراجعات الوصول المنتظمة ومراقبة أنشطة الوصول.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>41. إخفاء هوية البيانات</h3>
+                        <p>عند الاقتضاء، نستخدم تقنيات إخفاء هوية البيانات لتقليل مخاطر الخصوصية مع تمكين الاستخدامات
+                            المشروعة للبيانات. تم تصميم عمليات إخفاء الهوية لضمان عدم إمكانية إعادة تحديد هوية الأفراد
+                            من البيانات المجهولة الهوية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>42. النسخ الاحتياطي للبيانات</h3>
+                        <p>نحتفظ بأنظمة نسخ احتياطي آمنة لضمان توفر البيانات واستمرارية الأعمال. النسخ الاحتياطية مشفرة
+                            ومخزنة في مواقع آمنة ويتم اختبارها بانتظام للتكامل وتخضع لنفس ضوابط الأمان مثل أنظمة
+                            البيانات الأساسية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>43. استعادة البيانات</h3>
+                        <p>لدينا إجراءات راسخة لاستعادة البيانات في حالة فشل الأنظمة أو الكوارث أو الحوادث الأخرى. يتم
+                            اختبار إجراءات الاستعادة وتوثيقها وتحديثها بانتظام لضمان بقائها فعالة وتلبية متطلبات
+                            استمرارية الأعمال.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>44. سلامة البيانات</h3>
+                        <p>نطبق تدابير لضمان سلامة ودقة البيانات الشخصية تشمل إجراءات التحقق من صحة البيانات وفحوصات
+                            السلامة ومسارات التدقيق وتقييمات جودة البيانات المنتظمة. نصحح بسرعة أي مشاكل سلامة البيانات
+                            التي يتم تحديدها.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>45. إخطار انتهاك البيانات</h3>
+                        <p>لدينا إجراءات راسخة لإخطار السلطات ذات الصلة والأفراد المتأثرين في حالة انتهاك البيانات. يتم
+                            إجراء الإخطارات خلال الأطر الزمنية المطلوبة وتتضمن معلومات حول طبيعة الانتهاك والعواقب
+                            المحتملة والتدابير المتخذة لمعالجة الانتهاك.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>46. الخصوصية في التصميم</h3>
+                        <p>ندمج اعتبارات الخصوصية في تصميم وتطوير جميع أنظمتنا وعملياتنا وخدماتنا. الخصوصية في التصميم
+                            تضمن أن حماية الخصوصية مدمجة في عملياتنا من الأساس بدلاً من إضافتها كفكرة لاحقة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>47. الخصوصية افتراضياً</h3>
+                        <p>أنظمتنا وخدماتنا مكونة لتوفير أعلى مستوى من حماية الخصوصية افتراضياً. المستخدمون لا يحتاجون
+                            لاتخاذ أي إجراء للاستفادة من حماية الخصوصية، وإعدادات الخصوصية الودية تطبق تلقائياً.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>48. اتصال مسؤول حماية البيانات</h3>
+                        <p>يمكن الاتصال بمسؤول حماية البيانات لدينا على dpo@metasoftware.eg لأي استفسارات أو شكاوى أو
+                            طلبات متعلقة بالخصوصية. يعمل مسؤول حماية البيانات كنقطة اتصال مستقلة لمسائل حماية البيانات
+                            ويعمل لضمان امتثالنا للقوانين المعمول بها.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>49. مصادقة المستخدم</h3>
+                        <p>نطبق آليات مصادقة مستخدم قوية للتحقق من هويات المستخدمين ومنع الوصول غير المصرح به. قد تشمل
+                            طرق المصادقة كلمات المرور والمصادقة متعددة العوامل والتحقق البيومتري وتدابير أمنية أخرى
+                            مناسبة لحساسية البيانات والخدمات.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>50. سياسات كلمات المرور</h3>
+                        <p>نفرض سياسات كلمات مرور قوية تتطلب من المستخدمين إنشاء كلمات مرور معقدة وفريدة. تشمل سياسات
+                            كلمات المرور متطلبات للطول والتعقيد والتحديثات المنتظمة وقيود على إعادة استخدام كلمات
+                            المرور. نوفر أيضاً إرشادات حول إنشاء وإدارة كلمات مرور آمنة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>51. المصادقة الثنائية</h3>
+                        <p>نقدم المصادقة الثنائية (2FA) كطبقة أمان إضافية لحسابات المستخدمين. تتطلب المصادقة الثنائية من
+                            المستخدمين تقديم شكل ثان من التحقق بالإضافة إلى كلمة المرور، مما يعزز بشكل كبير أمان الحساب
+                            ويحمي من الوصول غير المصرح به.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>52. إدارة حسابات المستخدمين</h3>
+                        <p>نوفر للمستخدمين أدوات لإدارة حساباتهم تشمل تحديث المعلومات الشخصية وتغيير إعدادات الخصوصية
+                            ومراجعة نشاط الحساب وإلغاء تنشيط أو حذف الحسابات. ميزات إدارة الحساب مصممة لتكون سهلة
+                            الاستخدام مع الحفاظ على الأمان.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>53. مشاركة البيانات مع السلطات</h3>
+                        <p>قد نشارك البيانات الشخصية مع السلطات الحكومية عند الطلب بموجب القانون أو أمر محكمة أو عملية
+                            قانونية أخرى. هذه المشاركة محدودة بما هو ضروري للامتثال للمتطلبات القانونية، ونتخذ خطوات
+                            لحماية خصوصية المستخدم إلى الحد المسموح به قانونياً.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>54. مشاركة البيانات مع الأطراف الثالثة</h3>
+                        <p>نحد من مشاركة البيانات مع الأطراف الثالثة إلى ما هو ضروري لأغراض العمل المشروعة. جميع مشاركة
+                            البيانات مع الأطراف الثالثة محكومة بحماية تعاقدية صارمة، ونراقب بانتظام امتثال الأطراف
+                            الثالثة لمتطلبات حماية البيانات لدينا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>55. مشاركة البيانات مع مقدمي الخدمات</h3>
+                        <p>نعمل مع مقدمي خدمات مختارين بعناية يساعدوننا في تقديم خدماتنا. يجب على جميع مقدمي الخدمات
+                            تلبية معايير حماية البيانات الصارمة لدينا وتوقيع اتفاقيات معالجة البيانات الشاملة والخضوع
+                            لتقييمات أمنية منتظمة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>56. مشاركة البيانات لأسباب قانونية</h3>
+                        <p>قد نشارك البيانات الشخصية عند الضرورة للامتثال للالتزامات القانونية أو حماية حقوقنا ومصالحنا
+                            أو منع الاحتيال أو الأنشطة غير القانونية أو الاستجابة للعملية القانونية. هذه المشاركة محدودة
+                            بما هو ضروري ومتناسب مع الظروف.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>57. مشاركة البيانات لعمليات نقل الأعمال</h3>
+                        <p>في حالة الاندماج أو الاستحواذ أو نقل أعمال آخر، قد يتم نقل البيانات الشخصية كجزء من المعاملة.
+                            نضمن أن أي عمليات نقل من هذا القبيل تتضمن حماية خصوصية مناسبة وأن المستخدمين يتم إخطارهم بأي
+                            تغييرات في ممارسات التعامل مع البيانات.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>58. مشاركة البيانات بالموافقة</h3>
+                        <p>عندما نشارك البيانات الشخصية بناءً على موافقة المستخدم، نضمن أن الموافقة مدروسة ومحددة ومعطاة
+                            بحرية. يمكن للمستخدمين سحب موافقتهم في أي وقت، ونحترم خيارات المستخدم فيما يتعلق بمشاركة
+                            البيانات.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>59. مراجعات أمان البيانات</h3>
+                        <p>نجري مراجعات أمنية منتظمة لتقييم فعالية تدابير حماية البيانات لدينا. يتم إجراء المراجعات من
+                            قبل مدققين داخليين وخارجيين مؤهلين، وتستخدم نتائج المراجعة لتحسين وضعنا الأمني ومعالجة أي
+                            ثغرات محددة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>60. شهادات حماية البيانات</h3>
+                        <p>نسعى للحصول على شهادات حماية البيانات ذات الصلة ونمتثل لمعايير الصناعة لإظهار التزامنا
+                            بالخصوصية والأمان. توفر الشهادات تحققاً مستقلاً من ممارسات حماية البيانات لدينا وتساعد في
+                            بناء الثقة مع المستخدمين والشركاء.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>61. حوكمة حماية البيانات</h3>
+                        <p>أنشأنا إطار حوكمة شامل لحماية البيانات يتضمن السياسات والإجراءات والأدوار والمسؤوليات وآليات
+                            الإشراف وتدابير المساءلة. الحوكمة تضمن دمج حماية البيانات في جميع جوانب عملياتنا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>62. سياسات حماية البيانات</h3>
+                        <p>نحتفظ بسياسات حماية البيانات المفصلة التي تغطي جميع جوانب التعامل مع البيانات الشخصية تشمل
+                            الجمع والاستخدام والتخزين والمشاركة والاحتفاظ والحذف. تتم مراجعة وتحديث السياسات بانتظام
+                            لتعكس التغييرات القانونية وأفضل الممارسات.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>63. إجراءات حماية البيانات</h3>
+                        <p>نفذنا إجراءات محددة للتعامل مع البيانات الشخصية في سياقات مختلفة تشمل جمع البيانات والمعالجة
+                            والمشاركة والاستجابة للانتهاك وطلبات حقوق المستخدم وحذف البيانات. الإجراءات موثقة ومراجعة
+                            ومحدثة بانتظام حسب الحاجة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>64. الأدوار والمسؤوليات في حماية البيانات</h3>
+                        <p>لدينا أدوار ومسؤوليات محددة بوضوح لحماية البيانات في جميع أنحاء منظمتنا. جميع الموظفين يفهمون
+                            التزامات حماية البيانات الخاصة بهم، والأدوار المحددة مثل مسؤول حماية البيانات ومراقبي
+                            البيانات لديهم مسؤوليات إضافية لضمان الامتثال.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>65. برامج تدريب حماية البيانات</h3>
+                        <p>نوفر برامج تدريب شاملة لحماية البيانات لجميع الموظفين الذين يتعاملون مع البيانات الشخصية.
+                            التدريب مصمم خصيصاً للأدوار والمسؤوليات المحددة ومحدث بانتظام لتعكس التغييرات القانونية
+                            ويتضمن التدريب الأولي والتعليم المستمر.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>66. مراقبة امتثال حماية البيانات</h3>
+                        <p>نراقب باستمرار امتثالنا لقوانين ولوائح حماية البيانات من خلال التقييمات والمراجعات والمراجعات
+                            المنتظمة. المراقبة تساعدنا في تحديد المشاكل المحتملة مبكراً واتخاذ إجراءات تصحيحية للحفاظ
+                            على الامتثال.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>67. إدارة مخاطر حماية البيانات</h3>
+                        <p>أنشأنا إطار إدارة مخاطر شامل لحماية البيانات يتضمن تحديد المخاطر وتقييمها وتخفيفها ومراقبتها.
+                            إدارة المخاطر تساعدنا في معالجة مخاطر الخصوصية بشكل استباقي والحفاظ على مستويات حماية
+                            مناسبة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>68. إدارة حوادث حماية البيانات</h3>
+                        <p>أنشأنا إجراءات لإدارة حوادث حماية البيانات تشمل الكشف والاستجابة والتحقيق والإخطار والمعالجة.
+                            إدارة الحوادث تضمن أننا يمكن أن نستجيب بسرعة وفعالية لأي حوادث متعلقة بالخصوصية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>69. تقارير حماية البيانات</h3>
+                        <p>نحتفظ بتقارير شاملة عن أنشطة حماية البيانات لدينا تشمل حالة الامتثال وتقارير الحوادث ونتائج
+                            المراجعة ومقاييس الأداء. التقارير توفر الشفافية والمساءلة لممارسات حماية البيانات لدينا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>70. توثيق حماية البيانات</h3>
+                        <p>نحتفظ بتوثيق مفصل لأنشطة حماية البيانات لدينا تشمل سجلات المعالجة وسجلات الموافقة وسجلات
+                            الانتهاك وسجلات التدريب وتوثيق السياسة. التوثيق يدعم جهود الامتثال ويوفر دليلاً على ممارسات
+                            حماية البيانات لدينا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>71. تواصل حماية البيانات</h3>
+                        <p>نتواصل بوضوح وشفافية حول ممارسات حماية البيانات لدينا من خلال إشعارات الخصوصية وتحديثات
+                            السياسة وإشعارات الانتهاك والاتصالات الأخرى. التواصل يساعد المستخدمين على فهم كيفية التعامل
+                            مع بياناتهم وحقوقهم فيما يتعلق بتلك البيانات.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>72. وعي حماية البيانات</h3>
+                        <p>نعزز الوعي بحماية البيانات في جميع أنحاء منظمتنا وبين مستخدمينا من خلال التدريب والاتصالات
+                            والموارد التعليمية. الوعي يساعد في ضمان أن الجميع يفهم أهمية حماية البيانات ودورهم في الحفاظ
+                            على الخصوصية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>73. ثقافة حماية البيانات</h3>
+                        <p>نعزز ثقافة الخصوصية وحماية البيانات في جميع أنحاء منظمتنا حيث يتم دمج اعتبارات الخصوصية في
+                            عمليات اتخاذ القرار وجميع الموظفين يفهمون مسؤوليتهم لحماية البيانات الشخصية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>74. تكنولوجيا حماية البيانات</h3>
+                        <p>نستفيد من التقنيات المتقدمة لتعزيز حماية البيانات تشمل التشفير وضوابط الوصول وأنظمة المراقبة
+                            وأدوات إخفاء الهوية والتقنيات المعززة للخصوصية. يتم تقييم وتحديث حلول التكنولوجيا بانتظام
+                            لمعالجة التهديدات والمتطلبات المتطورة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>75. ابتكار حماية البيانات</h3>
+                        <p>نبتكر باستمرار في حماية البيانات من خلال تطوير تقنيات وعمليات ونهج جديدة لحماية الخصوصية.
+                            الابتكار يساعدنا في البقاء متقدمين على التهديدات الناشئة وتوفير حماية خصوصية معززة
+                            لمستخدمينا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>76. أفضل ممارسات حماية البيانات</h3>
+                        <p>نتبع أفضل ممارسات الصناعة لحماية البيانات ونراجع ونحدث ممارساتنا بانتظام بناءً على المعايير
+                            المتطورة والمتطلبات القانونية والتطورات التكنولوجية. أفضل الممارسات تساعد في ضمان الحفاظ على
+                            معايير عالية لحماية الخصوصية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>77. الإطار القانوني لحماية البيانات</h3>
+                        <p>نعمل ضمن إطار قانوني شامل لحماية البيانات يتضمن قوانين حماية البيانات المصرية واللوائح
+                            الدولية ومعايير الصناعة والالتزامات التعاقدية. نراقب التطورات القانونية بانتظام ونحدث
+                            ممارساتنا وفقاً لذلك.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>78. المعايير الدولية لحماية البيانات</h3>
+                        <p>نوائم ممارسات حماية البيانات لدينا مع المعايير الدولية تشمل GDPR وISO 27001 وأطر أخرى ذات
+                            صلة. المعايير الدولية تساعد في ضمان أن ممارساتنا تلبي التوقعات العالمية لحماية الخصوصية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>79. المتطلبات التنظيمية لحماية البيانات</h3>
+                        <p>نمتثل لجميع متطلبات حماية البيانات التنظيمية المعمول بها تشمل التسجيل والإخطار والتقارير
+                            والتزامات التعاون. الامتثال للمتطلبات التنظيمية يتم مراقبته والحفاظ عليه من خلال برامج
+                            امتثال مستمرة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>80. إنفاذ حماية البيانات</h3>
+                        <p>نتعاون مع سلطات حماية البيانات في أنشطة الإنفاذ ونتخذ إجراءات مناسبة لمعالجة أي مشاكل امتثال
+                            يتم تحديدها. التعاون في الإنفاذ يظهر التزامنا بالحفاظ على معايير عالية لحماية البيانات.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>81. حقوق المستخدم في حماية البيانات</h3>
+                        <p>نحترم ونسهل ممارسة حقوق المستخدم تحت قوانين حماية البيانات تشمل الوصول والتصحيح والمحو
+                            والتقييد وقابلية النقل والاعتراض والحقوق المتعلقة باتخاذ القرار الآلي. حقوق المستخدم أساسية
+                            لنهجنا في حماية البيانات.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>82. شفافية حماية البيانات</h3>
+                        <p>نلتزم بالشفافية في ممارسات حماية البيانات لدينا من خلال إشعارات الخصوصية الواضحة والتقارير
+                            المنتظمة والتواصل المفتوح حول ممارساتنا وتوفير المستخدمين بمعلومات ذات معنى حول كيفية
+                            التعامل مع بياناتهم.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>83. مساءلة حماية البيانات</h3>
+                        <p>نتحمل المساءلة الكاملة لممارسات حماية البيانات لدينا ويمكننا إظهار الامتثال للقوانين واللوائح
+                            المعمول بها. المساءلة تشمل الحفاظ على التوثيق المناسب وإجراء التقييمات المنتظمة وتحمل
+                            المسؤولية عن ممارسات التعامل مع البيانات لدينا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>84. أخلاقيات حماية البيانات</h3>
+                        <p>نسترشد بمبادئ أخلاقية قوية في نهجنا لحماية البيانات تشمل احترام خصوصية الأفراد والعدالة في
+                            التعامل مع البيانات وتقليل جمع البيانات والنظر في التأثير الاجتماعي الأوسع لممارسات البيانات
+                            لدينا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>85. المسؤولية الاجتماعية لحماية البيانات</h3>
+                        <p>نقر بمسؤوليتنا الاجتماعية لحماية البيانات الشخصية والمساهمة في بيئة رقمية جديرة بالثقة.
+                            المسؤولية الاجتماعية تشمل النظر في التأثير الأوسع لممارسات البيانات لدينا على المجتمع
+                            والأفراد.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>86. استدامة حماية البيانات</h3>
+                        <p>نلتزم بممارسات حماية البيانات المستدامة التي توازن بين حماية الخصوصية واحتياجات العمل
+                            والابتكار التكنولوجي. الاستدامة تشمل التفكير طويل المدى حول حماية البيانات والنظر في
+                            التأثيرات البيئية والاجتماعية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>87. الاتجاهات المستقبلية لحماية البيانات</h3>
+                        <p>نراقب ونستعد للاتجاهات المستقبلية في حماية البيانات تشمل التقنيات الناشئة والمتطلبات
+                            القانونية المتطورة وتوقعات المستخدمين المتغيرة وتحديات الخصوصية الجديدة. التفكير الموجه نحو
+                            المستقبل يساعدنا في الحفاظ على حماية البيانات الفعالة مع مرور الوقت.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>88. تحديات حماية البيانات</h3>
+                        <p>نقر ونعالج بنشاط تحديات حماية البيانات في مشهد تكنولوجي سريع التطور تشمل موازنة الخصوصية مع
+                            الابتكار وإدارة تدفقات البيانات المعقدة وتلبية المتطلبات التنظيمية المتنوعة عبر ولايات
+                            قضائية متعددة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>89. فرص حماية البيانات</h3>
+                        <p>نرى حماية البيانات كفرصة لبناء الثقة مع المستخدمين وتمييز خدماتنا ودفع الابتكار في التقنيات
+                            المعززة للخصوصية والمساهمة في تطوير ممارسات البيانات المسؤولة في صناعة التكنولوجيا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>90. تعاون حماية البيانات</h3>
+                        <p>نتعاون مع شركاء الصناعة والسلطات التنظيمية والمؤسسات الأكاديمية وأصحاب المصلحة الآخرين لتطوير
+                            ممارسات حماية البيانات ومشاركة المعرفة وأفضل الممارسات والمساهمة في تطوير أطر حماية الخصوصية
+                            الفعالة.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>91. شراكات حماية البيانات</h3>
+                        <p>نشكل شراكات استراتيجية مع المنظمات التي تشاركنا التزامنا بحماية البيانات تشمل بائعي
+                            التكنولوجيا ومقدمي الخدمات وجمعيات الصناعة ومجموعات الدفاع عن الخصوصية. الشراكات تساعدنا في
+                            تعزيز قدرات حماية البيانات لدينا والمساهمة في جهود حماية الخصوصية الأوسع.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>92. مشاركة مجتمع حماية البيانات</h3>
+                        <p>نشارك بنشاط مع مجتمع حماية البيانات الأوسع من خلال المشاركة في منتديات الصناعة والمؤتمرات
+                            ومجموعات العمل والمبادرات التعاونية الأخرى. مشاركة المجتمع تساعدنا في البقاء على اطلاع
+                            بالتطورات في المجال والمساهمة في المعرفة الجماعية.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>93. التحسين المستمر لحماية البيانات</h3>
+                        <p>نلتزم بالتحسين المستمر في ممارسات حماية البيانات لدينا من خلال المراجعة والتقييم المنتظم ودمج
+                            الملاحظات والدروس المستفادة واعتماد تقنيات ونهج جديدة والتعزيز المستمر لقدرات حماية الخصوصية
+                            لدينا.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>94. التميز في حماية البيانات</h3>
+                        <p>نسعى للتميز في حماية البيانات من خلال وضع معايير عالية لحماية الخصوصية والتحسين المستمر
+                            لممارساتنا والاستثمار في التقنيات المعززة للخصوصية والحفاظ على ثقافة الخصوصية في جميع أنحاء
+                            منظمتنا. التميز في حماية البيانات أساسي لمهمتنا في تعزيز الوعي التكنولوجي في جميع أنحاء
+                            الوطن العربي مع الحفاظ على أعلى معايير الخصوصية والأمان.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Meta Software</h3>
+                <p id="footerText">Advanced Software Solutions | Your Digital Transformation Partner</p>
+            </div>
+            <div class="footer-bottom">
+                <p id="copyrightText">© 2025 Meta Software. All rights reserved.</p>
+                <p id="updateText">Last updated: June 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== متغيرات عامة =====
+        const enBtn = document.getElementById('enBtn');
+        const arBtn = document.getElementById('arBtn');
+        const enContent = document.getElementById('enContent');
+        const arContent = document.getElementById('arContent');
+        const pageTitle = document.getElementById('pageTitle');
+        const pageSubtitle = document.getElementById('pageSubtitle');
+        const footerText = document.getElementById('footerText');
+        const copyrightText = document.getElementById('copyrightText');
+        const updateText = document.getElementById('updateText');
+
+        // ===== النصوص للغتين =====
+        const translations = {
+            ar: {
+                title: 'سياسة الخصوصية',
+                subtitle: 'خصوصيتك مهمة بالنسبة لنا. تعرف على كيفية حماية ومعالجة بياناتك الشخصية.',
+                footer: 'حلول برمجية متقدمة | شريكك في التحول الرقمي',
+                copyright: '© 2025 Meta Software. جميع الحقوق محفوظة.',
+                update: 'آخر تحديث: يونيو 2025'
+            },
+            en: {
+                title: 'Privacy Policy',
+                subtitle: 'Your privacy is important to us. Learn how we protect and handle your personal data.',
+                footer: 'Advanced Software Solutions | Your Digital Transformation Partner',
+                copyright: '© 2025 Meta Software. All rights reserved.',
+                update: 'Last updated: June 2025'
+            }
+        };
+
+        // ===== وظائف تبديل اللغة =====
+        function switchToArabic() {
+            if (arContent) arContent.classList.remove('hidden');
+            if (enContent) enContent.classList.add('hidden');
+
+            arBtn.classList.add('active');
+            enBtn.classList.remove('active');
+
+            if (pageTitle) pageTitle.textContent = translations.ar.title;
+            if (pageSubtitle) pageSubtitle.textContent = translations.ar.subtitle;
+            if (footerText) footerText.textContent = translations.ar.footer;
+            if (copyrightText) copyrightText.textContent = translations.ar.copyright;
+            if (updateText) updateText.textContent = translations.ar.update;
+
+            document.documentElement.lang = 'ar';
+            document.documentElement.dir = 'rtl';
+            document.body.className = 'rtl';
+
+            localStorage.setItem('preferredLanguage', 'ar');
+        }
+
+        function switchToEnglish() {
+            if (enContent) enContent.classList.remove('hidden');
+            if (arContent) arContent.classList.add('hidden');
+
+            enBtn.classList.add('active');
+            arBtn.classList.remove('active');
+
+            if (pageTitle) pageTitle.textContent = translations.en.title;
+            if (pageSubtitle) pageSubtitle.textContent = translations.en.subtitle;
+            if (footerText) footerText.textContent = translations.en.footer;
+            if (copyrightText) copyrightText.textContent = translations.en.copyright;
+            if (updateText) updateText.textContent = translations.en.update;
+
+            document.documentElement.lang = 'en';
+            document.documentElement.dir = 'ltr';
+            document.body.className = 'ltr';
+
+            localStorage.setItem('preferredLanguage', 'en');
+        }
+
+        // ===== تهيئة التطبيق =====
+        function initializeApp() {
+            console.log('Meta Software Privacy Policy - Initializing...');
+
+            if (arBtn) arBtn.addEventListener('click', switchToArabic);
+            if (enBtn) enBtn.addEventListener('click', switchToEnglish);
+
+            // تحميل اللغة المحفوظة
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang === 'ar') {
+                switchToArabic();
+            } else {
+                switchToEnglish();
+            }
+
+            // تأثيرات التمرير
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.content-section').forEach(section => {
+                observer.observe(section);
+            });
+
+            console.log('Meta Software Privacy Policy - Initialized successfully!');
+        }
+
+        // ===== تشغيل التطبيق =====
+        document.addEventListener('DOMContentLoaded', initializeApp);
+
+    </script>
+        <script src="protection.js"></script>
+
+</body>
+
+</html>
