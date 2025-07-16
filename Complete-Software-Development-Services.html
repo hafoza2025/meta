@@ -957,6 +957,69 @@
                 font-size: 1.3rem;
             }
         }
+         body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 80% 20%, var(--light-blue) 0%, transparent 70%),
+                radial-gradient(circle at 20% 80%, var(--primary-blue) 0%, transparent 70%);
+            opacity: 0.12;
+            z-index: 0;
+            pointer-events: none;
+        }
+ @media (max-width: 500px) {
+
+            .header-container,
+            .footer-container {
+                padding: 0 0.5rem;
+            }
+
+            .service-card {
+                padding: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* منع التحرك يمين وشمال */
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ضبط جميع العناصر الداخلية */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* التأكد أن كل العناصر تأخذ عرض الشاشة فقط */
+        .about-section,
+        .hero-section,
+        .content-section,
+        section,
+        header,
+        footer {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* الصور والفيديوهات لا تتعدى العرض */
+        img,
+        video,
+        iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 
